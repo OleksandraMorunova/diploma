@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Assistant</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sign_in_to_your_account">Увійдіть у ваш акаунт</string>
+    <string name="email_address_n">Електронна пошта</string>
+    <string name="by_clicking_sign_up">Натискаючи на "Створити", Ви погоджуєтеся з <u>Умовами використання</u> та <u>Політикою конфіденційності </u></string>
+    <string name="by_clicking_sign_in">Натискаючи на "Увійти", Ви погоджуєтеся з <u>Умовами використання</u> та <u>Політикою конфіденційності </u></string>
+</resources>
