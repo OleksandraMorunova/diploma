@@ -1,0 +1,888 @@
+Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3300ms]
+java.base@11.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [3300ms]
+com.intellij.execution.process.ProcessWaitFor$$Lambda$538/0x00000001006c5c40.run(Unknown Source) [3300ms]
+com.intellij.execution.process.ProcessWaitFor.lambda$new$1(ProcessWaitFor.java:23) [3300ms]
+com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213) [3300ms]
+com.intellij.execution.process.ProcessWaitFor$$Lambda$539/0x00000001006c5040.run(Unknown Source) [3300ms]
+com.intellij.execution.process.ProcessWaitFor.lambda$new$0(ProcessWaitFor.java:28) [3300ms]
+java.base@11.0.12/java.lang.ProcessImpl.waitFor(ProcessImpl.java:554) [3300ms]
+java.base@11.0.12/java.lang.ProcessImpl.waitForInterruptibly(Native Method) [3300ms]
+
+BaseDataReader: output stream of fsnotifier.exe, TID: 30 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3300ms]
+java.base@11.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [3300ms]
+com.intellij.util.io.BaseDataReader$$Lambda$542/0x00000001006c4c40.run(Unknown Source) [3300ms]
+com.intellij.util.io.BaseDataReader.lambda$start$0(BaseDataReader.java:51) [3300ms]
+com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213) [3300ms]
+com.intellij.util.io.BaseDataReader$$Lambda$547/0x00000001006c3040.run(Unknown Source) [3300ms]
+com.intellij.util.io.BaseDataReader.doRun(BaseDataReader.java:166) [3300ms]
+com.intellij.util.io.BaseDataReader.readAvailable(BaseDataReader.java:77) [3300ms]
+com.intellij.util.io.BaseOutputReader.readAvailableBlocking(BaseOutputReader.java:133) [3300ms]
+java.base@11.0.12/java.io.Reader.read(Reader.java:229) [3300ms]
+java.base@11.0.12/java.io.InputStreamReader.read(InputStreamReader.java:181) [3300ms]
+java.base@11.0.12/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178) [3300ms]
+java.base@11.0.12/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326) [3300ms]
+java.base@11.0.12/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284) [3300ms]
+java.base@11.0.12/java.io.BufferedInputStream.read(BufferedInputStream.java:351) [3300ms]
+java.base@11.0.12/java.io.BufferedInputStream.read1(BufferedInputStream.java:290) [3300ms]
+java.base@11.0.12/java.io.FileInputStream.read(FileInputStream.java:279) [3300ms]
+java.base@11.0.12/java.io.FileInputStream.readBytes(Native Method) [3300ms]
+
+BaseDataReader: error stream of fsnotifier.exe, TID: 31 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3300ms]
+java.base@11.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [3300ms]
+com.intellij.util.io.BaseDataReader$$Lambda$542/0x00000001006c4c40.run(Unknown Source) [3300ms]
+com.intellij.util.io.BaseDataReader.lambda$start$0(BaseDataReader.java:51) [3300ms]
+com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213) [3300ms]
+com.intellij.util.io.BaseDataReader$$Lambda$547/0x00000001006c3040.run(Unknown Source) [3300ms]
+com.intellij.util.io.BaseDataReader.doRun(BaseDataReader.java:166) [3300ms]
+com.intellij.util.io.BaseDataReader.readAvailable(BaseDataReader.java:77) [3300ms]
+com.intellij.util.io.BaseOutputReader.readAvailableBlocking(BaseOutputReader.java:133) [3300ms]
+java.base@11.0.12/java.io.Reader.read(Reader.java:229) [3300ms]
+java.base@11.0.12/java.io.InputStreamReader.read(InputStreamReader.java:181) [3300ms]
+java.base@11.0.12/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178) [3300ms]
+java.base@11.0.12/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326) [3300ms]
+java.base@11.0.12/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284) [3300ms]
+java.base@11.0.12/java.io.FileInputStream.read(FileInputStream.java:279) [3300ms]
+java.base@11.0.12/java.io.FileInputStream.readBytes(Native Method) [3300ms]
+
+TimerQueue, TID: 33 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.desktop@11.0.12/javax.swing.TimerQueue.run(TimerQueue.java:171) [3300ms]
+java.base@11.0.12/java.util.concurrent.DelayQueue.take(DelayQueue.java:229) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+ApplicationImpl pooled thread 30, TID: 100 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [3100ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [3100ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [3100ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [3100ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [3100ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [3100ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3100ms]
+
+ApplicationImpl pooled thread 32, TID: 102 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
++ java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [2600ms]
+  java.base@11.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264) [2600ms]
+  java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [2600ms]
+  com.intellij.openapi.application.impl.ApplicationImpl$1.run(ApplicationImpl.java:265) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$2440/0x0000000101ba2c40.run(Unknown Source) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$startProcessing$4(QueueProcessor.java:214) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$2441/0x0000000101ba3040.run(Unknown Source) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$startProcessing$3(QueueProcessor.java:214) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$1357/0x0000000101160840.accept(Unknown Source) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$wrappingProcessor$1(QueueProcessor.java:79) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$2443/0x0000000101ba7840.run(Unknown Source) [2600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$wrappingProcessor$0(QueueProcessor.java:79) [2600ms]
+  com.jetbrains.cidr.lang.daemon.clang.clangd.startup.ClangTidyStartupActivity$$Lambda$2439/0x0000000101ba2840.consume(Unknown Source) [2600ms]
+  com.jetbrains.cidr.lang.daemon.clang.clangd.startup.ClangTidyStartupActivity.lambda$doRunActivity$0(ClangTidyStartupActivity.java:56) [2600ms]
+  com.jetbrains.cidr.lang.daemon.clang.clangd.startup.ClangTidyStartupActivity.doScan(ClangTidyStartupActivity.java:80) [2600ms]
+  com.intellij.openapi.application.ReadAction.compute(ReadAction.java:61) [2600ms]
+  com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:852) [2600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.startRead(ReadMostlyRWLock.java:110) [2600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.waitABit(ReadMostlyRWLock.java:140) [2600ms]
+  java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [2600ms]
+  java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [2600ms]
++ java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [700ms]
+  java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [700ms]
+  java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [700ms]
+  java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [700ms]
+  java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [700ms]
+  java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [700ms]
+  java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [700ms]
+
+Monitor, TID: 43 [3300ms]
+com.android.ddmlib.internal.MonitorThread.run(MonitorThread.java:136) [3300ms]
+java.base@11.0.12/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141) [3300ms]
+java.base@11.0.12/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124) [3300ms]
+java.base@11.0.12/sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:182) [3300ms]
+java.base@11.0.12/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:357) [3300ms]
+java.base@11.0.12/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method) [3300ms]
+
+JobScheduler FJ pool 1/3, TID: 172 [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+JobScheduler FJ pool 2/3, TID: 173 [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1619) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:275) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+Symtable RecursiveSymbolBuilding, TID: 174 [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1619) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:275) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+Batik CleanerThread, TID: 47 [3300ms]
+org.apache.batik.util.CleanerThread.run(CleanerThread.java:106) [3300ms]
+java.base@11.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176) [3300ms]
+java.base@11.0.12/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155) [3300ms]
+java.base@11.0.12/java.lang.Object.wait(Native Method) [3300ms]
+
+ApplicationImpl pooled thread 34, TID: 111 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+Symtable RecursiveSymbolBuilding, TID: 175 [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1619) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkUntil(LockSupport.java:275) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+Windows Shell integration, TID: 48 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054) [3300ms]
+java.base@11.0.12/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:433) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2081) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+BuildManager Auto-Make Trigger, TID: 112 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3200ms]
+com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:184) [3200ms]
+com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213) [3200ms]
+com.intellij.util.concurrency.BoundedTaskExecutor$1$$Lambda$506/0x00000001006ae840.run(Unknown Source) [3200ms]
+com.intellij.util.concurrency.BoundedTaskExecutor$1.execute(BoundedTaskExecutor.java:195) [3200ms]
+com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:27) [3200ms]
+com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:216) [3200ms]
+com.intellij.compiler.server.BuildManager$3$$Lambda$2965/0x0000000101f90840.run(Unknown Source) [3200ms]
+com.intellij.compiler.server.BuildManager$3.lambda$after$1(BuildManager.java:306) [3200ms]
+com.intellij.openapi.application.ReadAction.run(ReadAction.java:51) [3200ms]
+com.intellij.openapi.application.ReadAction.compute(ReadAction.java:61) [3200ms]
+com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:852) [3200ms]
+com.intellij.openapi.application.impl.ReadMostlyRWLock.startRead(ReadMostlyRWLock.java:110) [3200ms]
++ com.intellij.openapi.application.impl.ReadMostlyRWLock.waitABit(ReadMostlyRWLock.java:140) [2600ms]
+  java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [2600ms]
+  java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [2600ms]
++ com.intellij.openapi.application.impl.ReadMostlyRWLock.waitABit(ReadMostlyRWLock.java:147) [600ms]
+  java.base@11.0.12/java.lang.Thread.yield(Native Method) [600ms]
+
+pool-4-thread-1, TID: 176 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3300ms]
+java.base@11.0.12/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) [3300ms]
+java.base@11.0.12/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:305) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [3300ms]
+com.android.tools.idea.diagnostics.ThreadSamplingReportContributor$$Lambda$3997/0x000000010261b440.run(Unknown Source) [3300ms]
+com.android.tools.idea.diagnostics.ThreadSamplingReportContributor.sampleThreads(ThreadSamplingReportContributor.java:103) [3300ms]
+java.management@11.0.12/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:509) [3300ms]
+java.management@11.0.12/sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:521) [3300ms]
+java.management@11.0.12/sun.management.ThreadImpl.dumpThreads0(Native Method) [3300ms]
+
+Device Client Monitor, TID: 49 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+com.android.ddmlib.internal.DeviceClientMonitorTask.run(DeviceClientMonitorTask.java:211) [3300ms]
+java.base@11.0.12/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141) [3300ms]
+java.base@11.0.12/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:124) [3300ms]
+java.base@11.0.12/sun.nio.ch.WindowsSelectorImpl.doSelect(WindowsSelectorImpl.java:182) [3300ms]
+java.base@11.0.12/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll(WindowsSelectorImpl.java:357) [3300ms]
+java.base@11.0.12/sun.nio.ch.WindowsSelectorImpl$SubSelector.poll0(Native Method) [3300ms]
+
+ApplicationImpl pooled thread 36, TID: 113 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+ApplicationImpl pooled thread 41, TID: 177 [2700ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [2600ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [2600ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [2600ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [2600ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [2600ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [2600ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [2300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [2300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [2300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [2300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [2300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [2300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [2300ms]
+
+Device List Monitor, TID: 50 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+com.android.ddmlib.internal.DeviceListMonitorTask.run(DeviceListMonitorTask.java:127) [3300ms]
+com.android.ddmlib.internal.AdbSocketUtils.readLength(AdbSocketUtils.java:80) [3300ms]
+com.android.ddmlib.internal.AdbSocketUtils.read(AdbSocketUtils.java:67) [3300ms]
+com.android.ddmlib.internal.AdbSocketUtils.read(AdbSocketUtils.java:37) [3300ms]
+java.base@11.0.12/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:353) [3300ms]
+java.base@11.0.12/sun.nio.ch.IOUtil.read(IOUtil.java:223) [3300ms]
+java.base@11.0.12/sun.nio.ch.IOUtil.read(IOUtil.java:245) [3300ms]
+java.base@11.0.12/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276) [3300ms]
+java.base@11.0.12/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) [3300ms]
+java.base@11.0.12/sun.nio.ch.SocketDispatcher.read0(Native Method) [3300ms]
+
+EDT Performance Checker, TID: 114 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3100ms]
++ com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:184) [2500ms]
+  com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213) [2500ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor$1$$Lambda$506/0x00000001006ae840.run(Unknown Source) [2500ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor$1.execute(BoundedTaskExecutor.java:195) [2500ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:27) [2500ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:216) [2500ms]
+  com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:220) [2500ms]
+  java.base@11.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264) [2500ms]
+  java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [2500ms]
+  com.intellij.diagnostic.PerformanceWatcher$FreezeCheckerTask$$Lambda$606/0x00000001007b6440.run(Unknown Source) [2500ms]
+  com.intellij.diagnostic.PerformanceWatcher$FreezeCheckerTask.edtFrozen(PerformanceWatcher.java:588) [2500ms]
+  com.intellij.diagnostic.PerformanceWatcher$FreezeCheckerTask$1.<init>(PerformanceWatcher.java:588) [2500ms]
+  com.intellij.diagnostic.SamplingTask.<init>(SamplingTask.java:39) [2500ms]
+  jdk.management@11.0.12/com.sun.management.internal.OperatingSystemImpl.getProcessCpuLoad(OperatingSystemImpl.java:89) [2500ms]
+  jdk.management@11.0.12/com.sun.management.internal.OperatingSystemImpl.getProcessCpuLoad0(Native Method) [2500ms]
++ java.base@11.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264) [600ms]
+  java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [600ms]
+  com.intellij.openapi.application.impl.ApplicationImpl$1.run(ApplicationImpl.java:265) [600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$2440/0x0000000101ba2c40.run(Unknown Source) [600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$startProcessing$4(QueueProcessor.java:214) [600ms]
+  com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240) [600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$2441/0x0000000101ba3040.run(Unknown Source) [600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$startProcessing$3(QueueProcessor.java:214) [600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$1357/0x0000000101160840.accept(Unknown Source) [600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$wrappingProcessor$1(QueueProcessor.java:79) [600ms]
+  com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240) [600ms]
+  com.intellij.util.concurrency.QueueProcessor$$Lambda$2443/0x0000000101ba7840.run(Unknown Source) [600ms]
+  com.intellij.util.concurrency.QueueProcessor.lambda$wrappingProcessor$0(QueueProcessor.java:79) [600ms]
+  com.jetbrains.cidr.lang.daemon.clang.clangd.startup.ClangTidyStartupActivity$$Lambda$2439/0x0000000101ba2840.consume(Unknown Source) [600ms]
+  com.jetbrains.cidr.lang.daemon.clang.clangd.startup.ClangTidyStartupActivity.lambda$doRunActivity$0(ClangTidyStartupActivity.java:56) [600ms]
+  com.jetbrains.cidr.lang.daemon.clang.clangd.startup.ClangTidyStartupActivity.doScan(ClangTidyStartupActivity.java:80) [600ms]
+  com.intellij.openapi.application.ReadAction.compute(ReadAction.java:61) [600ms]
+  com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:852) [600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.startRead(ReadMostlyRWLock.java:110) [600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.waitABit(ReadMostlyRWLock.java:147) [600ms]
+  java.base@11.0.12/java.lang.Thread.yield(Native Method) [600ms]
+
+ApplicationImpl pooled thread 38, TID: 115 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
++ java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [2900ms]
+  java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [2900ms]
+  java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [2900ms]
+  java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [2900ms]
+  java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [2800ms]
+  java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [2800ms]
+  java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [2800ms]
++ java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [300ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:184) [300ms]
+  com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213) [300ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor$1$$Lambda$506/0x00000001006ae840.run(Unknown Source) [300ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor$1.execute(BoundedTaskExecutor.java:195) [300ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:27) [300ms]
+  com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:216) [300ms]
+
+I/O pool 18, TID: 116 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+Symtable RecursiveSymbolBuilding, TID: 53 [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) [3300ms]
+java.base@11.0.12/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1628) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.park(LockSupport.java:194) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+FileBasedIndex Vfs Event Processor, TID: 117 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3300ms]
+com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:184) [3300ms]
+com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:213) [3300ms]
+com.intellij.util.concurrency.BoundedTaskExecutor$1$$Lambda$506/0x00000001006ae840.run(Unknown Source) [3300ms]
+com.intellij.util.concurrency.BoundedTaskExecutor$1.execute(BoundedTaskExecutor.java:195) [3300ms]
+com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:27) [3300ms]
+com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:216) [3300ms]
+com.intellij.util.indexing.events.ChangedFilesCollector$$Lambda$3430/0x0000000101910c40.run(Unknown Source) [3300ms]
+com.intellij.util.indexing.events.ChangedFilesCollector.lambda$ensureUpToDateAsync$2(ChangedFilesCollector.java:226) [3300ms]
+com.intellij.util.indexing.events.ChangedFilesCollector.processFilesInReadActionWithYieldingToWriteAction(ChangedFilesCollector.java:311) [3300ms]
+com.intellij.openapi.application.impl.NonBlockingReadActionImpl.executeSynchronously(NonBlockingReadActionImpl.java:186) [3300ms]
+com.intellij.openapi.application.impl.NonBlockingReadActionImpl$Submission.executeSynchronously(NonBlockingReadActionImpl.java:444) [3300ms]
+com.intellij.openapi.progress.util.ProgressIndicatorUtils.awaitWithCheckCanceled(ProgressIndicatorUtils.java:414) [3300ms]
+com.intellij.util.concurrency.Semaphore.waitFor(Semaphore.java:87) [3300ms]
+com.intellij.util.concurrency.Semaphore.waitForUnsafe(Semaphore.java:97) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer.tryAcquireSharedNanos(AbstractQueuedSynchronizer.java:1369) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.AbstractQueuedSynchronizer.doAcquireSharedNanos(AbstractQueuedSynchronizer.java:1079) [3200ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [3200ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3200ms]
+
+I/O pool 19, TID: 118 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1053) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue.poll(SynchronousQueue.java:937) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.transfer(SynchronousQueue.java:361) [3300ms]
+java.base@11.0.12/java.util.concurrent.SynchronousQueue$TransferStack.awaitFulfill(SynchronousQueue.java:462) [3300ms]
+java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [3300ms]
+java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [3300ms]
+
+ApplicationImpl pooled thread 40, TID: 119 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.security.AccessController.doPrivileged(Native Method) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:665) [3300ms]
+java.base@11.0.12/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:668) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3200ms]
+java.base@11.0.12/java.util.concurrent.FutureTask.run(FutureTask.java:264) [3200ms]
+java.base@11.0.12/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) [3200ms]
+com.intellij.openapi.application.impl.ApplicationImpl$1.run(ApplicationImpl.java:265) [3200ms]
+com.intellij.util.concurrency.QueueProcessor$$Lambda$2440/0x0000000101ba2c40.run(Unknown Source) [3200ms]
+com.intellij.util.concurrency.QueueProcessor.lambda$startProcessing$4(QueueProcessor.java:214) [3200ms]
+com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240) [3200ms]
+com.intellij.util.concurrency.QueueProcessor$$Lambda$2441/0x0000000101ba3040.run(Unknown Source) [3200ms]
+com.intellij.util.concurrency.QueueProcessor.lambda$startProcessing$3(QueueProcessor.java:214) [3200ms]
+com.intellij.util.concurrency.QueueProcessor$$Lambda$1357/0x0000000101160840.accept(Unknown Source) [3200ms]
+com.intellij.util.concurrency.QueueProcessor.lambda$wrappingProcessor$1(QueueProcessor.java:79) [3200ms]
+com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:240) [3200ms]
+com.intellij.util.concurrency.QueueProcessor$$Lambda$2443/0x0000000101ba7840.run(Unknown Source) [3200ms]
+com.intellij.util.concurrency.QueueProcessor.lambda$wrappingProcessor$0(QueueProcessor.java:79) [3200ms]
+com.intellij.vfs.AsyncVfsEventsPostProcessorImpl$queue$1.consume(AsyncVfsEventsPostProcessorImpl.kt:32) [3200ms]
+com.intellij.vfs.AsyncVfsEventsPostProcessorImpl$queue$1.consume(AsyncVfsEventsPostProcessorImpl.kt:34) [3200ms]
+com.intellij.vfs.AsyncVfsEventsPostProcessorImpl.access$processEvents(AsyncVfsEventsPostProcessorImpl.kt:32) [3200ms]
+com.intellij.vfs.AsyncVfsEventsPostProcessorImpl.processEvents(AsyncVfsEventsPostProcessorImpl.kt:63) [3200ms]
+com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:248) [3200ms]
+com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:270) [3200ms]
+com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:170) [3200ms]
+com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:63) [3200ms]
+com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:647) [3200ms]
+com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:705) [3200ms]
+com.intellij.openapi.progress.impl.CoreProgressManager$$Lambda$289/0x0000000100432040.run(Unknown Source) [3200ms]
+com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:183) [3200ms]
+com.intellij.vfs.AsyncVfsEventsPostProcessorImpl$processEvents$1.run(AsyncVfsEventsPostProcessorImpl.kt:64) [3200ms]
+com.intellij.openapi.vcs.roots.VcsRootScanner$$Lambda$1937/0x00000001009d6440.filesChanged(Unknown Source) [3200ms]
+com.intellij.openapi.vcs.roots.VcsRootScanner.filesChanged(VcsRootScanner.java:72) [3200ms]
++ com.intellij.openapi.vcs.roots.VcsRootScanner.visitDirsRecursivelyWithoutExcluded(VcsRootScanner.java:91) [2600ms]
+  com.intellij.openapi.vcs.roots.VcsRootScanner.isUnderIgnoredDirectory(VcsRootScanner.java:146) [2600ms]
+  com.intellij.openapi.vcs.roots.VcsRootScanner.isIgnoredDirectory(VcsRootScanner.java:153) [2600ms]
+  com.intellij.openapi.vcs.impl.ProjectLevelVcsManagerImpl.isIgnored(ProjectLevelVcsManagerImpl.java:738) [2600ms]
+  com.intellij.openapi.application.ReadAction.compute(ReadAction.java:61) [2600ms]
+  com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:852) [2600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.startRead(ReadMostlyRWLock.java:110) [2600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.waitABit(ReadMostlyRWLock.java:140) [2600ms]
+  java.base@11.0.12/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234) [2600ms]
+  java.base@11.0.12/jdk.internal.misc.Unsafe.park(Native Method) [2600ms]
++ com.intellij.openapi.vcs.roots.VcsRootScanner.visitDirsRecursivelyWithoutExcluded(VcsRootScanner.java:93) [600ms]
+  com.intellij.openapi.vfs.VfsUtilCore.visitChildrenRecursively(VfsUtilCore.java:293) [600ms]
+  com.intellij.openapi.vcs.roots.VcsRootScanner$1.visitFileEx(VcsRootScanner.java:108) [600ms]
+  com.intellij.openapi.vcs.roots.VcsRootScanner.isIgnoredDirectory(VcsRootScanner.java:153) [600ms]
+  com.intellij.openapi.vcs.impl.ProjectLevelVcsManagerImpl.isIgnored(ProjectLevelVcsManagerImpl.java:738) [600ms]
+  com.intellij.openapi.application.ReadAction.compute(ReadAction.java:61) [600ms]
+  com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:852) [600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.startRead(ReadMostlyRWLock.java:110) [600ms]
+  com.intellij.openapi.application.impl.ReadMostlyRWLock.waitABit(ReadMostlyRWLock.java:147) [600ms]
+  java.base@11.0.12/java.lang.Thread.yield(Native Method) [600ms]
+
+ClangdRequestsPlanner [main], TID: 56 [3300ms]
+java.base@11.0.12/java.lang.Thread.run(Thread.java:829) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) [3300ms]
+java.base@11.0.12/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) [3300ms]
+com.jetbrains.cidr.lang.daemon.clang.clangd.lsp.ClangdRequestsPlanner$ExecutorRunnable.run(ClangdRequestsPlanner.java:266) [3300ms]
+com.jetbrains.cidr.lang.daemon.clang.clangd.lsp.ClangdRequestsPlanner.waitForEvent(ClangdRequestsPlanner.java:163) [3300ms]
+java.base@11.0.12/java.lang.Object.wait(Object.java:328) [3300ms]
+java.base@11.0.12/java.lang.Object.wait(Native Method) [3300ms]
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     SNSS    ‚¢ö        ¨  8     	 	‚¢ö    5 0   ‚¢ö&   {BC753121-08B4-4FE1-B124-3BAFDA1D4130}  	  ‚¢ö    	 ‚¢ö   	  ‚¢ö×¢ö ×¢ö    \ñ´\   ½W¸W  ×¢ö       https://cleanup.pictures/   U   C l e a n u p . p i c t u r e s   -   R e m o v e   o b j e c t s ,   p e o p l e ,   t e x t   a n d   d e f e c t s   f r o m   a n y   p i c t u r e   f o r   f r e e   \V  XV     PV                              ˆ      €       È                                        Í¾Ëêõ Í¾Ëêõ Ğ      è      ğT      U      `U                                    :      h t t p s : / / c l e a n u p . p i c t u r e s /                     6      h t t p s : / / w w w . g o o g l e . c o m /                        8      0               À       Ø       (      @                    h   0   
+  ? %   B l i n k   s e r i a l i z e d   f o r m   s t a t e   v e r s i o n   1 0   
+  = &                     N o   o w n e r               
+      1                     D      f i l e - u p l o a d - 0 . 2 5 1 7 7 6 5 3 8 6 8 0 4 5 6 7                         f i l e               
+      0       8      0       8             ğ?                                                                                      x      p        	            ¸             P       8#       &      Ğ.      €7      h:      C       F      °N      ˆ      €              h              Ø             Ğ      ø]FÊêõ ù]FÊêõ       (      x            è                                    ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = q r l 8 k 5 b c 6 o 2 6               :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e F 3 A 5 2 9 F 7 E 6 9 5 5 1 6 3 3 4 2 C 0 C 0 8 8 8 7 F 5 C F 0 - - >          8      0       8                                                                                                                  ˆ      €       ¨       H              ¸             °      ü]FÊêõ ı]FÊêõ ğ                         x                                          a b o u t : b l a n k                 ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = q r l 8 k 5 b c 6 o 2 6               n   3   < ! - - d y n a m i c F r a m e 9 2 6 8 9 E 0 9 D C 6 A 9 6 D B 4 A C E 4 8 3 5 5 D 1 E 0 D 0 7 - - >          8      0       8                                                                                                                  https://www.google.com                P   $   f f 3 7 0 7 b f - 2 c 1 b - 4 0 e 5 - 9 c f c - c f f c 4 6 a 7 c 3 d 4               P   $   c c 5 0 f e c e - b 4 d 5 - 4 a 0 f - b b f 7 - 2 f e d a d 8 3 1 9 b f        https://cleanup.pictures              P   $   c 3 b f 7 4 c 8 - 5 7 f d - 4 4 6 c - 8 0 3 7 - e 5 f e 5 8 9 2 8 e 0 4               P   $   1 a 8 1 e 1 c 7 - 7 d c 0 - 4 6 1 6 - 8 4 6 a - 5 7 6 d 0 a a 7 3 9 5 0 ˆ      €       ¨       ğ               `             X      Í¾Ëêõ Í¾Ëêõ ˜      °      °      È                                                 a b o u t : b l a n k                 :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e E 6 C 6 6 4 9 1 1 9 D 1 6 C C 8 3 A 0 0 D D B 0 8 A F 3 C 2 1 9 - - >          8      0       8                                                                                                                   https://cleanup.pictures              P   $   6 1 4 5 a 6 7 a - 1 f c 8 - 4 8 a e - 8 9 3 0 - 9 5 e 2 0 8 e b e f a 8               P   $   4 7 9 4 c 5 e c - d c a e - 4 f 9 5 - b 2 9 b - c 5 9 5 1 c b 2 e e e 8 ˆ      €              h              Ø             Ğ      ˜'ß	çõ ™'ß	çõ       (      x            è                                    ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = r p d l j 4 1 t u 9 4 3               :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e E F 3 6 6 D 5 1 2 7 1 D 1 0 D 4 8 8 6 F 4 D 8 9 0 0 5 5 3 8 D F - - >          8      0       8                                                                                                                  ˆ      €       ¨       H              ¸             °      š'ß	çõ ›'ß	çõ ğ                         x                                          a b o u t : b l a n k                 ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = r p d l j 4 1 t u 9 4 3               n   3   < ! - - d y n a m i c F r a m e 6 1 7 6 3 3 8 B 3 5 4 2 9 E 9 E A 5 E 1 1 4 4 3 9 B A 5 9 A 3 D - - >          8      0       8                                                                                                                  https://www.google.com                P   $   1 b 6 9 6 5 4 e - 0 4 2 3 - 4 1 1 d - 8 1 3 0 - 5 9 6 e b 3 9 e 8 6 b f               P   $   b 0 4 4 7 8 f 9 - 6 4 e b - 4 8 5 c - 9 a 3 0 - 4 1 2 f 9 e d f c d 6 7        https://cleanup.pictures              P   $   4 d 9 5 4 8 3 7 - c 5 c c - 4 3 c c - b 8 2 c - 3 6 5 b 2 c c b 5 9 0 b               P   $   d 7 1 1 0 1 0 8 - 3 5 6 c - 4 7 c d - b f e 5 - 2 d 9 4 6 0 d 6 c 8 e 8 ˆ      €       ¨       ğ               `             X      ™¿ñIëõ š¿ñIëõ ˜      °      °      È                                                 a b o u t : b l a n k                 :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e 5 1 F E 1 4 1 B 8 A 3 6 6 F 8 7 2 8 A C 1 1 D 7 2 B 0 8 C 7 7 0 - - >          8      0       8                                                                                                                   https://cleanup.pictures              P   $   c c d f 8 f c 6 - e 1 0 b - 4 d 7 9 - 8 5 5 4 - 1 2 1 3 6 6 0 f 6 e 8 e               P   $   0 7 d 5 8 4 d d - 1 4 3 8 - 4 0 e 2 - 8 f e 2 - a 7 f 9 6 c d 6 7 0 6 0 ˆ      €              h              Ø             Ğ      	«_ìõ 
+«_ìõ       (      x            è                                    ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = n c a 5 s w t k c c q w               :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e 2 1 D F D 4 7 7 6 B 3 7 B C 5 4 E 4 1 2 4 3 3 4 B 4 0 F 6 E E C - - >          8      0       8                                                                                                                  ˆ      €       ¨       H              ¸             °      «_ìõ «_ìõ ğ                         x                                          a b o u t : b l a n k                 ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = n c a 5 s w t k c c q w               n   3   < ! - - d y n a m i c F r a m e D 2 D B 7 C E 5 2 C 1 0 7 D 3 E 5 3 1 4 8 1 C E 1 8 0 C 9 9 9 0 - - >          8      0       8                                                                                                                  https://www.google.com                P   $   8 2 2 d a 6 8 5 - c 2 7 8 - 4 8 5 3 - b 9 c 4 - 1 8 c 5 d f c b 7 c f e               P   $   5 e 2 e a 7 5 9 - 0 0 9 f - 4 9 d 2 - a 7 2 6 - 9 6 e d e 4 f 8 1 4 9 d        https://cleanup.pictures              P   $   8 b 6 6 8 d 4 e - 1 2 2 3 - 4 f 5 c - 8 c 7 1 - e 6 7 0 9 1 6 8 4 1 7 2               P   $   7 0 8 5 f e 8 a - 0 e f a - 4 0 a 3 - b e 7 d - 7 4 6 b 0 f d 3 f 8 e 6 ˆ      €       ¨       ğ               `             X      _ eìõ ` eìõ ˜      °      °      È                                                 a b o u t : b l a n k                 :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e 5 C 1 6 4 5 6 1 D 0 C 1 E B 1 5 F C 6 0 F 3 9 D 6 9 6 7 C 1 C D - - >          8      0       8                                                                                                                   https://cleanup.pictures              P   $   a 2 0 2 e 7 d 0 - 4 6 0 8 - 4 0 5 2 - 8 7 4 3 - 4 5 3 9 7 1 c 5 0 c e d               P   $   5 8 4 9 6 f d 1 - d e 4 5 - 4 4 4 e - 9 6 8 a - 5 e c e 7 8 1 e 1 c 3 2 ˆ      €       ¨       ğ               `             X      D‘ğõ D‘ğõ ˜      °      °      È                                                 a b o u t : b l a n k                 :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e D E D 3 E E 6 2 A 2 4 6 2 A C 9 A 0 7 8 5 6 E 2 6 8 8 5 F 0 B 0 - - >          8      0       8                                                                                                                   https://cleanup.pictures              P   $   0 5 f 9 a e 7 5 - 8 c 1 d - 4 c 1 0 - 8 7 4 7 - e a f c 1 4 7 f 3 d 8 9               P   $   3 5 e e a c d a - 8 4 9 c - 4 9 9 2 - 8 4 e 2 - 8 5 d 0 7 3 0 2 5 a 3 2 ˆ      €              h              Ø             Ğ      Ü3·?òõ İ3·?òõ       (      x            è                                    ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 2 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = 9 r c 2 l d x k b i h 5               :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e D B 6 F A D 4 3 B 7 9 D 5 0 C 3 F 9 6 B C F 0 B D 3 7 6 E 1 9 F - - >          8      0       8                                                                                                                  ˆ      €       ¨       H              ¸             °      Ş3·?òõ ß3·?òõ ğ                         x                                          a b o u t : b l a n k                 ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 2 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = 9 r c 2 l d x k b i h 5               n   3   < ! - - d y n a m i c F r a m e 0 D E 4 3 5 D E 1 F 5 0 2 4 A 9 8 C F 1 6 7 E 7 6 8 9 2 5 3 3 7 - - >          8      0       8                                                                                                                  https://www.google.com                P   $   a 5 f 1 0 3 4 e - 5 b 8 0 - 4 f 7 8 - 9 f b 3 - 2 9 7 8 6 2 6 f 8 0 5 3               P   $   3 9 a f 2 6 b 8 - 3 4 2 d - 4 7 f d - b f f 1 - 8 8 e 0 8 5 1 9 9 8 6 2        https://cleanup.pictures              P   $   7 1 f 9 a f d c - d 0 e 3 - 4 b 2 b - 8 d 9 3 - 8 e 1 c e 1 c f 4 e d 5               P   $   5 0 f 1 4 e a 6 - 1 8 a 8 - 4 a 0 2 - b 8 9 f - b f b 9 1 4 6 e 5 3 2 5 ˆ      €              h              Ø             Ğ      ½¶¼]üõ ¾¶¼]üõ       (      x            è                                    ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = v m 3 7 r 0 a d 8 p z b               :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e E 0 B D 1 9 B 4 A 1 3 2 9 A C D B F 0 2 2 3 2 D C 7 A 2 6 C 2 4 - - >          8      0       8                                                                                                                  ˆ      €       ¨       H              ¸             °      ¿¶¼]üõ À¶¼]üõ ğ                         x                                          a b o u t : b l a n k                 ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = v m 3 7 r 0 a d 8 p z b               n   3   < ! - - d y n a m i c F r a m e 5 3 9 C 7 0 C C C E 7 2 E 6 0 2 1 F F 2 9 6 1 8 1 4 E 1 D 8 2 1 - - >          8      0       8                                                                                                                  https://www.google.com                P   $   b f 4 e 9 2 f d - 3 7 c a - 4 1 9 7 - a 1 b 7 - 6 c 3 2 1 7 b c 9 7 8 6               P   $   3 a b 0 4 d 6 7 - 0 2 d c - 4 f f f - 8 6 0 d - d 8 1 a 8 0 0 8 d e 3 6        https://cleanup.pictures              P   $   7 a e b d 5 d 8 - a 6 2 1 - 4 2 c a - b e b b - b 3 d 3 e b 4 7 6 5 9 3               P   $   1 c f 3 4 6 f 7 - f 3 2 2 - 4 6 6 e - b 4 c 8 - 5 8 9 3 0 1 1 1 a 7 7 6 ˆ      €       ¨       ğ               `             X      ÓçÎ`üõ ÔçÎ`üõ ˜      °      °      È                                                 a b o u t : b l a n k                 :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e 7 B 0 5 7 4 7 D D A C D 6 E F A E 7 C 3 6 8 1 3 7 3 6 3 5 F 0 5 - - >          8      0       8                                                                                                                   https://cleanup.pictures              P   $   8 9 d 9 2 4 c 7 - 5 f 8 f - 4 0 3 c - b f e f - 1 1 e 3 9 5 c 0 b f f 4               P   $   f 6 a 9 0 9 c b - 8 c 8 f - 4 5 2 f - a 9 f b - 6 6 3 e 1 0 9 b a b 9 a ˆ      €              h              Ø             Ğ      ©€ö ª€ö       (      x            è                                    ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = 4 o 5 e p 2 d 5 p 1 k w               :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e 3 7 7 C 4 2 1 3 F 0 7 5 8 E 8 8 D D 5 9 9 E C C 5 F C 7 0 3 8 7 - - >          8      0       8                                                                                                                  ˆ      €       ¨       H              ¸             °      «€ö ¬€ö ğ                         x                                          a b o u t : b l a n k                 ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = 4 o 5 e p 2 d 5 p 1 k w               n   3   < ! - - d y n a m i c F r a m e 0 B 6 0 2 2 A 0 1 A 1 1 6 E B D 0 D 8 F 3 9 D 6 5 F 8 6 B 7 0 E - - >          8      0       8                                                                                                                  https://www.google.com                P   $   b 9 5 1 6 7 d 2 - e 9 5 a - 4 6 a 9 - 9 d 6 7 - 6 d f f 5 9 3 e 1 1 9 a               P   $   4 e a 7 d 1 b d - e b 4 b - 4 4 d f - 8 e a c - e 2 f b f a d a a 0 2 c        https://cleanup.pictures              P   $   1 4 0 8 8 f 0 8 - d f c 7 - 4 c d 0 - 8 3 2 9 - 0 f a 7 0 b e c 0 c 0 f               P   $   d 8 d c 8 4 e 6 - 7 5 9 5 - 4 d c a - 9 0 9 1 - 3 4 3 1 8 d 6 3 c 4 c 2 ˆ      €       ¨       ğ               `             X      z> €ö {> €ö ˜      °      °      È                                                 a b o u t : b l a n k                 :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e B 1 B 3 0 4 3 2 9 6 3 7 4 E 3 D 8 D 3 6 C B E 9 0 0 7 1 6 C 7 3 - - >          8      0       8                                                                                                                   https://cleanup.pictures              P   $   7 a b 8 b c a 3 - d e 7 3 - 4 4 a c - 9 d 0 a - 1 4 b 1 1 a 7 e a 3 c d               P   $   c 5 f b b 0 e c - b f c a - 4 9 5 a - a 2 2 a - c 9 b 9 9 e 2 5 d 3 f d ˆ      €              h              Ø             Ğ      Ğp×!ö Ñp×!ö       (      x            è                                    ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n c h o r ? a r = 1 & k = 6 L f V r t 0 c A A A A A N b n z _ m f F P 4 u 4 t d 6 G A o 7 z I I P 3 q x B & c o = a H R 0 c H M 6 L y 9 j b G V h b n V w L n B p Y 3 R 1 c m V z O j Q 0 M w . . & h l = u k & v = N h 1 0 q R Q B 5 k 2 u c c 5 S C B L A Q 4 n A & s i z e = i n v i s i b l e & c b = s t w y i h o 7 1 m x j               :      h t t p s : / / c l e a n u p . p i c t u r e s /                     n   3   < ! - - d y n a m i c F r a m e 3 7 A 5 A 6 8 F D 6 1 9 4 B 3 F D B 8 C B B 1 4 B F A A 8 1 4 0 - - >          8      0       8                                                                                                                  ˆ      €       ¨       H              ¸             °      Òp×!ö Óp×!ö ğ                         x                                          a b o u t : b l a n k                 ˜  È   h t t p s : / / w w w . g o o g l e . c o m / r e c a p t c h a / a p i 2 / a n =Bo†D¬01:1/>o¼))*5	½  R  +Ê   ! % “@
+	LK°PX@'
+  i 		g _MN@+
+  i 		gM a MNY@'"" "%"%$#!! +"&5463233#2654&#"5!“AWWAAWWü~O”`Mşjá&,,&&,,hšSFERREFSşfÁıëı?ıéÏ31021113ÏBB  p9 àù 
+ $±dD@ I   W  _   O	+± D'667#53¬)5p9"^?&?   Â62÷ 
+ +±dD@  J   W   _ O   
+ 
+	+± D54673Â)56@%@!_ ÿÿ 9¦iÁ &{   { º    bm“­  &±dD@   W   _ O    	+± D5!b1m@@   O)ó  ±dD@   …v    	+± D'3×ˆgg)ÊÊ ÿÿ 9¦ ¯ÁÇ    “) úô  *±dD@  i   Y  a   Q	+± D"&5463"3ú,;;,):++;1  ú)bô  0±dD@%   i   Y   a Q    	+± D52654&#52ú-;;)11;++:  ×)¥ó  ±dD@   …v    	+± D73×ggˆ)ÊÊ   ×şòÿ¼  &±dD@   W   _ O    	+± D53×FşòÊÊ  ×S  &±dD@   W   _ O    	+± D53×FSÉÉ  “ø úÃ  "@  i   Y  a   Q+"&5463"3ú,;;,ø:++;1  úøbÃ  (@%   i   Y   a Q    +52654&#52ú-;;ø11;++: ÿt\ Œ¿   2±dD@'  W  _ O    	+± D53!53(dşèd\cccc  ÿt) ”'    =@:   ……W`P  
+	  	+7353353!Pes­dPd‰‰uPPPP ÿg@ ™    ;@8   gW_O  
+	  	+5!53353™2şÛdPdÃ@@ƒOOOO ÿË[ 5À  &±dD@   W   _ O    	+± D535j[ee ÿg@ ™   /@,   g W _O    +5!53™2ËdÃ@@ƒOO  ÿU) #ó  ±dD@   …v    	+± D'3#ˆgg)ÊÊ  ÿİ) «ó  ±dD@   …v    	+± D73#ggˆ)ÊÊ  ÿ) ¯B   4@1   €†   W   _ O    +5373cd$kgŒòPPÉÊÊ  ÿŸ) ´ó   2±dD@'  W  _ O    	+± D73#73(4XUÀ4YV)ÊÊÊÊ    JÁ  @ _   6N    	+53J¿¿  ÿd) œó  '±dD@ L   …v    	+± D73#'œn\nCYY)ÊÊŒŒ  ÿd) œó  '±dD@ L  …v    	+± D'373.nCYYCn)ÊÊ  ÿd) œB  
+ 3@0L†   gN  
+
+	  +53'3732d`nCYYCnòPPÉŸccŸ ÿ`&  ë  .±dD@#
+J   Y  a  Q  	+± D"&'73267FV<4,,4<W&fY@EE@Yf  ÿ†" z   9±dD@.  i  Y a  Q  	+± D"&54632'2654&#"4FF44FF4''''"F22DD22F2(''(  ÿŠ Ş1   B@?	L …  i  Y a  Q 
+ +"&5463273'2654&#"2DD2!DYwD2''''B10C
+	?e1B/&&&& ÿFK ºŞ  0±dD@%I   i Y a Q$"$#	+± D'6632327#"&'&&#"…5<0%35<0%2KAKKBJ  ÿ\% ¤    G@D 
+ g 	Y 		i aQ  	  +53353'6632327#"'&#"‹bRcş27)# *	26) ,"·PPPP’54244  ÿ\% ¤'   >@;   …… Y i bR  	  	+73'6632327#"'&#"!Pes“27)# *	26) ,"‰‰y54244 ÿ\% ¤   <@9   g Y i aQ  	  	+5!'6632327#"'&#"˜1şõ27)# *	26) ,"Ã@@54244 ÿhm ™­  &±dD@   W   _ O    	+± D5!˜1m@@  ÿg@ ™    :@7  g W _O  
+	  	+533535!ŒdPdşÛ2´OOOOt??  ÿh9 ™'   1@.   …… W `P    +'35!!seP¹1‰‰e@@  ÿh9 ™'   1@.   …… W `P    +735!!Pes¹1‰‰e@@  ÿ¢) kú  6±dD@+  L †   Y  a   Q    $'	+± D54>54#"'632 +'<06)	0%!  ÿL) aó   2±dD@'  W  _ O    	+± D'3#'3*UY3¿VX4)ÊÊÊÊ ÿ`&  ë  '±dD@ I   Y   a  Q%#	+± D'6632&&#"d<VFFW<4,,4&YggY?FF ÿÈ6 8ù 
+ +±dD@  J   W   _ O   
+ 
+	+± D546738)76?'C$[    ¯ Àh 
+ ±dD@ I  …   v	+± D'52655377:.XI¯$2< BR ÿËÿ= 5ÿ¢  &±dD@   W   _ O    	+± D535jÃee  ÿtÿE Œÿ¨   2±dD@'  W  _ O    	+± D53!53(dşèd»cccc ÿÈşï 8ÿ³ 
+ $±dD@ I   W  _   O	+± D'667#53)7pşï$[?'C  ÿ£ÿ> u   v±dD@ LK°PX@ p  j   Y  a  Q@ …  j   Y  a  QY@  	+± D"&'732654#"'736323!&
+:
+'0@Â
+1\=%!%/  ÿ}ÿ> > '  3±dD@( LJ   Y  a  Q  	+± D"&54673273<5. ' "Â7.)F'
++5 ÿ`ÿ)  ÿÆ  .±dD@#
+J   Y  a  Q  	+± D"&'73267FV<4,,4<W×QF,22,FQ ÿhÿ` ™ÿ   &±dD@   W   _ O    	+± D5!˜1 @@ ÿB ¿Y  &±dD@   W   _ O    	+± D5!¾}II  ÿ` ñ ¡Ú  ³ 2+''%x((ñF£E  ÿ?ÿÌ Á  ³ 2+'‡:H:4"1"ÿÿ n\†¿ İ ú  ÿÿ Å[/À à ú  ÿÿ O)ó â ú  ÿÿ ×)¥ó ã ú  ÿÿ ™)®ó å ú  ÿÿ ^)–ó ç ú  ÿÿ ^)–ó è ú  ÿÿ Z&šë ê ú  ÿÿ €"t ë ú  ÿÿ @K´Ş í ú  ÿÿ bm“­ ñ ú  ÿÿ ÿ>o  ı ú  ÿÿ wÿ>8 ' ş ú   ÿ3
+ ¿  )@&J  i   Y  a  Q$$$"	+'6632327#"&'&&#"˜5B1(65@2+7
+DHKCI ÿó‰A  Cµ LK°	PX@   p a   6N@  … a   6NY@    2	+'326553#"/(;.YNA‰<2< BV ÿt Œ‚   *@'  W  _ O    +53!53(dşèdcccc  ÿt ”    =@:   ……W`P  
+	  	+7353353!Pes­dPdwŠŠuPPPP ÿh ™Ü    ;@8   gW_O  
+	  	+5!53353˜1şÛdPd??…PPPP ÿÌ! 4†  @   W   _ O    +534h!ee ÿg ™Ü   /@,   g W _O    +5!53™2Ëd??…PP  ÿBı %ª  @   …v    +'3%™mvı­­  ÿÛı ¾ª  @   …v    +73%vm™ı­­  ÿœı ¾ù   4@1   €†   W   _ O    +5373dd%vm™©PP¬­­  ÿ ı âª   *@'  W  _ O    +73373`U_{N\_ı­­­­   Û SÁ  @ _   N    +53SÛææ  ÿXı ¨ª  @ L   …v    +73#'¨{Z{I__ı­­pp  ÿXı ¨ª  @ L  …v    +'373-{I__I{ı­pp­  ÿdı œ  
+ <@9L€„   W   _ O  
+
+	  +53'3732d`nCYYCnÇPPÊŸccŸ  ÿQø ¯©  &@#
+J   Y  a  Q  +"&'73267I`<<22=<_ø[N6;;6N[  ÿ†ô zâ   1@.  i  Y a  Q  +"&54632'2654&#"4FF44FF4''''ôF22DD22F2(''(  ÿŠô Ş   B@?L …  i  Y a  Q 
+	 +"&5463273'2654&#"2DD2$DYwD2''''ôD01B?f 0D/'(('  ÿ)
+ ×  )@&J  i   Y  a  Q$$$"+'6632327#"&'&&#"¢5D40 !95E33"8
+DHKCI ÿ\ş ¤à     L@I 
+ g Y	 i aQ	   	   +53353"&'&&#"'6632327ŒdPdJ#	27)!
+*	26PPPP‘	44	245 ÿ\ş ¤   C@@   …… Y i b	R  	  
++73"&'&&#"'6632327!Pes!#	27)!
+*	26wŠŠx	44	245  ÿ\ş ¤Ü   A@>   g Y i a	Q  	  
++5!"&'&&#"'6632327™2W#	27)!
+*	26??	44	245 ÿY+ ¨j  @   W   _ O    +5!§O+??  ÿh ™Ü    :@7  g W _O  
+	  	+533535!ŒdPdşÜ1OOOOt@@  ÿh ™   1@.   …… W `P    +'35!!seP¹1wŠŠd??  ÿh ™   1@.   …… W `P    +735!!Pes¹1wŠŠd??  ÿ¢ı k°  R@
+ 
+ LK°	PX@  q   Y  a   Q@ †   Y  a   QY@    #'+54>54#"'632!+(</6ı/! ÿı aª   *@'  W  _ O    +'3#'3'z_UÁ_[ı­­­­ ÿQø ¯©  @I   Y   a  Q%#+'6632&&#"s<`IJ_<=22<øN[[N6<<  ÿÈı 8Á 
+ #@  J   W   _ O   
+ 
++546738)7ı?'C$[    ‰ ÁA 
+ @ I  …    N+'56655377;-YI‰#2; BQ  ÿ@? ÀŒ  @   W   _ O    +5!À€?MM  ÿ/ ğ Ñ  ³ 2+''%©(z(ğFÚF  şıÿËö  ³ 2+'7777¾E::E;şç5(e1á(d(e1ş ) ÿ). Øw  @   W   _ O    +5!×¯.II  ÿÅY ;Â  @ _   6N    	+53;vYii  ÿFK ­Ş  (@%I   i Y a Q$"$#	+'6632327#"&'&&#"„6;,"05:+$0KCIKDH     JÁ  @ _   6N    	+53J­­  ÿo Ù   @   W   _ O    +'5!‘!Ù@@ ÿO& ²À  &@#
+J   Y  a  Q  +"&'73267A]7;-.95^&EB1.,2G@ ÿ>ø Ä“  &@#
+J   Y  a  Q  +"&'73267He7C44A6gøFA2-,2FA ÿ]& £'   :@7 L   …… Y bR  
+  +73"&'73267'PesFW570075W‰‰xQF.33.FQ  ÿ]& £'   :@7 L   …… Y bR  
+  +'3"&'73267seP'FW570075W‰‰xQF.33.FQ  ÿ]& £2  $ t@ "!
+ LK°PX@!  r    i Y aQ@"  €    i Y aQY@  $$  %&+4>54#"'6632"&'73267(,,0FW570075W)	
+xQF.33.FQ  ÿ\& ¤2  % @@=#" L  i   i Y aQ %%$"$"	+'6632327#"&'&&#""&'73267r27)"
+*	26)#
+l>W5V,75WÅ45	244
+
+¹;4@"3< ÿd)'  
+ Yµ	LK°2PX@   …€„ N@   … ……vY@  
+
+  +7373#'eUZrşÂn\nCYY‘––h¢¢gg  ÿd) Ê'  
+ cµ	LK°2PX@€   c N@"   € ~   W   _ OY@  
+
+  +'373#'ŒqZUşšn\nCYY‘––h¢¢gg  ÿd) ç+   ›@ 
+ LK°PX@ r„    i NK°2PX@€„    i N@&   € ~„   Y  a   QYY@    $&+4>54#"'63273#'j(%7,0ş¿n\nCYY‘*h¢¢gg ÿ\) ¤2   mµLK°PX@	†  i   j N@(   €	„  Y  i  b  RY@$"$"
++'6632327#"&'&&#"73#'r27)"
+*	26)#
+0n\nBZZÅ45	244
+
+¶„„NN ÿ]ø £ú   8@5 L   …… Y bR  
+  +73"&'73267'PesFW570075WpŠŠxQG-44-GQ  ÿ]ø £ú   8@5 L   …… Y bR  
+  +'3"&'73267seP'FW570075WpŠŠxQG-44-GQ  ÿ]ø £  # r@ !
+ LK°PX@!  r    i Y aQ@"  €    i Y aQY@  ##  $&+4>54#"'632"&'73267(%7,0FW570075Wp*xQG-44-FR ÿ\ø ¤  % @@=#" L  i   i Y aQ %%$"$"	+'6632327#"&'&&#""&'73267r27)"
+*	26)#
+l>W5V,75W˜44	245
+
+º<4A"4< ÿdıü  
+ 3@0	L   … ……v  
+
+  +7373#'eUZrşÂn\nCYYf––i¢¢gg  ÿdı Êü  
+ ?@<	L   € ~   W   _ O  
+
+  +'373#'ŒqZUşšn\nCYYf––i¢¢gg  ÿdı ç    ~@ 
+ LK°PX@%   € p„   Y  a   Q@&   € ~„   Y  a   QY@    %&+4>54#"'663273#'j(,,0ş¿n\nCYYf*		i¢¢gg ÿ\ı ¤   B@?L   €	„  Y  i  b  R$"$"
++'6632327#"&'&&#"73#'r27)"
+*	26)#
+0n\n@\Zš54
+244	·……OO      K L  O   $ N    Š     * Y e q }  ™ ¥ ± ½ É Õ å ñ ı	!-9EQ]iu™Şê2¢êö*6fr~Š’	!O[gs›§·ÃÏÛçóÿ#/;GS_k”æòş
+".Y›§³¿Øäğü ,8DP\ht€Œ²¾ìø".:FWco{Œ¾Êòş	
+		"	.	:		‹	—	£	å	ñ	ı
+	
+
+%
+1
+=
+I
+U
+a
+m
+y
+…
+‘
+
+©
+µ
+Á
+Í
+Ù
+å
+ñ
+ı	!-9EQ]iu¼ï$q³¿Ë×ãïû`lx„œ¨´ÀÌÜ\®ÏÛçóÿDP\ht€Œ˜¤°¼ÈÔàìø(4@Lp ¬¸ÄĞ (4@LXdp»ÇÓß$0<PÉÕáíı	!-9EUamy…‘©µÁÍÙåñı	õfã)5AM]iuÚ>JÅÑNZf¶ÂÎÚêö*6BNZfr~Š–¢®ºÆ)`ô $0<ĞIUamy¢»ÆÑÜçòı)4?NY Òİ	!Jy„œ­¹ÅÑã>Jš¦²¾ÊÖ ; G S _ ¡ ­ ¹ Å Ñ á í ù!!!!)!5!A!M!Y!e!q!}!‰!•!¡!­!¹!Å!Ñ!İ!é"I"U"a"m"y"…#,##Ş$B$…$‘$$¨$´$¿$Ë$Ö%*%6%B%N%Z%f%r%~%Š%–%¦&)&l&}&‰&•&¡&³&¿&Ë''#'4'E'V'g'x'„'•'¦'²'¾'Ê'Ö'â'î'ÿ((!(2(>(O(`(q(”(Ä(Ğ(Ü(è(ô))D)P)\)h)t)€)Œ)Ş)ê)ö**/*;*G*S*_*g*z*İ*é*õ++++)+5+A+M+Y+i+u+++™+¥+±+½+É+Õ+á+í+ù,,,,6,A,M,X,i,t,€,‹,,é,õ----‰-Ä-Ì...+.7.[.°.¸.Ä.Ğ/ /}/¥/±/½0+0c0o0œ0¤0¬0´0×0ß0ç0ï11!1Á1É22>2h2®2ë33U3”3Ú44$4x4Ì4Ô4à4è5'5•5Ú636t6Â6Ê77;7‘88~8Ô99a99è::Y:Ñ;+;k;s;…;Ğ<<q<·<î=F=Æ=Ò=Ú=æ>7>‡>Ô??r?Å?Ñ?İ?å?ñ?ù@@@@j@v@‚@@à@ì@øAAAA(AdApA¯AëAüBYB”BœB¤BåC0CjC»CÇCÏC×CßCëC÷CÿDSDD¼DÈDüE8E@ELEXE¥FF*F6FBF™FÏFÛGG6G^GfGˆGG˜G¹GÁGÍHDHLHH¬HÕIICIxI²IóJ:J~J†JØK)K1K<KDKLK·KşLJLLÜLäM%MQM”MëNIN‡NÍOOOO€O­OÙPNP”P¿PåQQJQ~Q¼QşRRCRÃRÏR×RãS SUSŒS½SøT2T>TJTRT^TfTrT~TTÙTåTñTıUOU[UgUsUU‹U—U¾UÊVV?VQV®VèVğVøW WzWÄWøX X'X/X7XCXOX|X²XûY:Y‚Y¾YçZ%Z„Z»[[m[’[ö\T\v\¸\á] ]€]¹^^m^’^ö_W_y__‰_‘_™_¡_©_±_¹_Á_É`#`L`Š`æaaiaÁaãbIb¡b°b¿bÎbİbìbûc
+cc(c7cFcUcdcsc‚c‘c c¯c¾cÍcŞcîcşdd&dGdod d°dÙeeRe¥eÀeìf$fvf‡f™f´fÑfîg@gg²gÕgğgøhh.hIhdhlh‹h¬h¸hÄhĞhøii%i1iEiYiei€i—i­i­i­i­i­i­i­i­i­iüj]jŞkokælqlúm?mvmÎn_nœooYo•oôpPp¥pîqBq‡qºqùrdr¥rÀröss1sLshs¡sÌttt1t^t‹tÂu;uƒu¥uËv8v¥vØwwLwrwzw§wøxQxÎyvy¡z$zò{‡{¸|?|Í}^}§}ï~
+~~/~Y~~İ‚€
+€2€^€j€Š€§€¯€Ü)Hg¼ç‚‚R‚q‚›‚¸‚Õƒƒ.ƒGƒlƒ‘ƒÁƒó„5„‚„Â……_…¨…È…ı†)†U†•†Á†ï‡‡>‡]‡‡‡¯ˆˆLˆ}ˆœˆ¼ˆÍˆŞˆçˆğˆù‰‰‰‰‰&‰/‰8‰A‰J‰S‰‰É‰ğŠ&Š[ŠvŠ Š¹ŠÒŠÿ‹'‹@‹a‹‚‹·‹åŒ#ŒoŒ«W§Ãø$PœÄî7Sd‚·ó'UƒÂ‘‘t‘Ğ’’_’Ú“D“‚“À”0”Œ”¾”ö•d•¹•¹    ‰KZi2_<õ è    Û¥h    ÛˆĞşzşï          ô 2à à à à à à à à à à à à à à à à à à à à à à à à à à à ÚÿçÚÿçª R1  ¤ :¤ :¤ :¤ :¤ :¤ :¤ :ï R5 Rïÿûï Rïÿûï Rw  ï RÄ RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM RM R* RÛ :Û :Û :Û :Û :Û :Û :ÿ R' ÿ Rÿ Rÿ R R^ R Rÿ×ÿŞÿ¥ÿúÿú R QÿÈ (ÿ×ÿß #ÿ¯RÿöRÿöƒ Rƒ R( R¢ R( R( R( R( R( R R( R(ÿâ] T] Tç R: Rç Rç Rç Rç Rç Rç RŞ Rç Rç R : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : : :‚ Rƒ R :¥ R¥ R¥ R¥ R¥ R¥ R¥ R¥ Rn 0n 0n 0n 0n 0n 0n 0n 0n 0n 0n 0Ğ R :c c c c c c c İ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ Mİ M¼ÿúS S S S S ” ^ÿí^ÿí^ÿí^ÿí^ÿí^ÿí^ÿíhÿí^ÿí^ÿí^ÿíT 0T 0T 0T 0T 0^ R 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1_ 1_ 1O GO GÓ *Ó *Ó *Ó *Ó *Ó *Ó *O *9 *O *O +O *O *O *# * * * * * * * * * * * * * * * * * * * * * * * * &ø ø [ R *R *R *R *R *R *R *R *@ G@ÿí@ G@ G@ G@ G ó > ó G ó G óÿÙ óÿİ óÿÅ óÿí óÿí ó D ó > óÿÎ ó  óÿÙ óÿá ó  óÿ¿ öÿÉ öÿÉ öÿÉ G G G G2 G2 G2 G2 GW G2 G) G2 %2ÿãb Ib I@ G@ G@ÿí@ G@ G@ G@ G@ G6 G@ G@ G5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 *5 * *O GO GO *u Gu Gu @u Bu (u Eu <uÿâä +ä +ä +ä +ä +ä +ä +ä +ä +ä +ä +x Gm m m m m m m m 9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D9 D N N N N N         0    Ô 4Ô 4Ô 4Ô 4Ô 4Ğ Ré GO *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O *O * ò G ò G ò G ò A7 G ò Dè G òÿá/ÿøF  ^ Ré >M L Y à š Rª R& R& R& R M RM RM Rİ } #ç Rç Rç Rü R R Rê ] Tÿ R :ù R‚ R¤ :c ‹ÿù‹ÿù_ :” ­ 8! R% RL Rù Rš R l Rk  Rn 0¤ :¤ ' RÿúRÿöX  R§ #W İÿìÓ  :óÿúM « Ré } #² R¹ R¸ÿô ( Rª R# R8 :¤ :L ^ÿí^ÿí¶ ¥ × 8­ 8­ R× R­ ­  Rİ « Rÿ ÿ R R¹ 8r Tà à ÚÿçM R : :İ } #} #ç Rç R : : :¤ '‹ÿù‹ÿù‹ÿù­ 8& Rl RM ” ” } 9ê  :S Ó  ‚ RÿÿĞ  R* R} #¤ :} #¤ :% 7A 0, L½ L½ L½ L\ $ 0$ 0$ 0#ÿşû  Q LQ LQ Ll L L LI Ÿ LT LA 0Q LZ Mß 0É  
+ 
+. 0" 2 8a L. LI LQ L  Lo ï Lj w Lğ 1õ 0ô  ş D şÿóÿÏKÿó L% #Lÿóp #ÿşA 01 
+Ó 2 LPÿşû  F LK Lÿól p Lï Lm Lš 0ß 0É 	 	 2 Å M 8I 8K MZ Mƒ ƒ  ş M#ÿş* Ld T Lp L2 8º L% 7% 7j 7$ 0% ,% ,#ÿşû  ø Q LQ LA 0A 0A 0ô  
+ 
+ 
+2 8½ Lï LÓ " " û *I Z 0Z p Z LTÿÊd  ş M½ Lû  ß 0û  ß 0à *X ) '9 DY X 0X nX :X /X /X JX :X >X ,X /X zX !X _X :X -X )X ;X 0X :X .X &X W| | <| "| | | )| #| (| | | | <| "| | | )| #| (| | | | <| "| | | )| #| (| | | | <| "| | | )| #| (| |  ´ÿi³ <… <…  í ; í ; í ; í ;É ; í 8 í 8Â Â  í ; QÃ  X ')ÿí)ÿí KÿéP eP #r .r 
+M lM 
+­ F­ Fô  è  X Fè  ­ Fô  í ;  ;  ;  ; í ; í ;Ñ =Ñ , = ,¡ 9 æ 9X ÚY ÖX   d   í       È        X 8X WX 8X !X (X 9X X %X !X .X >X X .X ?X 2X X X X X X .X X X XÿöX ñX bX …X 8X 8X BX 8X 8X 8X 8X 8X 8X 8X 8X 8X 8X 8X /X X (X pX 'X X 8X )X X VX 2© 26 2X /’ ´ :Ä <] ), '/ ./ .ª 
+w # æ 9¡ 9 W WM X cM ~ 2B RP pô Â¡ 9ô bô O æ 9ô “ô úô ×ô ×ô ×ô “ô ú  ÿt  ÿt  ÿg  ÿË  ÿg  ÿU  ÿİ  ÿ  ÿŸ      ÿd  ÿd  ÿd  ÿ`  ÿ†  ÿŠ  ÿF  ÿ\  ÿ\  ÿ\  ÿh  ÿg  ÿh  ÿh  ÿ¢  ÿL  ÿ`  ÿÈ      ÿË  ÿt  ÿÈ  ÿ£  ÿ}  ÿ`  ÿh  ÿB  ÿ`  ÿ?ô nô Åô Oô ×ô ™ô ^ô ^ô Zô €ô @ô bô ô w  ÿ3ÿóÿtÿtÿhÿÌÿgÿBÿÛÿœÿ   ÿXÿXÿdÿQÿ†ÿŠÿ)ÿ\ÿ\ÿ\ÿYÿhÿhÿhÿ¢ÿÿQÿÈ  ÿ@ÿ/şıÿ)ÿÅÿF  ÿoÿOÿ>ÿ]ÿ]ÿ]ÿ\ÿdÿdÿdÿ\ÿ]ÿ]ÿ]ÿ\ÿdÿdÿdÿ\       óşŸ  6şzş{                MX   ŠX   KŠX  ^ '%              ÿP  K        NONE À  ûóşŸ  NG  —    èÁ                    
+–         / 9 ~2~Š’¡°´ÎÔçëï(-37SWY’¼¿Ìİ$(.158”£©¼À#:C_cku¥ÿ)/	!%+/7;IS[io{…“—ù      " & 0 3 : D R p y ‰ ¡ ¤ § © ® ² µ º ½!!!"!&!.""""""""+"H"`"e%Ê'éøÿûÿÿ        0 :  4Š’ ¯³ÄÔåéïú&*07SWY’¹¾ÆØ #&.157”£©¼À $;DbjrŠ¨$. $*.6:BLZ^lx€’—         & 0 2 9 D R p t € ¡ £ ¦ © « ± ´ ¸ ¼!!!"!&!.""""""""+"H"`"d%Ê'èøÿûÿÿJx  à      şş£ÿ+û        ÿæ    ÿI  ÿ&      ÿ"ş¼şÅşİş¥             ç æ Ş × Ö Ñ Ï Ì ËÿwÿiÿdÿRÿO  ş
+  şf                                                          ãâ    ã^        ã0ãŒã•ã?ã
+ãNâÔâÔâ¦âç  âïâô          â¹â¹â£ââ á¸  á§  áŒ  á”áˆáeáG  İóÛ”
+¿        ¤È        TVXZ  lp  r  ²¶¼          ¸¾ÀÌÖŞ                            Î     *`bdj NTZdfhntvxz|~€‚ ¶¼ÂÌÎ    Ì~  „Š’                    ‚    €†ˆŠ            „  „  „        ~          Wz^Š»À{bc]¢ShR_TU©¦¨Y¿     ' 0 H I P U e g i s u € £ ¥ ¦ ® » Â Ù Ú ß à ëf`g°o ñ9:BHX[_hju˜š›£¯·ÏĞÕÖádÉe®‚X‡š‰ÊÂÃv¯iÄÆ¬FG¹Á[EwPOQZ   
+     # @ 1 6 = _ W Y [ )    ƒ  Š¤ œ É Ã Å Ç á ¤® ò ú	. $+RJLNtƒvx“¥‘¿¸»½×™Ù   ó  ! % & " * + C1 2! >, F4 3" L= J; N? M> SF QC dW bU XK cV ]I V fZ h]^ k` mb la nc rg wk yn xml |q ˜ ‚w –‹ ¢— §œ © ¨ ¯¤ ´© ³¨ ±¦ ¾² ½± ¼° ×Í ÓÉ Ä¹ ÖÌ ÑÇ ÕË ÜÒ âØ ã ìâ îä íã … ËÁ çİ ( / j pe v }r 	 ùA K<\ › 
+  ’    <* B0 ZM aT ‰~ —Œ ªŸ ¬¡ Æ¼ ÒÈ µª ¿³  4 ‹€ ¡– Œ éßÕÒÑĞ×Ö	
+ÚÓØÔÙâãçíñêàİõëåèD<;>?@9:A$!.5 #/02134786=BC‘’•–™š›œŸ«¬®­¯°³´²¹¾¿—˜À“¸·º»¼µ¶½ ª±EÁFÂGÃHÄ"…†”IÅJÆKÇLÈMÉNÊOËPÌQÍRÎTĞUÑVÒWÓXÔYÕZÖ[×\Ø]Ù_Û`ÜabŞcßdàeáfâgãhäİiåjækçlèménêoëpìqírîsïtğuñvòwóxôyõzö{÷|ø}ù~úû€üı‚şƒÿ„ SÏ^Ú‡ˆ $ , . E3 D2 5# O@ TG RD \O od qf ti zo {p ~s Ÿ”  • š ™ «  ­¢ ¶« ·¬ °¥ ²§ ¸­ Àµ Á¶ ØÎ ÔÊ ŞÔ ÛÑ İÓ äÚ ïå    û  ı  ş  ÿ  ü  ô  ö  ÷  ø  õ ?- A/ G5 7% 9' :( ;) 8& `S ^Q ‚ „ „y †{ ‡| ˆ} …z ‘† “ˆ ”‰ •Š ’‡ È¾ ÊÀ ÌÂ ÎÄ ÏÅ ĞÆ ÍÃ æÜ åÛ èŞ êà~€ƒ„ljkmtuprsqËÍ\’‹Œ‘œ—†›™“”˜±µ·£Ÿ¸«ª  ° , ° UXEY  K¸ QK°SZX°4°(Y`f ŠUX°%a¹  cc#b!!° Y° C#D²  C`B-°,° `f-°,#!#!-°, d³ BC°C ``B±CB±%C°CTx °#°CCad°Px²C`B°!e!°CC²B °C#B²C`B#° PXeY²C`B-°,°+°CX#!#!°CC#° PXeY d °ÀP°&Z²(CEcE°EX!°%YR[X!#!ŠX °PPX!°@Y °8PX!°8YY ±CEcEad°(PX!±CEcE °0PX!°0Y °ÀPX f ŠŠa °
+PX` ° PX!°
+` °6PX!°6``YYY°%°Cc° RX° K°
+PX!°CK°PX!°Ka¸ c°Cc¸ bYYdaY°+YY#° PXeYY d°C#BY-°, E °%ad °CPX°#B°#B!!Y°`-°,#!#!°+ d±bB °#B°EX±CEc±C°`Ec°*! °C Š Š°+±0%°&QX`PaRYX#Y!Y °@SX°+!°@Y#° PXeY-°,°	C+²  C`B-°,°	#B# ° #Ba°bf°c°`°*-°	,  E °Cc¸ b ° PX°@`Yf°c`D°`-°
+,²	 CEB*!²  C`B-°,° C#D²  C`B-°,  E °+#° C°%` EŠ#a d ° PX!° °0PX° °@YY#° PXeY°%#aDD°`-°,  E °+#° C°%` EŠ#a d°$PX° °@Y#° PXeY°%#aDD°`-°, ° #B³ EPX!#!Y*!-°,±E°daD-°,°`  °CJ° PX °#BY°CJ° RX °#BY-°, °bf°c ¸ cŠ#a°C` Š` °#B#-°,KTX±dDY$°e#x-°,KQXKSX±dDY!Y$°e#x-°,± CUX±C°aB°+Y° C°%B±%B±%B°# °%PX± C`°%BŠŠ Š#a°*!#°a Š#a°*!± C`°%B°%a°*!Y°CG°CG`°b ° PX°@`Yf°c °Cc¸ b ° PX°@`Yf°c`±  #D°C° >²C`B-°, ± ETX°#B E°#B°#°`B `·   BBBŠ` °#B°a±+°‹+"Y-°,± +-°,±+-°,±+-°,±+-°,±+-°,±+-°,±+-°,±+-°,±+-°,±	+-°+,# °bf°c°`KTX# .°]!!Y-°,,# °bf°c°`KTX# .°q!!Y-°-,# °bf°c°&`KTX# .°r!!Y-° , °+± ETX°#B E°#B°#°`B `°aµ  BBŠ`±+°‹+"Y-°!,±  +-°",± +-°#,± +-°$,± +-°%,± +-°&,± +-°',± +-°(,± +-°),± +-°*,±	 +-°., <°`-°/, `°` C#°`C°%a°`°.*!-°0,°/+°/*-°1,  G  °Cc¸ b ° PX°@`Yf°c`#a8# ŠUX G  °Cc¸ b ° PX°@`Yf°c`#a8!Y-°2, ± ETX±EB°°1*±EX0Y"Y-°3, °+± ETX±EB°°1*±EX0Y"Y-°4, 5°`-°5, ±EB°Ec¸ b ° PX°@`Yf°c°+°Cc¸ b ° PX°@`Yf°c°+° ´     D>#8±4*!-°6, < G °Cc¸ b ° PX°@`Yf°c`° Ca8-°7,.<-°8, < G °Cc¸ b ° PX°@`Yf°c`° Ca°Cc8-°9,± % . G° #B°%IŠŠG#G#a Xb!Y°#B²8*-°:,° °#B°%°%G#G#a± B°C+eŠ.#  <Š8-°;,° °#B°%°% .G#G#a °#B± B°C+ °`PX °@QX³  ³&YBB# °
+C Š#G#G#a#F`°C°b ° PX°@`Yf°c` °+ ŠŠa °C`d#°CadPX°Ca°C`Y°%°b ° PX°@`Yf°ca#  °&#Fa8#°
+CF°%°
+CG#G#a` °C°b ° PX°@`Yf°c`# °+#°C`°+°%a°%°b ° PX°@`Yf°c°&a °%`d#°%`dPX!#!Y#  °&#Fa8Y-°<,° °#B   °& .G#G#a#<8-°=,° °#B °
+#B   F#G°+#a8-°>,° °#B°%°%G#G#a° TX. <#!°%°%G#G#a °%°%G#G#a°%°%I°%a¹  cc# Xb!Yc¸ b ° PX°@`Yf°c`#.#  <Š8#!Y-°?,° °#B °
+C .G#G#a `° `f°b ° PX°@`Yf°c#  <Š8-°@,# .F°%F°CXPRYX <Y.±0+-°A,# .F°%F°CXRPYX <Y.±0+-°B,# .F°%F°CXPRYX <Y# .F°%F°CXRPYX <Y.±0+-°C,°:+# .F°%F°CXPRYX <Y.±0+-°D,°;+Š  <°#BŠ8# .F°%F°CXPRYX <Y.±0+°C.°0+-°E,° °%°&   F#Ga°#B.G#G#a°C+# < .#8±0+-°F,±
+%B° °%°% .G#G#a °#B± B°C+ °`PX °@QX³  ³&YBB# G°C°b ° PX°@`Yf°c` °+ ŠŠa °C`d#°CadPX°Ca°C`Y°%°b ° PX°@`Yf°ca°%Fa8# <#8!  F#G°+#a8!Y±0+-°G,± :+.±0+-°H,± ;+!#  <°#B#8±0+°C.°0+-°I,°  G° #B² .°6*-°J,°  G° #B² .°6*-°K,± °7*-°L,°9*-°M,° E# . FŠ#a8±0+-°N,°
+#B°M+-°O,²  F+-°P,² F+-°Q,² F+-°R,²F+-°S,²  G+-°T,² G+-°U,² G+-°V,²G+-°W,³   C+-°X,³  C+-°Y,³  C+-°Z,³ C+-°[,³  C+-°\,³ C+-°],³ C+-°^,³C+-°_,²  E+-°`,² E+-°a,² E+-°b,²E+-°c,²  H+-°d,² H+-°e,² H+-°f,²H+-°g,³   D+-°h,³  D+-°i,³  D+-°j,³ D+-°k,³  D+-°l,³ D+-°m,³ D+-°n,³D+-°o,± <+.±0+-°p,± <+°@+-°q,± <+°A+-°r,° ± <+°B+-°s,±<+°@+-°t,±<+°A+-°u,° ±<+°B+-°v,± =+.±0+-°w,± =+°@+-°x,± =+°A+-°y,± =+°B+-°z,±=+°@+-°{,±=+°A+-°|,±=+°B+-°},± >+.±0+-°~,± >+°@+-°,± >+°A+-°€,± >+°B+-°,±>+°@+-°‚,±>+°A+-°ƒ,±>+°B+-°„,± ?+.±0+-°…,± ?+°@+-°†,± ?+°A+-°‡,± ?+°B+-°ˆ,±?+°@+-°‰,±?+°A+-°Š,±?+°B+-°‹,² EPX°²EX#!!YYB+°e°$Px±EX0Y- K¸ ÈRX±Y°¹  cp± B¶  ?/! *± B@LD4&
+*± B@PH<-
+*± B¾@@@	À@  *± B¾ @ @ @ @ @  *¹   D±$ˆQX°@ˆX¹  dD±(ˆQX¸ ˆX¹   DY±'ˆQXº€ @ˆcTX¹   DYYYYY@NF6(*¸ÿ…°± D³d DD                                               f f N NÁ  è  ÿLÊÿ÷ñÿ÷ÿL    Ê  èÿùÿLÊ  èÿùÿL f f N NÁ  Áè  ÿLÁÿ÷Áñÿ÷ÿC Q Q @ @§  «ÿü Q Q @ @ÁÆ    º  	   ²    	  ( ²  	   Ú  	  < è  	  ( ²  	  F$  	  &j  	    	 	   	  2¨  	  2¨  	  Ú  	  4ú  	  .  	  D C o p y r i g h t   2 0 1 6   T h e   N u n i t o   S a n s   P r o j e c t   A u t h o r s   ( h t t p s : / / g i t h u b . c o m / F o n t h a u s e n / N u n i t o S a n s ) N u n i t o   S a n s   S e m i B o l d R e g u l a r 3 . 0 0 6 ; N O N E ; N u n i t o S a n s - S e m i B o l d V e r s i o n   3 . 0 0 6 ;   t t f a u t o h i n t   ( v 1 . 8 . 3 ) N u n i t o S a n s - S e m i B o l d V e r n o n   A d a m s h t t p : / / w w w . s a n s o x y g e n . c o m T h i s   F o n t   S o f t w a r e   i s   l i c e n s e d   u n d e r   t h e   S I L   O p e n   F o n t   L i c e n s e ,   V e r s i o n   1 . 1 .   T h i s   l i c e n s e   i s   a v a i l a b l e   w i t h   a   F A Q   a t :   h t t p : / / s c r i p t s . s i l . o r g / O F L h t t p : / / s c r i p t s . s i l . o r g / O F L N u n i t o   S a n s S e m i B o l d         ÿ¬ '                    K   $ É Ç	
+ b ­ c ®  % & ı ÿ d ' é ! ( e"#$% È&'()*+ Ê,- Ë./01234 ) * ø56789 +:;<= ,> Ì? Í@ ÎA úB ÏCDEFG -H .I /JKLMNOPQ â 0R 1STUVWXYZ[ f 2 Ğ\ Ñ]^_`ab gcde Ófghijklmnopqr ‘s ¯tuv ° 3 í 4 5wxyz{|} 6~ ä€ û‚ƒ„…†‡ 7ˆ‰Š‹Œ 8 Ô Õ h Ö‘’“”•–—˜™š›œŸ 9 : ¡¢£ ; < ë¤ »¥¦§¨©ª« =¬ æ­®¯ D i°±²³´µ¶ k·¸¹º»¼ l½¾ j¿ÀÁÂ nÃ m  Ä EÅ F ş  oÆÇÈ G êÉÊËÌÍ H pÎÏĞ rÑÒÓÔÕÖ s×Ø qÙÚÛÜİŞßàáâ I J ùãäåæçè Kéêëìí L × tî vï wğñò uóôõö÷ Møù Núûü Oışÿ  ã P Q	
+ x R y { | z !"#$ ¡% }&'( ± S î T U)*+,-./ V01 å2 ü34567 ‰ W89:;<=> X ~?@ €A B CDEFGHIJKLMNOPQ Y ZRSTU [ \ ìV ºWXYZ[\] ]^ ç_`abcdefghijklmnopqrstuvwxyz{|}~€‚ƒ„…† À Á‡ˆ‰  Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹º»¼½¾¿ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏĞÑÒÓÔÕÖ×ØÙÚÛÜİŞßàáâãäåæçèéêëìíîïğñòóôõö÷øùúûüışÿ 	
+ !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~€‚ƒ„… ›          †‡ˆ‰Š‹Œ‘’“”•–—˜™š›œŸ ¡¢£¤¥¦§¨©ª«¬­®¯°±²³´µ¶·¸¹ ¼ ô õ ö     «  £ " ¢ Ã ‡    ?º   ^ ` > @ » ² ³¼½¾ B Ä Å ´ µ ¶ · © ª ¾ ¿  
+¿ÀÁÂÃ ÄÅÆÇÈ „É ½ ÊË ¦ ÷ÌÍÎÏĞÑÒÓÔÕÖ …×ØÙ –ÚÛÜ  ï ğ ¸    !  • ” “ § a ¤ Aİ ’ œŞß š ™ ¥à ˜  Æ ¹á # 	 ˆ † ‹ Š Œ ƒâã _ è ‚ä Âåæçèéêëìíîïğñòóôõö÷øùúûüışÿ 	
+  Ü C  ß Ø á Û İ Ù Ú Ş à !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTAbreveuni1EAEuni1EB6uni1EB0uni1EB2uni1EB4uni01CDuni1EA4uni1EACuni1EA6uni1EA8uni1EAAuni0200uni0226uni1EA0uni1EA2uni0202AmacronAogonek
+AringacuteAEacuteuni0181uni1E08Ccircumflex
+Cdotaccentuni01C4DcaronDcroatuni1E0Cuni018Auni1E0Euni01C5EbreveEcaronuni0228uni1E1Cuni1EBEuni1EC6uni1EC0uni1EC2uni1EC4uni0204
+Edotaccentuni1EB8uni1EBAuni0206Emacronuni1E16uni1E14Eogonekuni1EBCGcaronGcircumflexuni0122
+Gdotaccentuni1E20Hbaruni1E2AHcircumflexuni1E24IJIbreveuni0208uni1E2Euni1ECAuni1EC8uni020AImacronIogonekItildeJcircumflexuni0136uni01C7LacuteLcaronuni013BLdotuni1E36uni01C8uni1E3Auni1E42uni01CANacuteNcaronuni0145uni1E44uni1E46Enguni01CBuni1E48Obreveuni1ED0uni1ED8uni1ED2uni1ED4uni1ED6uni020Cuni022Auni0230uni1ECCuni1ECEOhornuni1EDAuni1EE2uni1EDCuni1EDEuni1EE0Ohungarumlautuni020EOmacronuni1E52uni1E50uni01EAOslashacuteuni1E4Cuni1E4Euni022CRacuteRcaronuni0156uni0210uni1E5Auni0212uni1E5ESacuteuni1E64uni1E66Scircumflexuni0218uni1E60uni1E62uni1E68uni1E9Euni018FTbarTcaronuni0162uni021Auni1E6Cuni1E6EUbreveuni0214uni1EE4uni1EE6Uhornuni1EE8uni1EF0uni1EEAuni1EECuni1EEEUhungarumlautuni0216Umacronuni1E7AUogonekUringUtildeuni1E78WacuteWcircumflex	WdieresisWgraveYcircumflexuni1E8Euni1EF4Ygraveuni01B3uni1EF6uni0232uni1EF8Zacute
+Zdotaccentuni1E92Iacute_J.loclNLDabreveuni1EAFuni1EB7uni1EB1uni1EB3uni1EB5uni01CEuni1EA5uni1EADuni1EA7uni1EA9uni1EABuni0201uni0227uni1EA1uni1EA3uni0203amacronaogonek
+aringacuteaeacuteuni0253uni1E09ccircumflex
+cdotaccentdcaronuni1E0Duni0257uni1E0Funi01C6ebreveecaronuni1E1Duni1EBFuni1EC7uni1EC1uni1EC3uni1EC5uni0205
+edotaccentuni1EB9uni1EBBuni0207emacronuni1E17uni1E15eogonekuni1EBDuni0259uni0292uni01EFgcarongcircumflexuni0123
+gdotaccentuni1E21uni01E5hbaruni1E2Buni021Fhcircumflexuni1E25ibreveuni0209uni1E2F	i.loclTRKuni1ECBuni1EC9uni020Bimacroniogonekitildeuni0237jcircumflexuni01E9uni0137kgreenlandiclacutelcaronuni013Cldotuni1E37uni01C9uni1E3Buni1E43nacutenapostrophencaronuni0146uni1E45uni1E47enguni01CCuni1E49obreveuni1ED1uni1ED9uni1ED3uni1ED5uni1ED7uni020Duni022Buni0231uni1ECDuni1ECFohornuni1EDBuni1EE3uni1EDDuni1EDFuni1EE1ohungarumlautuni020Fomacronuni1E53uni1E51uni01EBoslashacuteuni1E4Duni1E4Funi022Dracutercaronuni0157uni0211uni1E5Buni0213uni1E5Fsacuteuni1E65uni1E67scircumflexuni0219uni1E61uni1E63uni1E69tbartcaronuni0163uni021Buni1E97uni1E6Duni1E6Fubreveuni01D4uni0215uni1EE5uni1EE7uhornuni1EE9uni1EF1uni1EEBuni1EEDuni1EEFuhungarumlautuni0217umacronuni1E7Buogonekuringutildeuni1E79wacutewcircumflex	wdieresiswgraveycircumflexuni1E8Funi1EF5ygraveuni01B4uni1EF7uni0233uni1EF9zacute
+zdotaccentuni1E93germandbls.caltiacute_j.loclNLDa.ss01aacute.ss01abreve.ss01uni1EAF.ss01uni1EB7.ss01uni1EB1.ss01uni1EB3.ss01uni1EB5.ss01uni01CE.ss01acircumflex.ss01uni1EA5.ss01uni1EAD.ss01uni1EA7.ss01uni1EA9.ss01uni1EAB.ss01uni0201.ss01adieresis.ss01uni0227.ss01uni1EA1.ss01agrave.ss01uni1EA3.ss01uni0203.ss01amacron.ss01aogonek.ss01
+aring.ss01aringacute.ss01atilde.ss01l.ss02lacute.ss02lcaron.ss02uni013C.ss02	ldot.ss02uni1E37.ss02uni01C9.ss02uni1E3B.ss02lslash.ss02I_J.loclNLDi_j.loclNLDfl.ss02uni0410uni0411uni0412uni0413uni0403uni0490uni0414uni0415uni0400uni0401uni0416uni0417uni0418uni0419uni040Duni048Auni041Auni040Cuni041Buni041Cuni041Duni041Euni041Funi0420uni0421uni0422uni0423uni040Euni0424uni0425uni0427uni0426uni0428uni0429uni040Funi042Cuni042Auni042Buni0409uni040Auni0405uni0404uni042Duni0406uni0407uni0408uni040Buni042Euni042Funi0402uni0462uni046Auni0472uni0474uni0492uni0494uni0496uni0498uni049Auni049Cuni049Euni04A0uni04A2uni04A4uni0524uni04A8uni04AAuni04ACuni04AEuni04B0uni04B2uni04B4uni04B6uni04B8uni04BAuni0526uni04BCuni04BEuni04C0uni04C1uni04C3uni04C5uni04C7uni04C9uni04CBuni04CDuni04D0uni04D2uni04D4uni04D6uni04D8uni04DAuni04DCuni04DEuni04E0uni04E2uni04E4uni04E6uni04E8uni04EAuni04ECuni04EEuni04F0uni04F2uni04F4uni04F6uni04F8uni04FAuni04FCuni04FEuni0510uni0512uni051Auni051Cuni048Cuni048Euni0528uni052Euni0406.loclBSHuni0492.loclBSHuni0498.loclBSHuni04AA.loclBSHuni0498.loclCHUuni04AA.loclCHUuni0430uni0431uni0432uni0433uni0453uni0491uni0434uni0435uni0450uni0451uni0436uni0437uni0438uni0439uni045Duni048Buni043Auni045Cuni043Buni043Cuni043Duni043Euni043Funi0440uni0441uni0442uni0443uni045Euni0444uni0445uni0447uni0446uni0448uni0449uni045Funi044Cuni044Auni044Buni0459uni045Auni0455uni0454uni044Duni0456uni0457uni0458uni045Buni044Euni044Funi0452uni0463uni046Buni0473uni0475uni0493uni0495uni0497uni0499uni049Buni049Duni049Funi04A1uni04A3uni04A5uni0525uni04A9uni04ABuni04ADuni04AFuni04B1uni04B3uni04B5uni04B7uni04B9uni04BBuni0527uni04BDuni04BFuni04CFuni04C2uni04C4uni04C6uni04C8uni04CAuni04CCuni04CEuni04D1uni04D3uni04D5uni04D7uni04D9uni04DBuni04DDuni04DFuni04E1uni04E3uni04E5uni04E7uni04E9uni04EBuni04EDuni04EFuni04F1uni04F3uni04F5uni04F7uni04F9uni04FBuni04FDuni04FFuni0511uni0513uni051Buni051Duni048Duni048Funi0529uni052Funi0456.loclBSHuni0493.loclBSHuni0499.loclBSHuni04AB.loclBSHuni0499.loclCHUuni04AB.loclCHUuni0394Sigmauni03A9uni03BCone.ss01	zero.tosfone.tosftwo.tosf
+three.tosf	four.tosf	five.tosfsix.tosf
+seven.tosf
+eight.tosf	nine.tosfone.tosf.ss01uni2080uni2081uni2082uni2083uni2084uni2085uni2086uni2087uni2088uni2089	zero.dnomone.dnomtwo.dnom
+three.dnom	four.dnom	five.dnomsix.dnom
+seven.dnom
+eight.dnom	nine.dnom	zero.numrone.numrtwo.numr
+three.numr	four.numr	five.numrsix.numr
+seven.numr
+eight.numr	nine.numruni2070uni00B9uni00B2uni00B3uni2074uni2075uni2076uni2077uni2078uni2079periodcentered.loclCATuni00AD
+figuredashuni2015uni2010uni27E8uni27E9uni2007uni200Auni2008uni00A0uni2009uni200BCRuni20B5colonmonetarydongEurouni20B2uni20B4uni20ADlirauni20BAuni20BCuni20A6pesetauni20B1uni20BDuni20B9uni20B8uni20AEuni20A9uni2219uni2052uni2215emptysetuni2126uni2206uni00B5uniF8FFminuteseconduni2113	estimateduni2116uni02BCuni02BBuni02BAuni02C9fourthtofinechineseuni02B9uni02BFuni02BEuni02CAuni02CCuni02C8uni02BF.caseuni02BE.caseuni0308uni03080301uni03080304uni0307uni03070304	gravecomb	acutecombuni03010307uni030Buni030C.altuni0302uni030Cuni030C0307uni0306uni030Auni030A0301	tildecombuni03030308tildecomb_acutecombuni03030304uni0304uni03040308uni03040300uni03040301hookabovecombuni030Funi0311uni0312uni031Bdotbelowcombuni0324uni0326uni0327uni0328uni032Euni0331uni0335uni0337uni0338tildecomb.case.Ouni031B.O.caseuni0308.caseuni03080301.caseuni03080304.caseuni0307.caseuni03070304.casegravecomb.caseacutecomb.caseuni03010307.caseuni030B.caseuni030C.alt.caseuni0302.caseuni030C.caseuni030C0307.caseuni0306.caseuni030A.caseuni030A0301.casetildecomb.caseuni03030308.casetildecomb_acutecomb.caseuni03030304.caseuni0304.caseuni03040308.caseuni03040300.caseuni03040301.casehookabovecomb.caseuni030F.caseuni0311.caseuni0312.caseuni031B.caseuni0335.caseuni0337.caseuni0338.case
+uni0335.cy	uni0307.itildecomb.ouni030C.alt.t	uni0335.tbrevecombcybrevecombcy.caseuni03060301uni03060300uni03060309uni03060303uni03020301uni03020300uni03020309uni03020303uni03060301.caseuni03060300.caseuni03060309.caseuni03060303.caseuni03020301.caseuni03020300.caseuni03020309.caseuni03020303.caseNULL     ÿÿ      ¼  è  G      ,  . P  R ¸  º æ  è    5 7@ BB DW Yp r­ ¯Ü Şå ç    ! #. 01 88 ;@ GG KK MM PQ UU WY ]] _b fg ip r} €€ ƒ„ ‰Š Œ ’“ –ª ¬­ ´´ ·· ¹» ÃÃ ÇÇ ÉÉ ÑÑ ÓÓ ÕÕ ×× ÙŞ àà âì îù üü ÿ   
+ ÑÑ ÓÔ ÖØ ÛÜ İå ç  2 :I  
+    $     B   )   #          úûüıÿ   İå  çø 	 . $:I 6      
+  2 DFLT 4cyrl 4latn 4 kern $mark *mkmk 2  & 0 8 @ J H                     :    >ú    >ş   ?     ?   ÿÿ      >ú    h?Î?Ø@"@j@j@j@j@j@j@j@,@j@j@jLºLºLºLº@p@p@vLº@€ARB(CCôDÚLºEÀLºF‚GPH6LºILºLºJL´L´JèL´L´L´LºJòKLºK:KDKDKZKZKZKpK~L¦L¦L¦L¦L¦L¦L¦L¦L¦L¦L¦L¦L¦L@L¦L¦L¦LºLºLºLºLºLºLºL´LºLºLÀLÀLÀLÀLÀLÀLÀLÆLÌM M M LÚLàLêLêLêM M M  L0   MºT c P                                                                                                                  ÿï      ÿö                                                  ÿò              ÿÔ              ÿÔ  ÿÛ  ÿï      ÿñ      ÿú            ÿ÷         ÿı      ÿà        ÿğÿö    ÿù              ÿ÷          ÿå                                ÿû                                            ÿí                  ÿí                      ÿè      ÿô              ÿå      ÿò                                    ÿ÷             ÿûÿù      ÿì                  ÿÜ    ÿû      ÿö    ÿè   
+               ÿôÿâ      ÿë              ÿá      ÿí                                                                                                                                                                             ÿü  ÿş    ÿúÿò        ÿ÷  ÿúÿûÿöÿÿ    ÿû    ÿ÷   
+  ÿû                    ÿû                 ÿô                 "                              ÿú                                ÿù             ÿÿÿü                          ÿã    ÿÿ      ÿö    ÿò                  ÿüÿğ     ÿö              ÿè      ÿğ              ÿû  ÿò            ÿû  ÿå  ÿùÿ¿ÿùÿí    ÿòÿÿ  ÿ³     ÿÇ      ÿö      ÿÇ    ÿ÷            ÿª  ÿúÿï           ÿ˜ÿêÿ°     ÿÏ              ÿ¬      ÿ¸  ÿğ                                                    ÿ¾                  ÿâ  ÿì                                            ÿï      ÿö                                                                                                                                                                                                     ÿ÷        ÿö             ÿö    ÿí     ÿù      ÿÏ                                       ÿöÿï              ÿöÿúÿæ    ÿí               
+       ÿó                        ÿû                                  ÿì                                                    ÿæ          ÿö                                ÿ÷                                             ÿù    ÿ©    ÿğ      ÿö    ÿÍ    ÿÜ  ÿö        ÿö         
+                 ÿâ      ÿö              ÿá      ÿğ          ÿö                                  ÿâ        ÿ¶                  ÿÀ    ÿÎÿı                                        ÿØ                                                                              ÿÎ  ÿì    ÿâ          ÿö          ÿè  ÿØ                                                                                                              ÿö              ÿûÿû      ÿû                  ÿã                  ÿú                    ÿûÿì      ÿö              ÿö      ÿı              ÿ¯ ÿÔ    ÿ³ÿ¿ÿ¶ÿ³    ÿ¸  ÿ± ÿèÿÍ    ÿÛÿ±     ÿ¾                  
+    ÿã       "       ÿÄÿ¸  ÿÚ  ÿÓ     ÿ° 2ÿæ                          ÿöÿş                      ÿı        ÿù  ÿÿÿï       ÿıÿÿ  ÿñ  ÿö  ÿô      ÿù      ÿï    ÿı                         ÿ÷      ÿÿ                             ÿó  ÿö                                          ÿì        ÿÔ    ÿà      ÿö    ÿìÿÿ  ÿö        ÿçÿïÿ÷          ÿı    ÿÔ  ÿï      ÿğÿö                      ÿö          ÿà    ÿì             ÿí       ÿíÿı ÿÍÿì    ÿñ  ÿöÿÑÿÑ  ÿÔ  ÿÏ  ÿØ    ÿœÿÃÿÎÿÔ  ÿä    ÿæÿñ      ÿÑ  ÿç    ÿïÿÑÿåÿÖ  ÿœÿäÿÎ    ÿÑÿŞ        ÿöÿö ÿÊÿè    ÿÀ  ÿæÿå  ÿìÿâ                      ÿù  ÿö      ÿñ        ÿ½  ÿıÿÛ     ÿâ    ÿå       ÿù  ÿ÷ÿö            ÿöÿï                ÿúÿæ    ÿí            ÿ÷ 
+ÿò     
+          ÿÔ                      ÿù  ÿ÷      ÿÉ  ÿæ           
+   ÿâ  ÿò       ÿı  ÿí    ÿöÿğ         ÿöÿà    ÿõ  ÿö       $                  ÿö    ÿè  ÿí       ÿ÷    ÿö        ÿû          ÿù  ÿû    ÿÜ                                  ÿı                      ÿöÿŞ       	      ÿûÿë      ÿè              ÿı                      ÿû                             ÿø    ÿì                          ÿı             P         ÿñ              
+ÿş 2                                         ÿù        ÿû             ÿû    ÿë            ÿê                   "                 '  ÿşÿì                ÿò                 	   $       %ÿò            ÿû  ÿ÷                ÿô  ÿû    ÿú    ÿõ         
+                  ÿÔÿ×  ÿ÷       .ÿïÿö      ÿû                   "ÿ÷ 
+ÿïÿô            ÿÙ    ÿòÿãÿü                                                      ÿì   
+ÿq     ÿì                                                                                                 ÿÜ  ÿô  ÿû    ÿıÿô        ÿÿ  ÿöÿùÿÿÿï      ÿû  ÿì     ÿô      ÿÿ                            ÿôÿï             ÿ÷                                  ÿö          ÿû  ÿÛ      ÿîÿö  ÿå  ÿÔ  ÿûÿ‹ÿğÿÜ    ÿå    ÿ     ÿ              ÿÀ    ÿò            ÿÀ    ÿì      (    ÿ‡ÿìÿÃ ,    ÿ³              ÿ¶      ÿË  ÿì                              ÿö  ÿô      ÿï  ÿï    ÿö     
+                      ÿö  ÿöÿíÿğ            ÿë    ÿğ  ÿò                         ÿö              ÿû  ÿô                                              ÿ¦           
+     ÿ¾  ÿö                                                                      
+                                                       ÿù    ÿœ                  ÿ¶    ÿã  ÿö        ÿö                          ÿç     ÿö              ÿê      ÿğ              ÿö        ÿü                   ÿö              
+                               
+        ÿı              ÿğ                                                                                     ÿö    ÿ÷            ÿâÿö  ÿû        ÿõÿö                  ÿò  ÿö      ÿö                                   ÿö       ÿ³  ÿÔ    ÿ³ÿ³ÿ¶ÿ³    ÿ¿  ÿ³ ÿèÿÑ    ÿŞÿ³     ÿÂ         ÿü           ÿá       (       ÿÄÿÃ  ÿá  ÿÇ     ÿ³ 2ÿÎ                          ÿæ                                                            ÿñ                                                    ÿì                                                                ÿ°          ÿˆ  ÿö          ÿ¦        ÿ¢      ÿºÿuÿ    ÿå      ÿ°  ÿ  ÿ¦              ÿ~                            ÿˆ      ÿ’  ÿyÿÅ          ÿö  ÿá                              ÿñ              ÿô      ÿö              ÿö            ÿû    ÿ÷                      ÿö                     ÿü          ÿû          ÿİ  ÿê    ÿïÿğÿô      ÿè  ÿöÿğÿòÿá    ÿíÿï  ÿö   
+  ÿï      ÿù            ÿí                 ÿë      ÿû      ÿö                               ÿêÿğ                                       ÿğ             ÿ÷                   <            )         ÿû                        I              P       T                                                 ÿæ    ÿ’   
+      ÿæ      ÿœ  ÿÈÿ­ÿÄ                                       ÿÊ             
+                                ÿì  ÿÛ    ÿü ÿû  ÿìÿğÿÏÿà ÿ¾ 
+ÿÔ  ÿÛÿâ  ÿÃÿÂ      ÿÊÿÛ  ÿÅ 
+      ÿÊ   ÿìÿû 
+       ÿÊ   
+ÿâ    ÿÃ "ÿÑ  ÿ¢ ÿÊ B    ÿ¸             ÿÀ      ÿÊ   
+ "   
+                                                     
+                                
+         ÿı               ÿğ                                            ÿÃ  ÿï    ÿÅÿÇÿÎÿÇ    ÿã  ÿÃ ÿôÿÏ    ÿòÿÉ     ÿÊ                   
+    ÿï              ÿÑÿ½  ÿá  ÿÇ     
+ÿÈ (ÿì                          
+ÿáÿñ                      ÿÿ               (               "  ÿì                                   
+            ÿæ         <ÿö                   
+       	                                                       ÿ                   ÿÊ              ÿöÿı                                                                          ÿö  ÿñ  ÿñ    ÿöÿöÿö      ÿã  ÿö  ÿùÿì    ÿğÿê  ÿş   
+  ÿ÷                   ÿö               ÿöÿÊ             ÿñ 2                    ÿû      ÿı                                                        ÿÎ                  ÿŞ    ÿí                                          ÿè      ÿö              ÿå      ÿò                      ÿÎ          ÿÀ  ÿâ                    ÿ×      ÿıÿ°                                                                            ÿÀ                    ÿÄ                          ÿş      ÿÿ        ÿ÷     
+                            ÿ÷ÿò           ÿô    ÿû  ÿû        "                                   ÿö    ÿÜ  ÿû      ÿÇ      ÿÜ ÿûÿã 
+ ÿÔ          ÿÊ   
+                  ÿö     ÿÊ 
+              ÿô 
+ÿ¿       ÿ©  ÿØ             ÿã              ÿ¿                                                      ÿØ        ÿ¾ÿí    ÿÊ                              ÿß                            ÿË          ÿÊ                ÿÑ  ÿõ        ÿû          ÿï  ÿ÷    ÿã    ÿòÿû                         ÿş                     ÿùÿì              ÿìÿï     ÿò                      ÿş                                                        ÿ´                  ÿÀ                                                                                                ÿö  ÿ÷              ÿû  ÿ÷   "             " (                     
+         
+   (     
+          "          , (                            
+                              ÿö          ÿä  ÿù    ÿË               ÿÜ    ÿö      ÿû              ÿöÿã               ÿï     ÿè            ÿûÿı                                        ÿù  ÿç      ÿæ  ÿè           
+                      ÿç      ÿñ 
+        ÿöÿŞ    ÿû  ÿñ                         ÿù    ÿã  ÿô       ÿö                            ÿè      ÿñ  ÿè    ÿ¬         ÿâ  ÿß  ÿÊ  ÿÜÿÊ  ÿí    ÿñ            ÿöÿï    ÿ±  ÿÀ      ÿ°     ÿÏ            ÿùÿ¶  ÿì  ÿÂ       ÿù                ÿö                 
+                
+                             ÿö                   ÿá         ÿì                                ÿá   
+                        ÿı                   ÿı    ÿº     ÿı    ÿì                ÿÜ                                                        ÿú                    ÿè       ÿüÿª           ÿù  ÿÑ     .       ÿÊ                        .       
+                  ÿÄ         ÿ•  ÿÎ (                                       ÿı     ÿï       ÿïÿı  ÿ¸ÿö    ÿï  ÿğÿÃÿÃ  ÿâ  ÿ½      ÿö          ÿã   ÿŞÿï                  ÿÂÿğÿÊ    ÿã        ÿï                      ÿÔ  ÿØÿğ  ÿö     
+         ÿû       
+ÿö    ÿÄ  ÿç  ÿö  ÿöÿÄÿÄ   
+  ÿÑ      ÿÿ          ÿö   ÿöÿû                  ÿÄ  ÿÔ    ÿö   
+   ÿò                      ÿò  ÿö                                                                              	             9                                     @                       "                                          ÿÚ  ÿï        ÿïÿá      ÿå              ÿô                            ÿï ÿ÷      ÿŞ 8    ÿö                      ÿö     	                ÿ³          ÿ³  ÿÔ      ÿÑ  ÿ»         ÿÃ                   
+  ÿ³  ÿ³ÿşÿ± "        ÿÄÿÂ  ÿï           2ÿæ                ÿ³        
+    ÿÇ  ÿè            ÿ³          ÿ³  ÿØ      ÿÑ  ÿ¶       ÿÇÿÃ    ÿâÿªÿÄ    ÿé     ÿ³  ÿ³  ÿ¬ "        ÿÄÿÃÿÄÿİ           2ÿÎ         ÿ¬     ÿ¯ ÿ¶ÿâ        ÿÇ  ÿèÿÕ  ÿô  ÿã      ÿæÿö  ÿö  ÿã  ÿöÿäÿçÿà    ÿïÿğ  ÿŞ     ÿï             ÿı    ÿô           ÿû  ÿöÿÖ           ÿìÿ×  $                          ÿí  ÿö                  ÿÇ          ÿÇ  ÿï      ÿÖ  ÿã       ÿÚÿÑÿæ  ÿòÿ¹ÿŞ    ÿØ     ÿÌ  ÿÇÿñÿÀ         ÿÔÿÊÿáÿì            (ÿì         ÿ¶     ÿÇ ÿÍÿØ   
+    ÿÇ  ÿôÿØ          ÿö          ÿï  ÿö      ÿã       ÿí    ÿÌ              ÿØ     ÿö  ÿôÿâÿµÿö        ÿğÿŞ  ÿöÿû           
+ÿÅ                ÿï )           ÿÀ    ÿÎ              ÿú              ÿò             ÿö  ÿ÷  ÿö              ÿü                               ÿú        ÿú                                 ÿõ          ÿô        ÿü          ÿö  ÿû    ÿä      ÿû                                               ÿöÿã                ÿï     ÿè              ÿı                     ÿÄ  ÿöÿşÿÄÿÄÿìÿÄÿÄ  ÿÄÿâÿöÿÄ $  ÿÀÿşÿâÿöÿÄ ( (  ÿ–   (                ÿÎ  ÿÄ 
+ÿì (       ÿÎÿÀ  ÿì $ÿØ (   ÿÎ 2ÿÔ  ÿÄ 2  ÿÄ    ÿÄÿúÿÄ            
+ÿØ        ÿë  ÿÔ            ÿïÿöÿìÿØÿöÿÀÿïÿÎ  ÿìÿöÿşÿÀÿÀ      ÿÀ      ÿı      ÿå  ÿşÿö       "    ÿÛ G ÿö    ÿÀ (ÿÀ    ÿşÿÎ <   	ÿÔ         	  ÿöÿÒ      ÿ×     (  ÿï                                    ÿú              ÿª                                                      (   ÿö  ÿí                                                                        )                                                                                    ÿû                                                                                                                                                             ÿû                                                                                                                                                      ÿï      ÿö                                      ÿû                    ÿú  ÿû    ÿü              
+                                       ÿö                 " "                       &                                     ÿå  ÿû         ÿï         
+                  ÿİ    ÿû      ÿû                          ÿı       ÿØ          ÿı          ÿÑ              ÿò        ÿû          ÿ÷  ÿû    ÿ÷    ÿæÿö      ÿè                   2    ÿí       4     F  ÿöÿò             ÿï <       2              /       "ÿ÷                                        ÿï  ÿö        ÿöÿô      ÿö                                    /        ÿö ÿö         	   ÿû                      ÿö                                         ÿö  ÿö        ÿöÿö      ÿö                                             ÿö ÿö            ÿú                      ÿö                                                 ÿ÷    ÿ´    ÿû            ÿÄ  ÿæÿã  ÿû                                      ÿì      ÿö              ÿö      ÿı                     ,                                                            G             ]       ,                             D           3         n @              ÿá  ÿ÷    ÿıÿ¬      ÿá 
+  ÿï  ÿÊ   
+       ÿÀ         ÿû          ÿı 
+ÿı  ÿ¶                  ÿÀ     ÿı  ÿ„  ÿÁ             ÿï              ÿÀ                                                                                                                   ÿ×                                                  ÿí          ÿ¸      ÿğ   ÿı   ÿÀ   
+        ÿÑ   
+      ÿı               ÿôÿÂ         ÿòÿÔ  ÿö 
+ÿÉ 
+   ( ÿğÿ’  ÿÎ 
+        ÿöÿöÿı            ÿôÿÉ        ÿõ                   ÿò   ÿå              ÿæ      ÿá                                                                                             ÿõ          ÿù  ÿå      ÿğ    ÿ÷  ÿæ  ÿùÿüÿöÿæ    ÿêÿğ       
+  ÿñ                    ÿí       
+       ÿöÿØ           ÿìÿç                            ÿô                          ÿå              ÿ×ÿı          ÿ¬  ÿ×  ÿì      ÿâ      ÿş            ÿğ                  ÿÑ        ÿöÿò    ÿé                      ÿû  ÿØ          ÿè  ÿú    ÿèÿ¸ÿùÿö       ÿëÿü  ÿã     ÿì  ÿí  ÿÌ          ÿì                   ÿö       ÿğÿÛ  ÿú  ÿÀ     ÿñ 
+ÿÅ                   )       ÿğÿâ                              ÿû  ÿã      ÿà  ÿæ           
+                  ÿı  ÿí    ÿöÿğ         ÿöÿà    ÿõ  ÿö        $                  ÿö        ÿí       ÿç                                                    ÿñ                                                                                                    ÿì                ÿö          ÿö  ÿñ      ÿù             ÿã                   
+  ÿô  ÿñÿğÿÃ         ÿñÿê    ÿı          .ÿæ     
+           ÿö             ÿÇ  ÿë                                ÿò              ÿï  ÿû  ÿò      ÿû      ÿğ            ÿ÷                                    ÿò                      ÿò              ÿí  ÿñ    ÿìÿÈÿôÿö    ÿû  ÿğÿıÿëÿù      ÿİ     ÿã         ÿö       
+                    ÿñÿæ      ÿÌ     ÿô .ÿæ     
+                        ÿñ                                             ÿù    ÿñ    ÿö                      ÿÿ    ÿöÿı                  ÿï  ÿô                          ÿÿ       ÿı    ÿ÷                                                                                                                                                                ÿú  ÿó Z| $z ==F =P>‚ >~> >œ>¶ >¶>Ø ?@2  h Q l ¥ à á â ã ä å æ ç è é ê%'9HJKLMNOPQRSTUVWXYZ_`abcdefgr…†‡ˆ‰Šœ±ÏĞÑÒÓÔÖ×ØÙÚÛÜİŞßà	
+IR|~ANRSVYZbdfopq   ( - (  »ÿ¾ ¼ÿ¾ ½ÿ¾ ¾ÿ¾ ¿ÿ¾ Àÿ¾ Áÿ¾ àÿ· áÿ· âÿ· ãÿ· äÿ· åÿ· æÿ· çÿ· èÿ· éÿ· êÿ· X 	Y 	  Q  » < ¼ < ½ < ¾ < ¿ < À < Á < Ù 7 Ú 7 Û 7 Ü 7 İ 7 Ş 7 ß #  Q  Y  C Ë  4  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   Y 	c Be Bg B 5  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   Y ] c 8e 8g 8 9  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   Y ] 2c e g r 	s 	t 	u 	 9  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   Y ] c e g r s t u  9  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   Y ] c /e /g /r ,s ,t ,u , 9 2 2B 2C 2D 2E 2F 2G 2H 2J 2K 2L 2M 2N 2O 2P 2Q 2R 2S 2T 2U 2V 2W 2Z 2[ 2\ 2] 2_ 2` 2a 2b 2c 2d 2e 2f 2g 2™ 2® 2 2 2 2 2 2 2	 2
+ 2 2 2Y ] 6c )e )g )r 2s 2t 2u 2 0  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+    3  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   c 	e 	g 	 9    B  C  D  E  F  G  H  J  K  L  M  N  O  P  Q  R  S  T  U  V  W  Z  [  \  ]  _  `  a  b  c  d  e  f  g  ™  ®              	  
+      Y  ] <c %e %g %r .s .t .u . 9  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   Y ] c 8e 8g 8r 2s 2t 2u 2 9 2 2B 2C 2D 2E 2F 2G 2H 2J 2K 2L 2M 2N 2O 2P 2Q 2R 2S 2T 2U 2V 2W 2Z 2[ 2\ 2] 2_ 2` 2a 2b 2c 2d 2e 2f 2g 2™ 2® 2 2 2 2 2 2 2	 2
+ 2 2 2Y ] <c Le Lg Lr 2s 2t 2u 2 9  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+   Y 6] 2c e g r s t u  Ë Í  aÿŞc Ee Eg E 9 ¯  °  ±  ²  ³  ´  µ  ¶     aÿŞ Y ]ÿú Y ]ÿúcÿÿeÿÿgÿÿ Y ]ÿúc e g  c "e "g " 0  B C D E F G H J K L M N O P Q R S T U V W Z [ \ ] _ ` a b c d e f g ™ ®       	 
+    9 0¯ ° !± -Ï %Ğ %Ñ %Ò %Ó %Ô %Õ Ö %× %Ø %Ù %Ú %Û %Ü %İ %Ş %ß %à % 0 0 0 ¯ ° !± - aÿŞ P  ìÿ¶ NÿÕ 'ÿó*ÿÏ4ÿÒ Ë  X dY X V 	X VY 5f E¢ C X Y   A     
+    o  q | m ~ ø y ú ô üGII=[d>fqHsåTèÇâãå"$ó((ö*.÷00ü22ı44ş67ÿ9=@BDJ	LLNSUXZ[]`bd!ff$hq%tz/||6~7ƒ†;ˆˆ?Š˜@šO¡ªT¬¹^»»l½¿mÁÁpÃÅqÈÈtÍÔuÖÜ}àê„ì
+®:M¯R]Ã_`ÏbbÑdfÒh{Õ¹¹é¿ÁêÃÊíÏÏõ     
+           F   & & ' '  ( ( . ) .  / /  0 G  H H ` I O % P U  V V # W d  e f # g h C i i  j j # k o  q r  s u  v v # w |  ~   € ¡  ¢ ¢  £ £ [ ¤ ¤ Z ¥ ¥  ¦ ­  ® ¸  ¹ ¹ _ º º  » Á " Â Ê  Ë Ğ , Ñ Ø  Ù Ş + ß ß Y à ê  ë ï . ğ ğ # ñ ø  ú        ? T 5 66 78 99 PBG [^ 4_` aa Nbd fg hq st u– —— ˜™ šš L›¢ £­ ®® O¯¶ ÁÆ 'ÏÔ 
+ÕÕ GÖà 
+áå  ?  # < 9 b ! $  1  !"" ## $$ \(( ** E++ ,, B-. 000 822 44 67 -9: -;; a<< == @@ ]AA 5BB DD 5EE -FF GG HH DII $JJ 5LL !NP QQ RR $SS UU VV BWX AZ[ ]] 5^^ _` bc dd ff hh ij 9kl 1mn oo pq !tw xz 0|| $~~ $€ 8 ƒƒ „„ D…… -†† Eˆˆ ŠŠ ^‹‹ !ŒŒ  !  / ‘‘ ’” •• –˜ šš ›  ¡£ ¤¤ ¥¥ ¦¦ §§ *¨¨ ;©ª ¬¬ 7­­ ®® ¯¯ °° ±± ²³ (´´ µ¶ (·· S¸¸ *¹¹ »» ½½ /¾¾ ¿¿ ÁÁ (ÃÃ ÄÄ ÅÅ ÈÈ ÍÍ ÎÎ ÏÏ ĞĞ ÑÑ *ÒÒ ;ÓÔ Ö× ØØ ÙÙ /ÚÚ ÛÜ àà áá ââ ãã ää åæ /çè éê ìí îï ğó ôö ÷÷ øø ùù úú ûü 7ıı *şş ÿÿ K    (       *		 
+
+ * M:M 	RS )TU @VV )WW RXX QYY JZZ I[\ ]] W__ H`` Vbb 6dd 6ee ff 6hn oq )ru 2vv >ww =xx >yy =z{ 3¿¿ ÀÀ XÁÁ ÃÄ ÅÅ :ÆÆ UÇÈ 3ÉÊ ÏÏ :  à    
+           7   &  ' ,  - - 7 . H  I O  P U  W d  e f 4 g q  s   € ¢  £ ¤  ¥ ¥  ¦ ­  ® ¸  ¹ ¹  º º  » Á  Â Ø 
+ Ù Ş  ß ß K à ê  ë ï  ğ ğ  ñ ø  ú   6 78 99 &:A BH II 	JW XY .Z] ^^ 	_g hk 	mt 	u— ˜˜ 	™™ šš ›¢ 	£­ ®® ¯¶ ·Î ÏÔ ÕÕ 8Öà áå è   &   & - ) O %% !(( ++ ,, -.  00 (11 "77 99 !;; N<< == 6@@ LAA CC MDD GG HH 5LL PP TU VV WX 3YY (ZZ [\ "dd !gg "ik )mn pq tv ww 6xz  {{ "€ (‚‚ !ƒƒ „„ 5ˆˆ !‹‹ ŒŒ    ' G‘” •• F–˜ šš ›  ¡¡ ¢£ ¤¤ ¥¦ §§ ¨¨ ©ª ¬¬ %­­ ®² ³³ ´´ µµ ¶¶ ·· D¸¸ ¹¹ 1ºº »» ¼½ ¾¾ ¿¿ @ÀÁ ÃÃ ÄÄ ÅÆ ÈÈ ÉÊ ËË ÌÌ ÍÏ ĞÑ ÒÒ ÓÔ ÕÕ %ÖÖ ×Ø ÙÚ İİ ßß àà áâ ãã ää åç 'èê ìí îï ğò óó 1ôö ÷÷ øú ûü %şş ÿÿ          		 
+
+  ?NN ARS TU 2VV WW CXX BYY =ZZ <[\ ]] I__ :`` Hbb ,cc *dd ee *ff ,gg *hn oq ru #vv 0ww /xx 0yy /z{ $¹¹ 	»¼ +¿¿ ÀÀ JÁÁ >ÂÂ ;ÃÄ ÅÅ 9ÆÆ EÇÈ $ÉÊ ÏÏ   İå  ç 	 &2 /:I E  F       ,  . P + R u N w ¸ r º æ ´ è á57@+BB5DW6YpJr­b¯ÜŞåÌçÔùú!ı#$&(*.
+0188;@GGKKMMPQUUWY_b!fg%ip'r}/€€;ƒ„<‰Š>Œ@’“D– F¤¤Q¦§R©ªT¬­V´´X··Y¹»ZÃÃ]ÇÇ^ÉÉ_ÑÑ`ÓÓaÕÕb××cÙŞdããjåìkîùsüüÿ €‚
+ƒÑÑ†ÓÔ‡ÖØ‰ÛÜŒ U  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  + + + + + + + + + #p #| #v  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  + + #| #‚ #ˆ  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +  +">  ''    "D  ''    "D  ''    ">  ''    "D  "8'    ">  ''    ">  ''    ">  ''    "D  ''    "D  ''    ">  ''    "D  "8'    ">  ''    ">  ''    ">  ''    "D  ''    "D  ''    "D  ''    ">  "8'    "D  ''    "D  ''    "D  ''    "D  ''    ">  ''    "D  ''    ">  ''    "D  ''    '  '$      "J  '$      &L  &R      'ö  &¦      "P  &¦      "P  &¦      'ö  &¦      "P  &¦      "P  &¦      "P  &¦      "b  "\    "n          "n"b  "\    "n"V  "\    "n"b  "\    "n"b  "h    "n"b  "h    "n          "n'*  '0'6    &^  '0'6    &^  '0'6    &^  '0'6    '*  '0'6    &^  '0'6    &^  '0'6    '*  '0'6    &^  "t'6    '*  '0'6    '*  '0'6    '*  '0'6    &^  '0'6    &^  '0'6    &^  '0'6    '*  "t'6    &^  '0'6    &^  '0'6    &^  '0'6    &^  '0'6    '*  '0'6    '*  '0'6    '*  '0'6    &^  '0'6    'Ş  'ä      "z  "Œ      "†  "Œ      "†  "Œ      "†  "Œ      "z  "€      "†  "Œ      "†  "Œ      &ô  "˜    &ú&ô  "    &ú"’  "˜    &ú&ô  "    &ú)Ö  )Ü'Ø          'Ø    'Ò  )Ü'Ø    'Ò  )Ü'Ø    'Ò  )Ü'Ø    'Ò  )Ü'Ø    'Ò  )Ü'Ø    )Ö  )Ü'Ø    'Ò  )Ü'Ø    )Ö  "¤'Ø    'Ò  )Ü'Ø    'Ò  )Ü'Ø    'Ò  )Ü'Ø    'Ò  )Ü'Ø    )Ö  )Ü'Ø    'Ò  )Ü'Ø    &²  &¸      "ª  &¸      "¶  "°      "¶  "¼      )Ö"È"Î    "Ô  "È      "Ô'Ò"È"Î    "Ô)Ö"È"Î    "Ô)Ö"È"Â    "Ô)Ö"È"Î    "Ô)Ö"È"Â    "Ô)Ö"È"Î    "Ô)Ö"È"Â    "Ô)Ö"È"Î    "Ô&p  "Ú      &p  "à      &d  "ì      'T  "ì      'T  "ì      &d  "æ      'T  "ì      &d  "æ      &d  "ì      &d  "ì      &d  "æ      'T  "ì      #L'®'l'º  'À#'®'l'º  'À#'®'l'º  'À#'®'l'º  'À#L'®'l'º  'À#'®"ò'º  'À#L'®'l'º  'À#L'®'l'º  'À#L'®'l'º  'À#'®'l'º  'À#'®'l'º  'À#L'®'l'º  'À#L'®'l'º  'À#L'®"ò'º  'À#'®'l'º  'À#'®'l'º  'À#
+'®#'º  'À"ş'®#'º  'À#
+'®"ø'º  'À"ş'®#'º  'À"ş'®#'º  'À"ş'®#'º  'À#'®'l'º  'À#'®'l'º  'À#'®'l'º  'À#L'®'l'º  'À#L'®'l'º  'À#
+'®'l'º  'À#L'®'l'º  'À#'®'l'º  'À#'®'l'º  'À#L'®'l'º  'À#L'®'l'º  'À#L'®'l'º  'À#  #      &v  &|      &  #"      '¨'®'´'º  'À#4  #.      #(  #.      #(  #.      #4  #:      #(  #.      #4  #:      #(  #.      #4  #:      &š  &       #@  &       &š  &       #@  &       &š  &       &š  &       #@  &       &š  #F      #@  &       &š  #F      #@  #F      #L  'l      &‚  #X    &ˆ&‚  #X    &ˆ#R  #X    &ˆ&‚  #X    &ˆ&‚  #^    &ˆ&‚  #^    &ˆ&‚  #^    &ˆ#p#v#|%ª    #j#v#|%ª    #j#v#|%ª    #j#v#|%ª    #j#v#|%ª    #j#v#|%ª    #p#v#d%ª    #j#v#|%ª    #j#v#|%ª    #p#v#|%ª    #j#v#|%ª    #p#v#d%ª    #j#v#|%ª    #j#v#|%ª    #j#v#|%ª    #j#v#|%ª    #j#v#|%ª    #j#v#|%ª    #p#v#|%ª    #p#v#|%ª    #j#v#|%ª    #j#v#|%ª    #p#v#|%ª    #‚  #ˆ      'Æ  'Ì      #  'Ì      #  'Ì      #  'Ì      #  'Ì      'œ  #”      &Ö  &Ü      #   &Ü      #   &Ü      #   &Ü      #   &Ü      &Ö  #š      #   &Ü      #   &Ü      #   &Ü      #   &Ü      #è  #¬      #¦  #¬      #¦  #¬      #¦  #¬      #è  #²            'Ø    #¾  #Ê#Ğ    #Ä  #Ê#Ğ    #Ä  #Ê#Ğ    #¾  #Ê#Ğ    #Ä  #¸#Ğ    #¾  #Ê#Ğ    #¾  #Ê#Ğ    #¾  #Ê#Ğ    #Ä  #Ê#Ğ    #Ä  #Ê#Ğ    #¾  #Ê#Ğ    #Ä  #¸#Ğ    #¾  #Ê#Ğ    #¾  #Ê#Ğ    #¾  #Ê#Ğ    #Ä  #Ê#Ğ    #Ä  #Ê#Ğ    #Ä  #Ê#Ğ    #¾  #¸#Ğ    #Ä  #Ê#Ğ    #Ä  #Ê#Ğ    #Ä  #Ê#Ğ    #Ä  #Ê#Ğ    #¾  #Ê#Ğ    #Ä  #Ê#Ğ    #¾  #Ê#Ğ    #Ä  #Ê#Ğ    #Ö  #â      #Ü  #â      #è  #î      #ô  $       #ú  $       #ú  $       #ô  $       #ú  $       #ú  $       #ú  $       (\$$  $$(\$$  $$(\$$  $$(\$$  $$  $    $$$Æ  $À$$    $Ì  $À$$    $Ì  $À$$    $Ì  $À$$    $Ì  $À$$    $Ì  $À$$    $Æ  $À$$    $Ì  $º$$    $Æ  $À$$    $Æ  $À$$    $Æ  $À$$    $Ì  $À$$    $Ì  $À$$    $Ì  $À$$    $Æ  $º$$    $Ì  $À$$    $Ì  $À$$    $Ì  $À$$    $Ì  $À$$    $Æ  $À$$    $Æ  $À$$    $Æ  $À$$    $Ì  $À$$    )"          (          )î  )ô      (J          (          (          (          (          (          (          $`$*$®  $0$6$`$*$¢  $0$6$Z$*$®  $0$6$Z$*$®  $0$6$`$*$¢  $0$6    &%ì    $<  &%ì    $B  &%ì    $B  &%ì    $B  &%ì    $B  &%ì    $B  &%ì    $<  &%ì    $B  &%ì        &(%ì    $B  &%ì    $B  &%ì    $B  &%ì    $B  &%ì    $B  &%ì    $B  &%ì    $H  $T      $N  $T      $`  $r      $Z  $r      $`  $f      $l  $r      &&"$~    $„&&"$~    $„&&"$~    $„&&"$x    $„&&"$~    $„&&"$x    $„&&"$~    $„&&"$x    $„&&"$~    $„$  $Š      $  $–      $œ  $®      $¨  $®      $œ  $®      $¨  $®      $œ  $¢      $¨  $®      $œ  $¢      $œ  $®      $œ  $¢      $¨  $®      $Ø$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ò$Ş$´$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ø$Ş$´$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Æ$Ş$À$ê  $ğ$Ì$Ş$À$ê  $ğ$Æ$Ş$º$ê  $ğ$Ì$Ş$À$ê  $ğ$Ì$Ş$À$ê  $ğ$Ì$Ş$À$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ò$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Æ$Ş$ä$ê  $ğ$Æ        $ğ$Ì        $ğ$Ò$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$Ø$Ş$ä$ê  $ğ$ö  $ü      %  %      %  %      %  %      %&  %       %  %       %  %       %&  %,      %  %       %&  %,      %  %       %&  %,      %8  %2      %>  %2      %8  %2      %>  %2      %8  %2      %8  %2      %>  %2      %8  %D      %>  %2      %8  %D      %>  %D      %V%\%P    %h%V%\%P    %h%V%\%P    %h%V%\%P    %h%V%\%b    %h%J%\%P    %h%V%\%b    %h%V%\%b    %h%†(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %†(ª%t%’    %€(ª%Œ%’    %€(ª%Œ%’    %n(ª%Œ%’    %z(ª%Œ%’    %n(ª%t%’    %z(ª%Œ%’    %z(ª%Œ%’    %z(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %†(ª%Œ%’    %†(ª%Œ%’    %€(ª%Œ%’    %€(ª%Œ%’    %†(ª%Œ%’    %¼  %˜      %  %ª      %¤  %ª      %¤  %ª      %¤  %ª      %¤  %ª      %°  %¶      %¼  %Î      %È  %Î      %È  %Î      %È  %Î      %È  %Î      %¼  %Â      %È  %Î      %È  %Î      %È  %Î      %È  %Î      %à  %Ú      %Ô  %Ú      %Ô  %Ú      %Ô  %Ú      %à  %æ            %ì    %ø  &&
+    %ş  &&
+    %ş  &&
+    %ø  &&
+    %ş  %ò&
+    %ø  &&
+    %ø  &&
+    %ø  &&
+    %ş  &&
+    %ş  &&
+    %ø  &&
+    %ş  %ò&
+    %ø  &&
+    %ø  &&
+    %ø  &&
+    %ş  &&
+    %ş  &&
+    %ş  &&
+    %ø  %ò&
+    %ş  &&
+    %ş  &&
+    %ş  &&
+    %ş  &&
+    %ø  &&
+    %ş  &&
+    %ø  &&
+    %ş  &&
+    &&"&    &.&&"&    &.&&"&    &.&&"&(    &.&&"&    &.&&"&(    &.&&"&    &.&&"&(    &.&4&:&@    &F'  ''    &L  &R      'Š      '  &X      '  '*  '0'6    &^  '0'6    &^  '0'6    &î          'ê  'ğ      &d          &d          'T          &¾        &Ä&j        &Ä&p          &ô        &ú'`'®'l'º  'Z&v  &|      'ö  'ü      &‚        &ˆ&          &          'œ        '¢'         '„&”          &š  &       'ö  &¦      &¬  )F      )Ö  )Ü'Ø    'Ò  )Ü'Ø    &²  &¸      '`'®'l'º  'À&î          &¾        &Ä&Ê        &Ğ&ô        &ú'ö  'ü      &Ö  &Ü    &â&Ö  &Ü    &â'œ        '¢      &è          &è    )Ö  )Ü'Ø    &î          &ô        &ú'         '„'  ''    '  ''    '  '$      '*  '0'6    '<  'l      'B  'l      'H          'N  'ğ      'T          'T          'f'®'l'º  'Z'`'®'l'º  'À'f'®'l'º  'À'r  )F      'x          'x          'x          '~        '„'Š      '  '–          'œ        '¢'¨'®'´'º  'À'Æ  'Ì      'Ò  )Ü'Ø    'Ş  'ä      'ö  'ü      'ê  'ğ      'ö  'ü      (’  ((¤    )"        )((        )((ò  (à(¶    (ø  (à(¶    (ø  (à(¶    (†          )j  )p      (          (          (Ô          (          (J        (P(        (P(ò(Ú(à(æ  (ì(  (      )v  )|      (   )      (   )      )4        ):(Œ        )(&          (,  (2      (8              (>)d    (D  )^)d    (ò        (ş(†          (J        (P)v  )|                (V)4        ):(Œ        )(\(b    (h(n(\(b    (h(n      *           *     (t(z)^    (€(†          (Œ        )(’  ((¤    (˜  ((¤    (ª  (°      (ò  (à(¶    (¼          (Â          (È          (Î  )p      (Ô          (Ô          (ø(Ú(à(æ  (ì(ò        (ş(ø        (ş)          )
+  )      )
+  )      )
+  )      )        ))"        )().          )4        ):)@  )F      )L  )R      )X  )^)d    )v  )|      )j  )p      )v  )|      )‚          )‚          )‚          )‚          )‚          )‚          )ˆ          )ˆ            İå  çø 	úı ÿ   !. *:I <   L  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö 
+Ê 
+Ê 
+Ê 
+Ê 
+Ê 
+Ê  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ö  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü  
+Ü 	z	„	  úûüıÿ   úûüÿ    	r  	r  	r  	r  	r  	r 	^	^	^	^	^  İå  çø 	 . $:I 6  İàâãåçèêëíñõö÷ø !#'+,-. F  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ö  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ü  ö  ö  ö  ö  ö  ö  ö  ö  ü  ü  ü  ü  ü  ü  ü  ü èèèèèèèèèèèèèèèîîîîîîîîîîîîîîî   5    ö   f   €   a qÿV qÁ qa ça …a va v   vÁ vÿV  »f FÿV ŒÁ “ÿV Œa “   a €   €ÿV  †ÿV  Ëa C   CÁ CÿV 5ÿV (Á 5    ³ƒ ¯   ¯ÿV tÿV t   ƒÿV ‚ÿV a ‚   Á ƒa RÁ R   I   Xa Y   XÁ YÿV ?a ?ÿV ƒÁ 2a 2   2ÿV oÿV oa oÁ AÁ o   ]Á ^   *a K   /ÿV /a 5a 6   6ÿV ÿV ä ­    ½   Ÿä Ÿ­ Ÿ   5Á 4   ä ­    )   )ÿV 3Á £J $ ö k    ÍÁ  ¬J ! ÷  yä  y­  }ä  }­  }   !a !Á ÿV ä     ½ÿV  ½    ƒe ²   ²ä ²ÿV !ä !ÿV !­ !   ÿV ÿV    ä ­ ­ ä Rä    V    ô Öä Ö   &ä &   'ä '    Ü­  z    Üä  zÿV  ò    ûä  û­  òÿV  ”  Ş    ”{ Á  ŞÿV  ¬ ä ÿV ­ ® å    Ú      ¨ä ¨­ ¨   ä    ä ÿV ­     ñ­  ñ    ñä  ñÿV  ™   $ÿV $ä $­ $   ï    ya  y    yÁ  ×Á  yÿV  ye  ˜Á  õÁ  ˜    ˜e VÁ W   a Fa tÁ La ¯Á GÁ G   2Á 2f IÁ ¶Á ?Á ?   „   -Á  ËÁ  Ì   LÁ Ma ĞÁ Ña /Á /   /:    ïÁ Á €- DÁ pÁ pa q   º   çÁ è   FÁ F   ğ   {Á {a ïa 7a ta ‚a ‚Á ‚a ƒ   -a Ia Da 1' Á  c ¶a JÁ Jk yÁ ÉÁ y   ¾   „a *Á *    †a  ¦   ,Á *   7Á <   …Á †    î­ )ä *­ ,ä ,   
+ä xä ä  ø    İä  ~    ­ *ä  õ ÿü 'Á  ÓÁ  ²J ' ÷  Á  İÁ  e ’ä ä ä ­    Â   ¥ä ¥   p    ùä  ù­ ’­  ú± )­ Xä     [     ÷  ä  ­   ô  İ­ 
+­ •   ­  È  îä  œ õ x­ ä  ø -ä -   ­ä ­    ä      Ÿ    úè  ş   ä     ú­  úa  ` f l B  > D J P  L R X ^        ÿV   ä   Á   ­   a     †Á  †   ×Á Ø    —Á  —   ÔÁ Ô      
+  ª DFLT òcyrl ölatn aalt,calt4case:ccmp@ccmpLdnomZfrac`ligajloclploclvlocl|locl‚loclˆloclnumr”onumšordn salt¨sinf®ss01´ss02ºsubsÀsupsÆ (@HP^^fpx€ˆ˜¢¢ª²ººÂÚÊÒÚâììôş&&.6@@ä  à BSH òCHU 2 	AZE ĞCAT XCRT ĞKAZ ĞMOL €NLD ¨ROM ĞTAT ĞTRK ö          %            	       	 	              !                        
+                 "        #    $            D        ,>Rd    h    ¼Î    Ö    ğ    ö    ô    ú                 *    0    .    ,    *    (    &8    @    >P    X    ^    ^    \   ¬    ¬    ä    ö
+      ÿÿ                     ÿÿ          
+           ÿÿ                    ÿÿ          	           ÿÿ                     ÿÿ                     ÿÿ                    ÿÿ                    Ö g µ ¿éêëìíîïğñòóôõö÷øùúûüışÿ P	
+ªæ³‰Š%0123456789aNÛÜ !"#$%&'()*+,-./012BCDEFGHI 4 œ¢¨®´ºÆÔàìø(     (        ş       € €        ¼ n         +IYÛÜ !"#$%&'()*+,-./012BCDEFGHI      Ò      À î       „ ÊĞÔØÜàèğöúş ‚ ôş     µ ¿ª³ l                    ò  ò ‰Š‹Œ ğ 	
+ .  ( 4 "   Üÿï  *  Ö æ        Ê Ô       Âÿö  æ Æ        Ô ¼       ²   ° ¬  ° )ÛÜ !"#$%&'()*+,-./012BCDEFGHI > z x èéêëìíîïğñòóôõö÷øùúûüışÿ % N 
+	
+  D Z D    &  00 F      ' 2 8       € €  ³ ³  ¾ ¾  ò HH _g uu (¨¨ )®® *²² + ,>> -II .ºº /ÅÅ 0 1:C 2[[ <__ =Ö× >İå @çù I \:A _ è ‹ Œ 	 
+ &0:D '1;E (2<F )3=G *4>H  +5?I !,6@J "-7AK #.8BL $/9CM  HX  ùû  ı   İàâãåçèêëíñõö÷ø  HH  XX Ö× İå çù   :A #  ÛÜ   2 BI ! ¤ ¤ ¦ ¨ ª ¬²¸ ¶¼Â ÀÆ Æ È Ê Ì ÎÔÚ ØŞä âèîô ğöü ş
+   H   ³ ¾¨²  
+    _   i  [  >ILUºÅÈÑ  LUÈÑ  _  N  09    :C      ñ   €u    € ñu ¢      Ö×  İå çù  :A ! z€   ñ      _g   	    ğ   ğl  ®   ñLUÈÑŞ ãß ñá ñä àé àì ãï ãî İğ ñô ãò İó â  ' '  " % $ & '* ( ) > ã? â@ õA í: ã; â< õ= íF G H +I #B C D +E #  e ğ  e Xç XÏ uR H _  İàãèëíñ!#'  çê    U WHJ   u  9

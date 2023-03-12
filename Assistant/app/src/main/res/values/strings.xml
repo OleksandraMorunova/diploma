@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Emmo Techie</string>
+    <string name="_1_x_2_d">%1$x : %2$d</string>
+    <string name="resend_message">Надіслати код повторно</string>
+    <string name="_1_s">Повідомлення було надіслано на номер %1$s</string>
+    <string name="create">Створити</string>
+</resources>
