@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Assistant" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimary">@color/transparent</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -11,5 +11,42 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/primary</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="NoBackgroundTintButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="PopMenu" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="android:textColor">@color/background_text</item>
+        <item name="android:itemBackground">@color/background1</item>
+        <item name="android:iconTint">@color/primary</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="EditTextColorCustom">
+        <item name="colorControlActivated">@color/purple</item>
+    </style>
+
+    <style name="Theme.Assistant.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="SearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">@color/background_text</item>
+    </style>
+
+    <style name="Theme.Assistant.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Assistant.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="RoundedImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
     </style>
 </resources>

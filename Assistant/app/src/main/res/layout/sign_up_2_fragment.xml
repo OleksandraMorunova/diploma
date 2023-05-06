@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.sign_up.activity.sign_up_2.SignUpCodeFragment">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="80dp"
+            android:gravity="end|center_horizontal"
+            android:src="@drawable/ic_launcher_image_3"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:id="@+id/text_sign_up"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lora_bold"
+            android:gravity="center_horizontal"
+            android:text="Підтвердіть номер"
+            android:textColor="@color/background_text"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/text_message_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/nunito_sans_light"
+            android:text="@string/phone_number"
+            android:textColor="@color/background_text"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_text_1"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:backgroundTint="@color/purple"
+                android:textColor="@color/purple"/>
+
+            <EditText
+                android:id="@+id/edit_text_2"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:backgroundTint="@color/purple_pink"
+                android:textColor="@color/purple"/>
+            <EditText
+                android:id="@+id/edit_text_3"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:backgroundTint="@color/light_purple"
+                android:textColor="@color/light_purple"/>
+
+            <EditText
+                android:id="@+id/edit_text_4"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionNext"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/pink"/>
+
+            <EditText
+                android:id="@+id/edit_text_5"
+                android:layout_width="40dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:maxLength="1"
+                android:textSize="18sp"
+                android:textAlignment="center"
+                android:inputType="number"
+                android:backgroundTint="@color/orange"
+                android:textColor="@color/orange"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_message_timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="@string/resend_message"
+                android:textColor="@color/background_text"
+                android:textSize="14sp" />
+            <TextView
+                android:id="@+id/timer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/nunito_sans_light"
+                android:text="@string/_1_x_2_d"
+                android:textColor="@color/error"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

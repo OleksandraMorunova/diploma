@@ -5,8 +5,8 @@ import androidx.fragment.app.*;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.diploma.assistant.view.ui.fragment.auth.sign_in.SignInFragment;
-import com.diploma.assistant.view.ui.fragment.auth.sign_up.*;
+import com.diploma.assistant.view.ui.sign_in.fragment.SignInFragment;
+import com.diploma.assistant.view.ui.sign_up.fragment.SignUpInputPhoneNumberFragment;
 
 public class SignAdapter extends FragmentStateAdapter {
 
@@ -20,7 +20,7 @@ public class SignAdapter extends FragmentStateAdapter {
         if(position == 0) {
             return new SignInFragment();
         }
-        return new SignUp1();
+        return new SignUpInputPhoneNumberFragment();
     }
 
     @Override

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_view"
+    android:layout_width="match_parent"
+    android:layout_height="117dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="15dp"
+    android:background="@drawable/border1">
+
+    <RelativeLayout
+        android:id="@+id/block1"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="@drawable/mod_view_admin1">
+
+        <TextView
+            android:id="@+id/datatime_and_owner_view_task"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="center|start"
+            android:text="00:00 00.00 by Author"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/article_task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/datatime_and_owner_view_task"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/lora_semi_bold"
+            android:gravity="center|start"
+            android:maxLines="3"
+            android:text="Pellentesque luctus posuere ullamcorper. Nunc eget nulla ac nibh aliquam rhoncus vel ut augue. Integer mollis gravida libero, ut tristique arcu tempor vel. Nunc accumsan arcu eu malesuada pellentesque. "
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

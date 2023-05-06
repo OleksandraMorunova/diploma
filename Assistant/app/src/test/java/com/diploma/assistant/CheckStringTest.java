@@ -4,20 +4,20 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import com.diploma.assistant.view.ui.activity.auth.sign_up_2.CheckString;
+import com.diploma.assistant.view.ui.sign_up.activity.sign_up_2.CheckStringLine;
 
 public class CheckStringTest {
 
     @Test
     public void testPassword() {
-        assertTrue(CheckString.password("Password1@")); // Test valid password
-        assertFalse(CheckString.password("Password@"));// Test password with no number
-        assertFalse(CheckString.password("PASSWORD1@"));// Test password with no lower case
-        assertFalse(CheckString.password("password1@")); // Test password with no upper case
-        assertFalse(CheckString.password("Passwo d1@"));   // Test password with whitespace
-        assertFalse(CheckString.password("Password1")); // Test password with no special character
-        assertFalse(CheckString.password("Pass1@")); // Test password with incorrect length (less than 8 characters)
-        assertFalse(CheckString.password("ThisIsALongPassword1@")); // Test password with incorrect length (more than 16 characters)
+        assertTrue(CheckStringLine.password("Password1@")); // Test valid password
+        assertFalse(CheckStringLine.password("Password@"));// Test password with no number
+        assertFalse(CheckStringLine.password("PASSWORD1@"));// Test password with no lower case
+        assertFalse(CheckStringLine.password("password1@")); // Test password with no upper case
+        assertFalse(CheckStringLine.password("Passwo d1@"));   // Test password with whitespace
+        assertFalse(CheckStringLine.password("Password1")); // Test password with no special character
+        assertFalse(CheckStringLine.password("Pass1@")); // Test password with incorrect length (less than 8 characters)
+        assertFalse(CheckStringLine.password("ThisIsALongPassword1@")); // Test password with incorrect length (more than 16 characters)
     }
 
     @Test

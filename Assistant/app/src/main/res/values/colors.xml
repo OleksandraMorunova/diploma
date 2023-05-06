@@ -8,19 +8,24 @@
     <color name="white">#FFFFFF</color>
 
     <color name="background">#FFFFFF</color>
+    <color name="background1">#FFFFFF</color>
+    <color name="box">#FFFFFF</color>
     <color name="background_text">#FF000000</color>
-    <color name="bar">#14FFFFFF</color>
     <color name="error">#B00020</color>
-    <color name="icon">#E3000000</color>
-    <color name="frame_layout_bar">#0D000000</color>
 
     <color name="primary">#0C2949</color>
-    <color name="light_blue">#3A6DA6</color>
-    <color name="yellow">#FFC500</color>
+    <color name="primary_box">#0C2949</color>
 
+    <color name="yellow">#FFC500</color>
     <color name="purple">#463568</color>
     <color name="purple_pink">#7B346E</color>
     <color name="light_purple">#9D77E7</color>
     <color name="pink">#FA7B96</color>
     <color name="orange">#F9B54E</color>
+
+    <color name="transparent">#FFFFFFFF</color>
+    <color name="box_stroke">#60000000</color>
+
+
+    <color name="item_comments_normal">#80000000</color>
 </resources>

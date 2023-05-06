@@ -1,0 +1,47 @@
+<vector android:height="17.5dp" android:viewportHeight="62"
+    android:viewportWidth="100" android:width="35dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#d21135" android:pathData="M0,0L0,37 37,37 37,0 0,0Z"/>
+    <path android:fillColor="#19795f" android:pathData="M37,0L37,1 100,1C94.29,-1.39 86.15,0 80,0L37,0Z"/>
+    <path android:fillColor="#016b4f" android:pathData="M37,1L37,12 100,12 100,1 37,1Z"/>
+    <path android:fillColor="#ea8c9e" android:pathData="M18,7L19,8 18,7Z"/>
+    <path android:fillColor="#ffffff" android:pathData="M18,8C16.48,13.75 13.7,14.93 8,15L8,16C12.48,18.69 13.48,20.86 13,26 18.24,24.23 20,24.95 25,27 23.31,21.48 24.1,19.18 29,16L29,15C22.52,14.92 21.54,12.83 18,8Z"/>
+    <path android:fillColor="#df536e" android:pathData="M17,9L18,10 17,9Z"/>
+    <path android:fillColor="#e6788c" android:pathData="M19,9L20,10 19,9Z"/>
+    <path android:fillColor="#f0b1bd" android:pathData="M17,10L18,11 17,10Z"/>
+    <path android:fillColor="#df536e" android:pathData="M16,12L17,13 16,12Z"/>
+    <path android:fillColor="#e2647b" android:pathData="M20,12L21,13 20,12Z"/>
+    <path android:fillColor="#8ba125" android:pathData="M37,12L37,13 100,13C94.29,10.61 86.15,12 80,12L37,12Z"/>
+    <path android:fillColor="#ed9eac" android:pathData="M16,13L17,14 16,13Z"/>
+    <path android:fillColor="#f0b1bd" android:pathData="M20,13L21,14 20,13Z"/>
+    <path android:fillColor="#ffcf01" android:pathData="M37,13L37,24 100,24 100,13 37,13Z"/>
+    <path android:fillColor="#df536e" android:pathData="M29,15L30,16 29,15Z"/>
+    <path android:fillColor="#ed9eac" android:pathData="M9,16L10,17 9,16Z"/>
+    <path android:fillColor="#f0b1bd" android:pathData="M27,16L28,17 27,16Z"/>
+    <path android:fillColor="#df536e" android:pathData="M10,17L11,18 10,17Z"/>
+    <path android:fillColor="#e2647b" android:pathData="M26,17L27,18 26,17Z"/>
+    <path android:fillColor="#f3bfc9" android:pathData="M12,18L13,19 12,18Z"/>
+    <path android:fillColor="#e6788c" android:pathData="M13,19L14,20 13,19Z"/>
+    <path android:fillColor="#ea8c9e" android:pathData="M23,19L24,20 23,19Z"/>
+    <path android:fillColor="#df536e" android:pathData="M23,21L24,22 23,21Z"/>
+    <path android:fillColor="#ea8c9e" android:pathData="M13,22L14,23 13,22Z"/>
+    <path android:fillColor="#ed9eac" android:pathData="M23,22L24,23 23,22Z"/>
+    <path android:fillColor="#df536e" android:pathData="M18,23L19,24 18,23Z"/>
+    <path android:fillColor="#ed9eac" android:pathData="M16,24L17,25 16,24Z"/>
+    <path android:fillColor="#ea8c9e" android:pathData="M20,24L21,25 20,24Z"/>
+    <path android:fillColor="#df536e" android:pathData="M24,24L25,25 24,24Z"/>
+    <path android:fillColor="#d1bd0f" android:pathData="M37,24L37,25 100,25C94.29,22.61 86.15,24 80,24L37,24Z"/>
+    <path android:fillColor="#ea8c9e" android:pathData="M12,25L13,26 12,25Z"/>
+    <path android:fillColor="#e2647b" android:pathData="M15,25L16,26 15,25Z"/>
+    <path android:fillColor="#df536e" android:pathData="M21,25L22,26 21,25Z"/>
+    <path android:fillColor="#f0b1bd" android:pathData="M24,25L25,26 24,25Z"/>
+    <path android:fillColor="#016b4f" android:pathData="M37,25L37,37 100,37 100,25 37,25Z"/>
+    <path android:fillColor="#f9dbe1" android:pathData="M12,26L12,28C13.64,27.45 13.45,27.64 14,26L12,26Z"/>
+    <path android:fillColor="#ed9eac" android:pathData="M24,27L25,28 24,27Z"/>
+    <path android:fillColor="#df536e" android:pathData="M25,27L26,28 25,27Z"/>
+    <path android:fillColor="#d19d15" android:pathData="M0,37L0,38 37,38C27.2,33.89 10.65,37 0,37Z"/>
+    <path android:fillColor="#d1bd0f" android:pathData="M37,37L37,38 100,38C94.29,35.61 86.15,37 80,37L37,37Z"/>
+    <path android:fillColor="#ffcf01" android:pathData="M0,38L0,49 100,49 100,38 0,38Z"/>
+    <path android:fillColor="#8ba125" android:pathData="M0,49L0,50 100,50C91.64,46.49 78.06,49 69,49L0,49Z"/>
+    <path android:fillColor="#016b4f" android:pathData="M0,50L0,61 100,61 100,50 0,50Z"/>
+    <path android:fillColor="#19795f" android:pathData="M0,61L0,62 100,62C91.64,58.49 78.06,61 69,61L0,61Z"/>
+</vector>

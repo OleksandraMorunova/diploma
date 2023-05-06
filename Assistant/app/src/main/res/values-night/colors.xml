@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="background">#FF000000</color>
+    <color name="background">#121212</color>
+    <color name="background1">#2D2D2D</color>
+    <color name="primary_box">#121212</color>
+
     <color name="background_text">#FFFFFF</color>
+    <color name="box">#174b85</color>
+    <color name="primary">#174b85</color>
+    <color name="transparent">#FF000000</color>
+    <color name="box_stroke">#66FFFFFF</color>
+
+    <color name="item_comments_normal">#50FFFFFF</color>
 </resources>

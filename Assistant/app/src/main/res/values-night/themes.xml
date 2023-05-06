@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.Assistant" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimary">@color/background</item>
         <item name="colorPrimaryVariant">@color/teal_700</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
@@ -19,4 +19,18 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <style name="NoBackgroundTintButton" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="PopMenu" parent="Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu">
+        <item name="android:textColor">@color/background_text</item>
+        <item name="android:itemBackground">@color/background1</item>
+        <item name="android:iconTint">@color/white</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
+    </style>
 </resources>

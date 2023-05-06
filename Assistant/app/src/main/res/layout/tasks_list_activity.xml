@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipe_layout_task"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_view_tasks_list"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:contentDescription="TODO"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"
+            app:strokeWidth="1dp"/>
+
+        <TextView
+            android:id="@+id/name_user_tasks_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:gravity="center"
+            android:text="User"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/background_text"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/lastname_user_tasks_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lora_bold"
+            android:gravity="top|center_horizontal"
+            android:text="user"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/background_text"
+            android:textSize="20sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/ic_background_example1"
+            android:elevation="5dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/count_tasks_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/lora_regular"
+                android:gravity="center"
+                android:text="Count: 0"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_view_tasks_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="10dp"/>
+    </LinearLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

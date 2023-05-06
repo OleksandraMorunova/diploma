@@ -1,7 +1,8 @@
 package com.diploma.assistant.model.enumaration;
 
 public enum StatusUserEnum {
-    ACTIVE("ACTIVE");
+    ACTIVE("ACTIVE"),
+    DEACTIVE("DEACTIVE");
 
     private final String status;
 

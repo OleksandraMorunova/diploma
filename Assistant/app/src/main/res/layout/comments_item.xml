@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/block1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background">
+
+        <TextView
+            android:id="@+id/nav_data_time_comment_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="end"
+            android:text="00.00 00:00"
+            android:textColor="@color/primary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/nav_user_name_comment_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/nav_data_time_comment_view"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="center|end"
+            android:text="User user"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nav_article"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nav_data_time_comment_view"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="10dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="center|start"
+            android:maxLines="2"
+            android:text="Finibusfghjj."
+            android:textColor="@color/primary"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/nav_comment_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/nav_article"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="center|start"
+            android:maxLines="2"
+            android:text="Finibusfghjj. Phasellus vehicula, ex eget malesuadafinibus. Phasellus vehicula, ex eget malesuadamalesuadamalesua"
+            android:textColor="@color/background_text"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

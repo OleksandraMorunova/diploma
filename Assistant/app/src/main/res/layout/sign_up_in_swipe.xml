@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.sign_in.activity.SwitchEntriesActivity"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/transparent"
+        app:tabTextColor="@color/primary"
+        app:tabGravity="fill"
+        app:tabIndicatorAnimationMode="elastic"
+        app:tabIndicatorGravity="stretch"
+        app:tabMode="fixed"
+        app:tabRippleColor="@color/transparent"
+        app:tabSelectedTextColor="@color/background" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager2_login"/>
+</LinearLayout>

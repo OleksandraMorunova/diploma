@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/option_1"
+        android:icon="@drawable/ic_baseline_task"
+        android:title="Завдання" />
+    <item android:id="@+id/option_2"
+        android:icon="@drawable/ic_baseline_message"
+        android:title="Чат" />
+    <item android:id="@+id/option_3"
+        android:icon="@drawable/ic_baseline_users"
+        android:title="Користувач">
+        <menu>
+            <item android:id="@+id/option_3_1"
+                android:title="Активувати"/>
+            <item android:id="@+id/option_3_2"
+                android:title="Заблокувати"/>
+            <item android:id="@+id/option_3_3"
+                android:title="Видалити"/>
+        </menu>
+    </item>
+</menu>

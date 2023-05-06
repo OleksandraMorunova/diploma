@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/certain_data_time_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="end"
+            android:text="00.00 00:00"
+            android:textColor="@color/primary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/certain_user_name_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@id/certain_data_time_comment"
+            android:fontFamily="@font/lora_regular"
+            android:gravity="center|end"
+            android:text="User user"
+            android:textColor="@color/primary"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/certain_task_name_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/lora_regular"
+        android:text="Article"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/primary"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:id="@+id/border"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shadow_border"
+        android:elevation="5dp"
+        android:gravity="center_vertical"/>
+
+    <TextView
+        android:id="@+id/certain_text_of_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/lora_semi_bold"
+        android:text="Proin eget arcu quis lorem varius auctor. Mauris mollis, metus aliquam porttitor faucibus, odio neque semper tellus, vitae consequat neque dolor vitae metus. Aliquam scelerisque faucibus lectus. Duis eleifend felis dui. Praesent eu facilisis nulla. Praesent imperdiet dui erat, et aliquet mauris varius vitae. Fusce eu iaculis sapien, a gravida massa. Suspendisse potenti. Sed vitae massa et magna dictum commodo eget sodales est."
+        android:textColor="@color/background_text"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/border_below_certain_text_of_comment"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/shadow_border"
+        android:elevation="5dp"
+        android:gravity="center_vertical"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_view_certain_text_of_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+</LinearLayout>

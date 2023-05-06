@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_view_tasks_list"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:queryHint="Search..."
+        android:layout_margin="5dp"
+        android:background="@drawable/mod_search_view"
+        android:elevation="10dp"
+        android:theme="@style/SearchView"
+        app:iconifiedByDefault="false"/>
+
+    <include android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/tasks_list_activity"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
