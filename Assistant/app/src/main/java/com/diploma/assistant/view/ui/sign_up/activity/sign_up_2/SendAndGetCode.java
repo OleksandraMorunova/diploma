@@ -120,7 +120,8 @@ public class SendAndGetCode {
 
     private void updateDetailsByEmailViewModelImplMethod(User new_u, String numberOrEmail, Class<?> emailClass){
         UserViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
-        viewModel.updateUserDetails(numberOrEmail, new_u).observe(lifecycleOwner, users -> {
+        //TODO CHECK
+        viewModel.updateUserDetails(null, numberOrEmail, null, null).observe(lifecycleOwner, users -> {
             try {
                 if(users != null){
                     Log.i("TAG", "Updated user data by email and password");

@@ -63,7 +63,6 @@
             android:textColorLink="@color/light_purple"/>
     </com.google.android.material.textfield.TextInputLayout>
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_field_role_bottom_sheet"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
@@ -75,9 +74,9 @@
         app:hintTextColor="@color/primary">
 
         <AutoCompleteTextView
+            android:id="@+id/role_bottom_sheet"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/role_bottom_sheet"
             android:hint="Статус клієнта"
             android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>

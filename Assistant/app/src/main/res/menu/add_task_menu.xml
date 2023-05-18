@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/added_file_to_task"
+        android:icon="@drawable/ic_baseline_add_to_drive"
+        android:checked="true"
+        android:title="Додати файл"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/send_task"
+        android:icon="@drawable/ic_baseline_send"
+        android:checked="true"
+        android:title="Відправити"
+        app:showAsAction="always"/>
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/view_chat_coordinator"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/Widget.Material3.AppBarLayout">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar_chat"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/ic_background_new"
+                android:theme="@style/Widget.MyTheme.Toolbar"
+                app:menu="@menu/chat_menu">
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar_chat"
+            android:layout_marginBottom="65dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycle_view_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/comment_chat_til"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Коментар..."
+        app:boxStrokeColor="@color/box_color_selector"
+        app:hintTextColor="@color/primary"
+        app:endIconDrawable="@drawable/ic_baseline_send"
+        app:endIconTint="@color/primary"
+        android:layout_gravity="bottom"
+        app:endIconMode="custom"
+        android:elevation="4dp"
+        android:theme="@style/EditTextColorCustom"
+        app:boxBackgroundColor="@color/background"
+        app:boxBackgroundMode="outline"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/comment_chat_tiet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lines="1"
+            android:textColorHighlight="@color/primary"
+            android:textCursorDrawable="@drawable/color_cursor_chat"
+            android:textColorLink="@color/light_purple"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

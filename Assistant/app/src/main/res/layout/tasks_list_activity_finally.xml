@@ -20,4 +20,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         layout="@layout/tasks_list_activity"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_list_tasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@color/white"
+        android:layout_gravity="bottom|end"
+        app:rippleColor="@color/background"
+        app:backgroundTint="@color/white"
+        app:borderWidth="2dp"
+        android:contentDescription="TODO" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

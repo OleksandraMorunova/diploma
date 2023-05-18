@@ -23,6 +23,16 @@
         <item name="android:iconTint">@color/primary</item>
     </style>
 
+    <style name="Widget.MyTheme.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="iconTint">@color/white</item>
+        <item name="android:background">#103155</item>
+        <item name="materialThemeOverlay">@style/MyThemeOverlay_Toolbar</item>
+    </style>
+
+    <style name="MyThemeOverlay_Toolbar" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorOnPrimary">@color/purple</item>
+    </style>
+
     <style name="DialogAnimation">
         <item name="android:windowEnterAnimation">@anim/slide_in_bottom</item>
         <item name="android:windowExitAnimation">@anim/slide_out_bottom</item>
@@ -49,4 +59,5 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
+
 </resources>

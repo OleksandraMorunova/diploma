@@ -1,61 +1,82 @@
 package com.diploma.assistant.view.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
-import android.os.Parcelable;
 import android.view.ContextThemeWrapper;
 import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.PopupMenu;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.diploma.assistant.R;
 import com.diploma.assistant.model.entity.adapter.ItemsForListOfUsers;
-import com.diploma.assistant.model.entity.resource_service.TaskDto;
-import com.diploma.assistant.view.ui.tasks.ChatFragment;
-import com.diploma.assistant.view.ui.tasks.TasksListActivity;
+import com.diploma.assistant.model.entity.registration_service.User;
+import com.diploma.assistant.model.enumaration.StatusUserEnum;
+import com.diploma.assistant.service.account_manager.AuthenticatorService;
+import com.diploma.assistant.view.ui.chat.ChatActivity;
+import com.diploma.assistant.view.ui.tasks.admin.TasksListActivity;
+import com.diploma.assistant.view_model.UserViewModel;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class RecycleViewAdminContext extends RecyclerView.Adapter<ViewHolderAdminContext> implements Filterable, Serializable {
-    private final Context context;
+public class RecycleViewAdminContext extends RecyclerView.Adapter< RecycleViewAdminContext.ViewHolderAdminContext> implements Filterable, Serializable {
+    private final Activity context;
     private final List<ItemsForListOfUsers> items;
     private final List<ItemsForListOfUsers> itemsFull;
 
-    public RecycleViewAdminContext(Context context, List<ItemsForListOfUsers> items) {
+    private final ViewModelStoreOwner vmso;
+    private final LifecycleOwner lo;
+
+    public RecycleViewAdminContext(Activity context, List<ItemsForListOfUsers> items, ViewModelStoreOwner vmso, LifecycleOwner lo) {
         this.context = context;
         this.items = items;
         itemsFull = new ArrayList<>(items);
+        this.vmso = vmso;
+        this.lo = lo;
     }
 
     @NonNull
     @Override
     public ViewHolderAdminContext onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ViewHolderAdminContext(LayoutInflater.from(context).inflate(R.layout.user_admin_item, parent, false));
+        return new ViewHolderAdminContext(LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.user_admin_item, parent, false));
     }
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     public void onBindViewHolder(@NonNull ViewHolderAdminContext holder, int position) {
+        AuthenticatorService accounts = new AuthenticatorService(context);
+        String token = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
+
         holder.nameView.setText(items.get(position).getName());
         holder.countView.setText(items.get(position).getCount());
         holder.statusView.setText(items.get(position).getStatus());
+
         holder.itemView.setOnClickListener(v -> {
             Context wrapper = new ContextThemeWrapper(v.getContext(), R.style.PopMenu);
             PopupMenu popup = new PopupMenu(wrapper, v);
             popup.setForceShowIcon(true);
             popup.inflate(R.menu.menu_items_day);
             popup.setGravity(Gravity.CENTER);
+
+            UserViewModel userViewModel = new ViewModelProvider(vmso).get(UserViewModel.class);
+            User user = new User();
             popup.setOnMenuItemClickListener(item -> {
                 final int itemId = item.getItemId();
                 if (itemId == R.id.option_1) {
@@ -63,15 +84,48 @@ public class RecycleViewAdminContext extends RecyclerView.Adapter<ViewHolderAdmi
                             .putExtra("id", items.get(position).getId())
                             .putExtra("name", items.get(position).getName())
                             .putExtra("count", items.get(position).getCount())
-                            .putExtra("icon", (Parcelable) items.get(position).getIcon())
+                            .putExtra("icon", items.get(position).getIcon())
                     );
                     return true;
                 }
                 if (itemId == R.id.option_2) {
-                    context.startActivity(new Intent(context, ChatFragment.class));
+                    context.startActivity(new Intent(context, ChatActivity.class)
+                            .putExtra("user_id", items.get(position).getId()));
                     return true;
                 }
-                return itemId == R.id.option_3;
+                if (itemId == R.id.option_3_1) {
+                    user.setStatus(StatusUserEnum.BLOCKED.getStatus());
+                    userViewModel.updateUserDetails(token, items.get(position).getId() ,user,null).observe(lo, l -> {
+                        if(l != null){
+                            holder.statusView.setText(StatusUserEnum.BLOCKED.getStatus());
+                            Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();
+                        }
+                        else Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
+                    });
+                    return true;
+                }
+                if (itemId == R.id.option_3_2){
+                        userViewModel.deleteUserById(token, items.get(position).getId()).observe(lo, l -> {
+                            if(l){
+                                Toast.makeText(context.getApplicationContext(), "Успішно видаленно", Toast.LENGTH_SHORT).show();
+                            }
+                            else Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
+                        });
+                    return true;
+                }
+
+                if (itemId == R.id.option_3_3){
+                    user.setStatus(StatusUserEnum.ACTIVE.getStatus());
+                    userViewModel.updateUserDetails(token, items.get(position).getId() ,user,null).observe(lo, l -> {
+                        if(l != null){
+                            holder.statusView.setText(StatusUserEnum.ACTIVE.getStatus());
+                            Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();
+                        }
+                        else Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
+                    });
+                    return true;
+                }
+                return false;
             });
             popup.show();
         });
@@ -114,4 +168,15 @@ public class RecycleViewAdminContext extends RecyclerView.Adapter<ViewHolderAdmi
             notifyDataSetChanged();
         }
     };
+
+    static class ViewHolderAdminContext extends RecyclerView.ViewHolder {
+        TextView nameView, statusView, countView;
+
+        public ViewHolderAdminContext(@NonNull View itemView) {
+            super(itemView);
+            nameView = itemView.findViewById(R.id.name_view);
+            statusView = itemView.findViewById(R.id.status_user_view);
+            countView = itemView.findViewById(R.id.count_tasks_view);
+        }
+    }
 }

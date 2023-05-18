@@ -53,8 +53,8 @@ public class RetrofitService {
             return new OkHttpClient.Builder()
                     .sslSocketFactory(sslSocketFactory, (X509TrustManager) trustAllCerts[0])
                     .hostnameVerifier((hostname, session) -> true)
-                    .readTimeout(15, TimeUnit.SECONDS)
-                    .writeTimeout(10, TimeUnit.SECONDS)
+                    .readTimeout(60, TimeUnit.SECONDS)
+                    .writeTimeout(200, TimeUnit.SECONDS)
                     .connectTimeout(2, TimeUnit.SECONDS);
         } catch (Exception e) {
             throw new RuntimeException(e);

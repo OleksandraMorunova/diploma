@@ -6,6 +6,10 @@ public class LoadFile {
     private String fileSize;
     private String file;
 
+    public LoadFile() {
+
+    }
+
     public String getFilename() {
         return filename;
     }

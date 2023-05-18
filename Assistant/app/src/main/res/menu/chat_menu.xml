@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/update_message"
+        android:icon="@drawable/ic_baseline_update"
+        android:checked="true"
+        android:visible="false"
+        android:title="Редагувати"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/delete_message"
+        android:icon="@drawable/ic_baseline_delete"
+        android:checked="true"
+        android:visible="false"
+        android:title="Видалити"
+        app:showAsAction="ifRoom"/>
+</menu>

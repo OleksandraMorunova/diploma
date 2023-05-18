@@ -4,23 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/transparent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_certain_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="100dp">
+
         <include layout="@layout/comment_certain_part"/>
     </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
       <com.google.android.material.textfield.TextInputLayout
-          android:layout_gravity="end|bottom"
           android:id="@+id/comment_text_input_layout"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
+          android:layout_gravity="end|bottom"
           android:hint="Коментар до завдання..."
           app:boxStrokeColor="@color/box_color_selector"
           app:hintTextColor="@color/primary"
+          app:endIconDrawable="@drawable/ic_baseline_send"
+          app:endIconTint="@color/primary"
+          app:endIconMode="custom"
           android:theme="@style/EditTextColorCustom"
-          style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+          app:boxBackgroundColor="@color/transparent"
+          app:boxBackgroundMode="outline"
+          style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
 
           <com.google.android.material.textfield.TextInputEditText
               android:id="@+id/comment_text_input_edit_text"

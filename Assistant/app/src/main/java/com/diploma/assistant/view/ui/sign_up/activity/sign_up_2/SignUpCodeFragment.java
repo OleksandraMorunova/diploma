@@ -17,7 +17,7 @@ import androidx.lifecycle.ViewModelStoreOwner;
 import com.diploma.assistant.R;
 import com.diploma.assistant.databinding.SignUp2FragmentBinding;
 import com.diploma.assistant.model.entity.registration_service.User;
-import com.diploma.assistant.view.ui.sign_in.activity.SwitchEntriesActivity;
+import com.diploma.assistant.view.ui.MainPage;
 import com.diploma.assistant.view.ui.sign_up.activity.sign_up_3.SignUpSetLoginAndPasswordFragment;
 
 import java.util.Arrays;
@@ -78,7 +78,7 @@ public class SignUpCodeFragment extends AppCompatActivity{
                             List<String> l = Arrays.asList(binding.editText1.getText().toString(), binding.editText2.getText().toString(), binding.editText3.getText().toString(), binding.editText4.getText().toString(), binding.editText5.getText().toString());
                             User u = new User();
                             u.setCode(l.stream().map(String::valueOf).collect(Collectors.joining("", "", "")));
-                            code.getCode(u, emailAndPassword, SignUpSetLoginAndPasswordFragment.class, SwitchEntriesActivity.class);
+                            code.getCode(u, emailAndPassword, SignUpSetLoginAndPasswordFragment.class, MainPage.class);
                         }
                     }
                 }
@@ -102,7 +102,7 @@ public class SignUpCodeFragment extends AppCompatActivity{
     }
 
     public void onBackPressed(){
-        Intent i = new Intent(SignUpCodeFragment.this, SwitchEntriesActivity.class);
+        Intent i = new Intent(SignUpCodeFragment.this, MainPage.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }

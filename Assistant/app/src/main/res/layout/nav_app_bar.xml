@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ui.navigation.NavigationActivity">
+    tools:context=".view.ui.main_page.admin.NavigationActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/app_bar_layout"
         android:theme="@style/Widget.Material3.AppBarLayout">
 
         <androidx.appcompat.widget.Toolbar
@@ -24,8 +24,8 @@
     <include layout="@layout/nav_content" />
 
     <include android:layout_marginTop="?attr/actionBarSize"
-        layout="@layout/users_admin_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        layout="@layout/users_admin_list"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,21 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item android:id="@+id/option_1"
         android:icon="@drawable/ic_baseline_task"
+        android:checked="true"
         android:title="Завдання" />
     <item android:id="@+id/option_2"
+        android:checked="true"
         android:icon="@drawable/ic_baseline_message"
         android:title="Чат" />
     <item android:id="@+id/option_3"
+        android:checked="true"
         android:icon="@drawable/ic_baseline_users"
         android:title="Користувач">
         <menu>
             <item android:id="@+id/option_3_1"
-                android:title="Активувати"/>
-            <item android:id="@+id/option_3_2"
+                android:checked="true"
                 android:title="Заблокувати"/>
-            <item android:id="@+id/option_3_3"
+            <item android:id="@+id/option_3_2"
+                android:checked="true"
                 android:title="Видалити"/>
+            <item android:id="@+id/option_3_3"
+                android:checked="true"
+                android:title="Розблокувати" />
         </menu>
     </item>
 </menu>

@@ -3,6 +3,7 @@ package com.diploma.assistant.model.entity.adapter;
 import java.io.Serializable;
 
 public class ItemsForListOfComments implements Serializable {
+    private String idTask;
     private String idCommentByExistList;
     private String userName;
     private final String comment;
@@ -11,6 +12,12 @@ public class ItemsForListOfComments implements Serializable {
     private final String articleId;
     private final String article;
 
+    public String getIdTask() {
+        return idTask;
+    }
+    public void setIdTask(String idTask) {
+        this.idTask = idTask;
+    }
     public String getIdCommentsByExistList() {
         return idCommentByExistList;
     }
@@ -40,6 +47,7 @@ public class ItemsForListOfComments implements Serializable {
     }
 
     public ItemsForListOfComments(ItemsBuilder builder) {
+        this.idTask = builder.idTask;
         this.idCommentByExistList = builder.idCommentByExistList;
         this.userName = builder.userName;
         this.comment = builder.comment;
@@ -50,6 +58,7 @@ public class ItemsForListOfComments implements Serializable {
     }
 
     public static class ItemsBuilder implements Serializable{
+        private String idTask;
         private String idCommentByExistList;
         private final String userName;
         private final String comment;
@@ -61,6 +70,11 @@ public class ItemsForListOfComments implements Serializable {
         public ItemsBuilder (String userName, String comment) {
             this.userName = userName;
             this.comment = comment;
+        }
+
+        public ItemsBuilder idTask(String idTask) {
+            this.idTask = idTask;
+            return this;
         }
 
         public ItemsBuilder idComment(String idCommentByExistList) {

@@ -7,11 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.diploma.assistant.model.entity.registration_service.LoadFile;
-import com.diploma.assistant.model.entity.registration_service.LoginResponse;
 import com.diploma.assistant.service.connection.FilesService;
-import com.diploma.assistant.service.connection.TokenService;
-
-import org.bson.types.ObjectId;
 
 public class FilesViewModel extends AndroidViewModel {
     FilesService repository = new FilesService();
@@ -20,7 +16,12 @@ public class FilesViewModel extends AndroidViewModel {
         super(application);
     }
 
+
     public LiveData<LoadFile> getFiles(String token, String idFiles){
         return repository.getFiles(token, idFiles);
+    }
+
+    public LiveData<LoadFile> getListFiles(String token, String idFiles){
+        return repository.getListFiles(token, idFiles);
     }
 }

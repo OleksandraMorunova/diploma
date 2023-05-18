@@ -12,7 +12,7 @@ public class ItemsForListOfUsers implements Serializable {
     private String name;
     private String status;
     private String count;
-    private Bitmap icon;
+    private String icon;
 
     public String getId() {
         return id;
@@ -46,11 +46,11 @@ public class ItemsForListOfUsers implements Serializable {
         this.count = count;
     }
 
-    public Bitmap getIcon() {
+    public String getIcon() {
         return icon;
     }
 
-    public void setIcon(Bitmap icon) {
+    public void setIcon(String icon) {
         this.icon = icon;
     }
 
@@ -59,6 +59,7 @@ public class ItemsForListOfUsers implements Serializable {
         this.name = builder.name;
         this.status = builder.status;
         this.count = builder.count;
+        this.icon = builder.icon;
     }
 
     public static class ItemsForListOfUsersBuilder implements Serializable {
@@ -66,7 +67,7 @@ public class ItemsForListOfUsers implements Serializable {
         private String name;
         private String status;
         private String count;
-        private Bitmap icon;
+        private String icon;
 
         public ItemsForListOfUsersBuilder(String id, String name) {
             this.id = id;
@@ -83,7 +84,7 @@ public class ItemsForListOfUsers implements Serializable {
             return this;
         }
 
-        public ItemsForListOfUsersBuilder icon(Bitmap icon){
+        public ItemsForListOfUsersBuilder icon(String icon){
             this.icon = icon;
             return this;
         }

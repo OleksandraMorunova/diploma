@@ -32,6 +32,7 @@
         <entry key="..\:/Users/User/Desktop/Assistant/app/src/main/res/layout/sign_up_3.xml" value="0.25052083333333336" />
         <entry key="..\:/Users/User/Desktop/Assistant/app/src/main/res/layout/switch_entries_activity.xml" value="0.130078125" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable-night/border.xml" value="0.141" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable-night/ic_background_new.xml" value="0.164" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable-night/mod_search_view.xml" value="0.1465" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable-night/shadow_border.xml" value="0.141" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable-v24/ic_foreground.xml" value="0.1385" />
@@ -41,6 +42,7 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/border1.xml" value="0.1465" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/boxStrokeColor.xml" value="0.1385" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/color_cursor.xml" value="0.1695" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/color_cursor_chat.xml" value="0.177" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/dialog_bottom.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/gradients.xml" value="0.159" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_ad.xml" value="0.1335" />
@@ -56,10 +58,17 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_ax.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_background_example.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_background_example1.xml" value="0.1465" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_background_new.xml" value="0.164" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.181" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_check.xml" value="0.1595" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_close.xml" value="0.177" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_delete.xml" value="0.117" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_image_not_supported.xml" value="0.1445" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_message.xml" value="0.159" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_setting.xml" value="0.1595" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_task.xml" value="0.159" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_users.xml" value="0.159" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_baseline_video.xml" value="0.1485" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_bb.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_bd.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_be.xml" value="0.1" />
@@ -238,6 +247,7 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_yt.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_za.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/ic_zm.xml" value="0.1" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/launcher.xml" value="0.177" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/mod_button.xml" value="0.142" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/mod_circle.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/mod_circle_image.xml" value="0.1" />
@@ -259,18 +269,31 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/tab_indicator_selected.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/drawable/text_input_layout_stroke_color.xml" value="0.1385" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/a.xml" value="0.11816939890710383" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/activity_add_task.xml" value="0.264" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/activity_navigation.xml" value="0.176" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/add_task_bottom_sheet.xml" value="0.2" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/add_task_cordinator.xml" value="0.2" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/add_task_list_item.xml" value="0.4" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/app_bar.xml" value="0.190625" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/app_bar_navigation.xml" value="0.128" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bar.xml" value="0.17008196721311475" />
-        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet.xml" value="0.2" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet.xml" value="0.1" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet_look_task.xml" value="0.17452402538531278" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet_look_task_items.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet_ook_task.xml" value="0.176" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/chat.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/chat_finally.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/comment_certain.xml" value="0.176" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/comment_certain_part.xml" value="0.2" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/comments.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/comments_certain.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/comments_certain_item.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/comments_item.xml" value="0.19581017528858485" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/commentscertain.xml" value="0.15956482320942883" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/content_admin.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/content_navigation.xml" value="0.144" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/firs_page.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/fragment_gallery.xml" value="0.190625" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/fragment_home.xml" value="0.190625" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/fragment_sign_in.xml" value="0.152" />
@@ -286,6 +309,8 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/list_item.xml" value="0.18984375" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/list_of_users.xml" value="0.12" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/list_users_admin.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/look_task_cordinator.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/look_task_list_item.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/nav_activity.xml" value="0.17008196721311475" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/nav_app_bar.xml" value="0.24352331606217617" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/nav_content.xml" value="0.1609375" />
@@ -300,21 +325,31 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/sign_up_2_fragment.xml" value="0.17271078875793291" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/sign_up_in_swipe.xml" value="0.11816939890710383" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/task_item.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_activity.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_activity_finally.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_fragment.xml" value="0.1448087431693989" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_list_activity.xml" value="0.2" />
-        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_list_activity_finally.xml" value="0.152" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_list_activity_finally.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_list_item.xml" value="0.264" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/update_user_data.xml" value="0.2" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/update_users_data.xml" value="0.152" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/user_admin_item.xml" value="0.1470713980333476" />
-        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/users_admin_list.xml" value="0.11196736174070716" />
-        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/users_list.xml" value="0.1470713980333476" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/users_admin_list.xml" value="0.136" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/users_list.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/activity_main_drawer.xml" value="0.190625" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/add_task_menu.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/chat_menu.xml" value="0.20863616930312098" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/look_task_menu.xml" value="0.20599409033347404" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/menu_items_day.xml" value="0.10625" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/menu_main.xml" value="0.11329628046173579" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/navigation.xml" value="0.190625" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/navigation_menu.xml" value="0.190625" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/tasks_current_menu.xml" value="0.20389249304911955" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/menu/update_users_data_menu.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1685" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1685" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/xml/authenticator.xml" value="0.1" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/xml/provider_paths.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/xml/root_preferences.xml" value="0.176" />
       </map>
     </option>

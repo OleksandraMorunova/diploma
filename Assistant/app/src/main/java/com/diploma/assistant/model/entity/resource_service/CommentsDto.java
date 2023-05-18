@@ -61,4 +61,6 @@ public class CommentsDto implements Serializable {
     public void setReviewed(Boolean reviewed) {
         this.reviewed = reviewed;
     }
+
+
 }

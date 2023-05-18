@@ -10,6 +10,7 @@ import com.diploma.assistant.model.entity.regiastartion_and_resource_services.Us
 import com.diploma.assistant.model.entity.regiastartion_and_resource_services.UsersAndCountTasks;
 import com.diploma.assistant.service.connection.UserService;
 
+import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 
 public class UserViewModel extends AndroidViewModel {
@@ -19,8 +20,12 @@ public class UserViewModel extends AndroidViewModel {
         super(application);
     }
 
-    public LiveData<User> createUser(String token, User user){
+    public LiveData<User> createUser(String token, User user) {
         return repository.createUser(token, user);
+    }
+
+    public LiveData<Boolean> deleteUserById(String token, String id){
+        return repository.deleteUserById(token, id);
     }
 
     public LiveData<UserAndTasks> getDetailsUser(String token, String email){
@@ -34,9 +39,10 @@ public class UserViewModel extends AndroidViewModel {
         return repository.getPhoneNumber(phoneNumber);
     }
 
-    public LiveData<ResponseBody> updateUserDetails(String phone, User user) {
-        return repository.updateUserDetails(phone, user);
+    public LiveData<User> updateUserDetails(String token, String phone, User user, MultipartBody.Part file) {
+        return repository.updateUserDetails(token, phone, user, file);
     }
+
 
     public LiveData<UsersAndCountTasks> getUsers(String token){
         return repository.getUsers(token);

@@ -11,7 +11,7 @@ import androidx.lifecycle.ViewModelStoreOwner;
 
 import com.diploma.assistant.databinding.SignUp3FragmentBinding;
 import com.diploma.assistant.model.entity.registration_service.User;
-import com.diploma.assistant.view.ui.sign_in.activity.SwitchEntriesActivity;
+import com.diploma.assistant.view.ui.MainPage;
 import com.diploma.assistant.view.ui.sign_up.activity.sign_up_2.SendAndGetCode;
 import com.diploma.assistant.view.ui.sign_up.activity.sign_up_2.SignUpCodeFragment;
 
@@ -46,7 +46,7 @@ public class SignUpSetLoginAndPasswordFragment extends AppCompatActivity {
     }
 
     public void onBackPressed(){
-        Intent i = new Intent(SignUpSetLoginAndPasswordFragment.this, SwitchEntriesActivity.class);
+        Intent i = new Intent(SignUpSetLoginAndPasswordFragment.this, MainPage.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(i);
     }

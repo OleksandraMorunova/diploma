@@ -9,9 +9,6 @@ import androidx.lifecycle.LiveData;
 import com.diploma.assistant.model.entity.resource_service.CommentsDto;
 import com.diploma.assistant.model.entity.resource_service.TaskDto;
 import com.diploma.assistant.service.connection.CommentService;
-import com.diploma.assistant.service.connection.TasksService;
-
-import java.util.List;
 
 public class CommentsViewModel extends AndroidViewModel {
     CommentService repository = new CommentService();
@@ -20,11 +17,15 @@ public class CommentsViewModel extends AndroidViewModel {
         super(application);
     }
 
-    public LiveData<TaskDto> postComment(String id, CommentsDto comment){
-        return repository.postComment(id, comment);
+    public LiveData<TaskDto> postComment(String token, String id, CommentsDto comment){
+        return repository.postComment(token, id, comment);
     }
 
-    public LiveData<TaskDto> updateComment(String id, String idComment){
-        return repository.updateComment(id, idComment);
+    public LiveData<TaskDto> updateComment(String token, String id, String idComment){
+        return repository.updateComment(token, id, idComment);
+    }
+
+    public LiveData<Boolean> deleteComment(String token, String idTask, String idUser, String idComment){
+        return repository.deleteComment(token, idTask, idUser, idComment);
     }
 }

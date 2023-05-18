@@ -2,10 +2,6 @@ package com.diploma.assistant.model.entity.registration_service;
 
 import com.google.gson.annotations.SerializedName;
 
-import org.bson.BsonType;
-import org.bson.codecs.pojo.annotations.BsonRepresentation;
-import org.bson.types.ObjectId;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,10 +36,14 @@ public class User implements Serializable {
     @SerializedName("codeData")
     private String codeData;
 
+    @SerializedName("token")
     private Map<String, String> token;
 
     @SerializedName("icon")
     private String icon;
+
+    @SerializedName("userTokenFirebase")
+    private String userTokenFirebase;
 
     public String getId() {
         return id;

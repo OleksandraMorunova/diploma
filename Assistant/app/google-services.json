@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "95663595690",
+    "project_id": "assistant-861cb",
+    "storage_bucket": "assistant-861cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:95663595690:android:d509b72b021b99b7e530d3",
+        "android_client_info": {
+          "package_name": "com.diploma.assistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "95663595690-pdn08k45hlcqe6nnsitr7idn6ik9i871.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnJCCQRN09rzkO733SbLIgj2owBAvItsI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "95663595690-pdn08k45hlcqe6nnsitr7idn6ik9i871.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

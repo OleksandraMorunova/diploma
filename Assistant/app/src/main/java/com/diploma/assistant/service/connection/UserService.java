@@ -11,15 +11,18 @@ import com.diploma.assistant.model.entity.regiastartion_and_resource_services.Us
 import com.diploma.assistant.model.enumaration.URIEnum;
 import com.diploma.assistant.controller.UserController;
 
+import okhttp3.MultipartBody;
 import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import retrofit2.http.Multipart;
 
 public class UserService {
     private final MutableLiveData<ResponseBody>  mutableLiveDataString = new MutableLiveData<>();
     private final MutableLiveData<UserAndTasks> taskMutableLiveData = new MutableLiveData<>();
     private final MutableLiveData<User> userMutableLiveData = new MutableLiveData<>();
+    private final MutableLiveData<Boolean> booleanMutableLiveData = new MutableLiveData<>();
     private final MutableLiveData<UsersAndCountTasks> countTasksMutableLiveData = new MutableLiveData<>();
 
     UserController service = RetrofitService.getRetrofit(URIEnum.BASE_URL.getUrl()).create(UserController.class);
@@ -37,9 +40,29 @@ public class UserService {
             @Override
             public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
                 userMutableLiveData.postValue(null);
+                Log.e("CREATE USER", t.getMessage(), t.fillInStackTrace());
             }
         });
         return userMutableLiveData;
+    }
+
+    public MutableLiveData<Boolean> deleteUserById(String token, String id){
+        Call<Void> call = service.deleteUserById(token, id);
+        call.enqueue(new Callback<>() {
+            @Override
+            public void onResponse(@NonNull Call<Void> call, @NonNull Response<Void> response) {
+                if (response.isSuccessful()){
+                    booleanMutableLiveData.setValue(true);
+                } else booleanMutableLiveData.postValue(false);
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<Void> call, @NonNull Throwable t) {
+                booleanMutableLiveData.postValue(false);
+                Log.e("DELETE USER", t.getMessage(), t.fillInStackTrace());
+            }
+        });
+        return booleanMutableLiveData;
     }
 
     public MutableLiveData<UserAndTasks> getDetailsUser(String email, String token){
@@ -54,7 +77,7 @@ public class UserService {
 
             @Override
             public void onFailure(@NonNull Call<UserAndTasks> call, @NonNull Throwable t) {
-                Log.e("TAG", "Get user data", t.getCause());
+                Log.e("GET USER`S DATA", t.getMessage(), t.fillInStackTrace());
                 taskMutableLiveData.postValue(null);
             }
         });
@@ -73,7 +96,7 @@ public class UserService {
 
             @Override
             public void onFailure(@NonNull Call<UsersAndCountTasks> call, @NonNull Throwable t) {
-                Log.e("TAG", "List users", t.getCause());
+                Log.e("GET USERS", t.getMessage(), t.fillInStackTrace());
                 countTasksMutableLiveData.postValue(null);
             }
         });
@@ -111,29 +134,29 @@ public class UserService {
 
             @Override
             public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
-                Log.e("TAG", "Get user phone number", t.getCause());
+                Log.e("GET USER`S PHONE NUMBER", t.getMessage(), t.fillInStackTrace());
                 mutableLiveDataString.postValue(null);
             }
         });
         return mutableLiveDataString;
     }
 
-    public MutableLiveData<ResponseBody> updateUserDetails(String phone, User user){
-        Call<ResponseBody> call = service.updateUserDetails(phone, user);
+    public MutableLiveData<User> updateUserDetails(String token, String phone, User user, MultipartBody.Part file){
+        Call<User> call = service.updateUserDetails(token, phone, user, file);
         call.enqueue(new Callback<>() {
             @Override
-            public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
+            public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    mutableLiveDataString.setValue(response.body());
-                } else mutableLiveDataString.postValue(null);
+                    userMutableLiveData.setValue(response.body());
+                } else userMutableLiveData.postValue(null);
             }
 
             @Override
-            public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
-                Log.e("TAG", "Update user data", t.getCause());
-                mutableLiveDataString.postValue(null);
+            public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
+                Log.e("UPDATE USER`S DATA", t.getMessage(), t.fillInStackTrace());
+                userMutableLiveData.postValue(null);
             }
         });
-        return mutableLiveDataString;
+        return userMutableLiveData;
     }
 }

@@ -27,7 +27,10 @@ public class TokenService {
             public void onResponse(@NonNull Call<LoginResponse> call, @NonNull Response<LoginResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     mutableLiveData.setValue(response.body());
-                } else mutableLiveData.postValue(null);
+                } else {
+                    Log.e("ACCESS_TOKEN", "Code: " + response.code());
+                    mutableLiveData.postValue(null);
+                }
             }
 
             @Override
@@ -45,18 +48,18 @@ public class TokenService {
         call.enqueue(new Callback<>() {
             @Override
             public void onResponse(@NonNull Call<LoginResponse> call, @NonNull Response<LoginResponse> response) {
-                System.out.println("A");
                 if (response.isSuccessful() && response.body() != null) {
                     mutableLiveData.setValue(response.body());
-                    System.out.println("B");
-                } else mutableLiveData.postValue(null);
+                } else {
+                    Log.e("NEW_ACCESS_TOKEN", "Code: " + response.code());
+                    mutableLiveData.postValue(null);
+                }
             }
 
             @Override
             public void onFailure(@NonNull Call<LoginResponse> call, @NonNull Throwable t) {
                 Log.e("NEW_ACCESS_TOKEN", t.getMessage(), t.fillInStackTrace());
                 mutableLiveData.postValue(null);
-                System.out.println("C");
             }
         });
         return mutableLiveData;

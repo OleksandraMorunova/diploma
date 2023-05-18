@@ -2,6 +2,8 @@ package com.diploma.assistant.view.ui.sign_up.activity.sign_up_2;
 
 import com.diploma.assistant.databinding.SignUp2FragmentBinding;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
@@ -34,5 +36,9 @@ public class CheckStringLine {
 
     public static boolean password(String password){
         return password.matches(REGEX);
+    }
+
+    public static String parserData(String data){
+        return LocalDateTime.parse(data).format(DateTimeFormatter.ofPattern("dd.MM.yyyy HH:mm"));
     }
 }

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/comment_text_input_layout_look_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Коментар до завдання..."
+        app:boxStrokeColor="@color/box_color_selector"
+        app:hintTextColor="@color/primary"
+        app:endIconDrawable="@drawable/ic_baseline_send"
+        app:endIconTint="@color/primary"
+        app:endIconMode="custom"
+        android:elevation="4dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:theme="@style/EditTextColorCustom"
+        app:boxBackgroundColor="@color/background"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/comment_text_input_edit_text_look_task"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:lines="1"
+            android:textColorHighlight="@color/light_purple"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textColorLink="@color/light_purple"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_tasks_look"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lora_regular"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:textColor="@color/background_text"
+        android:textSize="16sp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/card_view_look_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        app:cardCornerRadius="4dp" />
+</LinearLayout>
