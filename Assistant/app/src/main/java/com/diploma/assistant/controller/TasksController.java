@@ -19,9 +19,6 @@ public interface TasksController {
     @GET("api/tasks/list")
     Call<List<TaskDto>> getComments(@Header("Authorization") String token);
 
-    @GET("api/tasks/list/{idUser}")
-    Call<List<TaskDto>> getAllTasksByIdUser(@Header("Authorization") String token, @Path("idUser") String idUser);
-
     @GET("api/tasks/{idTask}")
     Call<TaskDto> getTaskByIDTask(@Header("Authorization") String token, @Path("idTask") String idTask);
 

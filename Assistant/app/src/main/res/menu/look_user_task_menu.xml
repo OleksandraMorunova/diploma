@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/delete_task"
+        android:icon="@drawable/ic_baseline_delete"
+        android:checked="true"
+        android:title="Видалити"
+        app:showAsAction="ifRoom">
+    </item>
+    <item android:id="@+id/add_task"
+        android:icon="@drawable/ic_baseline_add"
+        android:checked="true"
+        android:title="Додати"
+        app:showAsAction="ifRoom">
+    </item>
+</menu>

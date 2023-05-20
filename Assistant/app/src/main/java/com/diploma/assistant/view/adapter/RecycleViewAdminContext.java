@@ -27,7 +27,7 @@ import com.diploma.assistant.model.entity.adapter.ItemsForListOfUsers;
 import com.diploma.assistant.model.entity.registration_service.User;
 import com.diploma.assistant.model.enumaration.StatusUserEnum;
 import com.diploma.assistant.service.account_manager.AuthenticatorService;
-import com.diploma.assistant.view.ui.chat.ChatActivity;
+import com.diploma.assistant.view.ui.chat.admin.ChatActivity;
 import com.diploma.assistant.view.ui.tasks.admin.TasksListActivity;
 import com.diploma.assistant.view_model.UserViewModel;
 
@@ -35,6 +35,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Objects;
 
 public class RecycleViewAdminContext extends RecyclerView.Adapter< RecycleViewAdminContext.ViewHolderAdminContext> implements Filterable, Serializable {
     private final Activity context;
@@ -75,54 +76,68 @@ public class RecycleViewAdminContext extends RecyclerView.Adapter< RecycleViewAd
             popup.inflate(R.menu.menu_items_day);
             popup.setGravity(Gravity.CENTER);
 
+           String status = accounts.getTokenProperty(token).getBody().get("status", String.class);
+
             UserViewModel userViewModel = new ViewModelProvider(vmso).get(UserViewModel.class);
             User user = new User();
             popup.setOnMenuItemClickListener(item -> {
                 final int itemId = item.getItemId();
                 if (itemId == R.id.option_1) {
-                    context.startActivity(new Intent(context, TasksListActivity.class)
-                            .putExtra("id", items.get(position).getId())
-                            .putExtra("name", items.get(position).getName())
-                            .putExtra("count", items.get(position).getCount())
-                            .putExtra("icon", items.get(position).getIcon())
-                    );
+                    if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())){
+                        context.startActivity(new Intent(context, TasksListActivity.class)
+                                .putExtra("id", items.get(position).getId())
+                                .putExtra("name", items.get(position).getName())
+                                .putExtra("count", items.get(position).getCount())
+                                .putExtra("icon", items.get(position).getIcon())
+                                .putExtra("firebase_token", items.get(position).getFirebaseToken())
+                        );
+                    }
                     return true;
                 }
                 if (itemId == R.id.option_2) {
-                    context.startActivity(new Intent(context, ChatActivity.class)
-                            .putExtra("user_id", items.get(position).getId()));
+                    if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())) {
+                        context.startActivity(new Intent(context, ChatActivity.class)
+                                .putExtra("user_id", items.get(position).getId())
+                                .putExtra("firebase_token", items.get(position).getFirebaseToken()));
+                    }
                     return true;
                 }
                 if (itemId == R.id.option_3_1) {
-                    user.setStatus(StatusUserEnum.BLOCKED.getStatus());
-                    userViewModel.updateUserDetails(token, items.get(position).getId() ,user,null).observe(lo, l -> {
-                        if(l != null){
-                            holder.statusView.setText(StatusUserEnum.BLOCKED.getStatus());
-                            Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();
-                        }
-                        else Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
-                    });
+                    if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())) {
+                        user.setStatus(StatusUserEnum.BLOCKED.getStatus());
+                        userViewModel.updateUserDetails(token, items.get(position).getId(), user, null).observe(lo, l -> {
+                            if (l != null) {
+                                holder.statusView.setText(StatusUserEnum.BLOCKED.getStatus());
+                                Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();
+                            } else
+                                Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
+                        });
+                    }
                     return true;
                 }
                 if (itemId == R.id.option_3_2){
+                    if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())) {
                         userViewModel.deleteUserById(token, items.get(position).getId()).observe(lo, l -> {
-                            if(l){
+                            if (l) {
                                 Toast.makeText(context.getApplicationContext(), "Успішно видаленно", Toast.LENGTH_SHORT).show();
-                            }
-                            else Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
+                            } else
+                                Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
                         });
+                    }
                     return true;
                 }
 
                 if (itemId == R.id.option_3_3){
-                    user.setStatus(StatusUserEnum.ACTIVE.getStatus());
-                    userViewModel.updateUserDetails(token, items.get(position).getId() ,user,null).observe(lo, l -> {
-                        if(l != null){
-                            holder.statusView.setText(StatusUserEnum.ACTIVE.getStatus());
-                            Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();
-                        }
-                        else Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
-                    });
+                    if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())) {
+                        user.setStatus(StatusUserEnum.ACTIVE.getStatus());
+                        userViewModel.updateUserDetails(token, items.get(position).getId(), user, null).observe(lo, l -> {
+                            if (l != null) {
+                                holder.statusView.setText(StatusUserEnum.ACTIVE.getStatus());
+                                Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();
+                            } else
+                                Toast.makeText(context.getApplicationContext(), "Щось пішло не так", Toast.LENGTH_SHORT).show();
+                        });
+                    }
                     return true;
                 }
                 return false;

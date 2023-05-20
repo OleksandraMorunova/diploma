@@ -28,10 +28,6 @@ public class TasksViewModel extends AndroidViewModel {
         return repository.getTaskByIDTask(token, idTask);
     }
 
-    public LiveData<List<TaskDto>> getTasksByIDUser(String token, String idUser){
-        return repository.getTaskByIDUser(token, idUser);
-    }
-
     public LiveData<Boolean> createTask(String token, TaskDto taskDto, List<MultipartBody.Part> file){
         return repository.createTask(token, taskDto, file);
     }

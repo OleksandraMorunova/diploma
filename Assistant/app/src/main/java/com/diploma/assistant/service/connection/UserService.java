@@ -72,7 +72,10 @@ public class UserService {
             public void onResponse(@NonNull Call<UserAndTasks> call, @NonNull Response<UserAndTasks> response) {
                 if (response.isSuccessful() && response.body() != null && response.body().getUserDto() != null) {
                     taskMutableLiveData.setValue(response.body());
-                } else taskMutableLiveData.postValue(null);
+                } else{
+                    Log.e("GET USER`S DATA", "Code: " + response.code());
+                    taskMutableLiveData.postValue(null);
+                }
             }
 
             @Override
@@ -91,7 +94,10 @@ public class UserService {
             public void onResponse(@NonNull Call<UsersAndCountTasks> call, @NonNull Response<UsersAndCountTasks> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     countTasksMutableLiveData.setValue(response.body());
-                } else countTasksMutableLiveData.postValue(null);
+                } else {
+                    Log.e("GET USERS", "Code: " + response.code());
+                    countTasksMutableLiveData.postValue(null);
+                }
             }
 
             @Override
@@ -120,6 +126,25 @@ public class UserService {
             }
         });
         return mutableLiveDataString;
+    }
+
+    public MutableLiveData<User> checkUserId(String id){
+        Call<User> call = service.checkUserId(id);
+        call.enqueue(new Callback<>() {
+            @Override
+            public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
+                if (response.isSuccessful()) {
+                    userMutableLiveData.setValue(response.body());
+                } else userMutableLiveData.postValue(null);
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
+                Log.e("TAG", "Check user email", t.getCause());
+                userMutableLiveData.postValue(null);
+            }
+        });
+        return userMutableLiveData;
     }
 
     public MutableLiveData<ResponseBody> getPhoneNumber(String phone){

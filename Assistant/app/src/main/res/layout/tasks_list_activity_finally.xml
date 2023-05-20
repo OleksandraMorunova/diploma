@@ -16,7 +16,7 @@
         android:theme="@style/SearchView"
         app:iconifiedByDefault="false"/>
 
-    <include android:layout_marginTop="?attr/actionBarSize"
+    <include android:id="@+id/ms" android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         layout="@layout/tasks_list_activity"/>

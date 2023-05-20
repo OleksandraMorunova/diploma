@@ -11,6 +11,7 @@ public class ItemsForListOfComments implements Serializable {
     private final Boolean reviewed;
     private final String articleId;
     private final String article;
+    private String firebaseToken;
 
     public String getIdTask() {
         return idTask;
@@ -21,8 +22,8 @@ public class ItemsForListOfComments implements Serializable {
     public String getIdCommentsByExistList() {
         return idCommentByExistList;
     }
-    public void setIdCommentsByExistList(String idCommentsByExistList) {
-        this.idCommentByExistList = idCommentsByExistList;
+    public void setIdCommentByExistList(String idCommentByExistList) {
+        this.idCommentByExistList = idCommentByExistList;
     }
     public String getUserName() {
         return userName;
@@ -45,6 +46,12 @@ public class ItemsForListOfComments implements Serializable {
     public String getArticle() {
         return article;
     }
+    public String getFirebaseToken() {
+        return firebaseToken;
+    }
+    public void setFirebaseToken(String firebaseToken) {
+        this.firebaseToken = firebaseToken;
+    }
 
     public ItemsForListOfComments(ItemsBuilder builder) {
         this.idTask = builder.idTask;
@@ -55,6 +62,7 @@ public class ItemsForListOfComments implements Serializable {
         this.reviewed = builder.reviewed;
         this.articleId = builder.articleId;
         this.article = builder.article;
+        this.firebaseToken = builder.firebaseToken;
     }
 
     public static class ItemsBuilder implements Serializable{
@@ -66,6 +74,7 @@ public class ItemsForListOfComments implements Serializable {
         private Boolean reviewed;
         private String articleId;
         private String article;
+        private String firebaseToken;
 
         public ItemsBuilder (String userName, String comment) {
             this.userName = userName;
@@ -99,6 +108,11 @@ public class ItemsForListOfComments implements Serializable {
 
         public ItemsBuilder article(String article) {
             this.article = article;
+            return this;
+        }
+
+        public ItemsBuilder firebaseToken(String firebaseToken){
+            this.firebaseToken = firebaseToken;
             return this;
         }
 

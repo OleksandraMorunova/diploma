@@ -23,4 +23,12 @@ public class TaskResponseViewModel extends AndroidViewModel {
     public LiveData<ResponseTask> getAllTaskResponseByIdUser(String token, String idTask){
         return repository.getTaskResponseByIdUser(token, idTask);
     }
+
+    public LiveData<Boolean> createTaskResponse(String token, ResponseTask responseTask, List<MultipartBody.Part> file){
+        return repository.createTaskResponse(token, responseTask, file);
+    }
+
+    public LiveData<Boolean> deleteTaskResponse(String token, String idTask){
+        return repository.deleteTaskResponse(token, idTask);
+    }
 }

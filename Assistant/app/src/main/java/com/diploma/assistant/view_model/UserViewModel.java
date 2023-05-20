@@ -35,6 +35,10 @@ public class UserViewModel extends AndroidViewModel {
     public LiveData<ResponseBody> checkUserEmail(String email) {
         return repository.checkUserEmail(email);
     }
+
+    public LiveData<User> checkUserId(String id) {
+        return repository.checkUserId(id);
+    }
     public LiveData<ResponseBody> getDetailsByPhone(String phoneNumber){
         return repository.getPhoneNumber(phoneNumber);
     }

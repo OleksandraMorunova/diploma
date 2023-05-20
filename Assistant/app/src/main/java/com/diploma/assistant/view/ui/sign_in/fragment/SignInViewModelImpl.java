@@ -3,21 +3,29 @@ package com.diploma.assistant.view.ui.sign_in.fragment;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 
+import com.diploma.assistant.R;
 import com.diploma.assistant.databinding.SignInFragmentBinding;
 import com.diploma.assistant.model.entity.regiastartion_and_resource_services.UserAndTasks;
+import com.diploma.assistant.model.entity.registration_service.User;
 import com.diploma.assistant.model.enumaration.ErrorEnum;
 import com.diploma.assistant.model.enumaration.StatusUserEnum;
 import com.diploma.assistant.model.enumaration.TypeUserEnum;
 import com.diploma.assistant.service.account_manager.AuthenticatorService;
+import com.diploma.assistant.service.firebase.MyFirebaseInstanceIDService;
 import com.diploma.assistant.view_model.TokenViewModel;
 import com.diploma.assistant.view_model.UserViewModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 
 import java.io.Serializable;
@@ -62,19 +70,32 @@ public class SignInViewModelImpl implements Serializable{
     }
 
     public void getUserDetails(String email, String token){
+        AuthenticatorService authenticator = new AuthenticatorService(activity);
         UserViewModel userViewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
         userViewModel.getDetailsUser(email, token).observe(lifecycleOwner, userEntity -> ((Activity) context).runOnUiThread(() -> {
             if(userEntity != null){
-                AuthenticatorService authenticator = new AuthenticatorService(activity);
+                FirebaseMessaging.getInstance().getToken()
+                        .addOnCompleteListener(task -> {
+                            if (!task.isSuccessful()) {
+                                Log.w("FIREBASE TOKEN", "Fetching FCM registration token failed", task.getException());
+                                return;
+                            }
+                            String tokenFirebase = task.getResult();
+                            Log.d("FIREBASE TOKEN", tokenFirebase);
+
+                            User user = new User();
+                            user.setUserTokenFirebase(tokenFirebase);
+                            userViewModel.updateUserDetails(token, userEntity.getUserDto().getId(), user, null).observe(lifecycleOwner, o -> {});
+                        });
                 authenticator.savedString("com.assistant.emmotechie.PREFERENCE_FILE_KEY", "id_user", userEntity.getUserDto().getId());
-                checkUserStatusForPermission(token, userEntity);
+                checkUserStatusForPermission(userEntity);
             } else {
                 Toast.makeText(context, "Проблема з даними", Toast.LENGTH_SHORT).show();
             }
         }));
     }
 
-    private void checkUserStatusForPermission(String token, UserAndTasks userEntity){
+    private void checkUserStatusForPermission(UserAndTasks userEntity){
         boolean statusNotNull = userEntity.getUserDto().getStatus().equals(StatusUserEnum.ACTIVE.getStatus());
         String role = userEntity.getUserDto().getRoles()
                 .stream().map(String::valueOf)
@@ -84,11 +105,8 @@ public class SignInViewModelImpl implements Serializable{
         } else if(statusNotNull && role.equals(TypeUserEnum.ADMIN.getTypeUserName())){
             String roles =  userEntity.getUserDto().getRoles().stream().map(String::valueOf).collect(Collectors.joining(" "));
             context.startActivity(new Intent(context, classAdmin)
-                    .putExtra("token", token)
-                    .putExtra("name", userEntity.getUserDto().getName())
-                    .putExtra("phone", userEntity.getUserDto().getPhone())
+                    .putExtra("id", userEntity.getUserDto().getId())
                     .putExtra("role",  roles)
-                    .putExtra("icon", userEntity.getUserDto().getIcon())
             );
         } else Toast.makeText(context, ErrorEnum.INVALID.getName(), Toast.LENGTH_SHORT).show();
     }

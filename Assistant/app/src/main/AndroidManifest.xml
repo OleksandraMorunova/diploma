@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/> <!-- client -->
     <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
@@ -31,6 +32,12 @@
         android:theme="@style/Theme.Assistant"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_foreground" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/purple" />
         <activity
             android:name=".view.ui.tasks.admin.AddTaskActivity"
             android:exported="false"/>
@@ -101,7 +108,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.ui.chat.ChatActivity"
+            android:name=".view.ui.chat.admin.ChatActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -130,7 +137,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.ui.main_page.admin.UserNavigationActivity"
+            android:name=".view.ui.tasks.user.AddTaskFragment"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ui.tasks.user.TaskFragment"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ui.main_page.user.UserNavigationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

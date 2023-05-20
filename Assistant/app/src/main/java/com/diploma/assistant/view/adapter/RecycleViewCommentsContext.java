@@ -1,7 +1,6 @@
 package com.diploma.assistant.view.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.diploma.assistant.R;
 import com.diploma.assistant.model.entity.adapter.ItemsForListOfComments;
+import com.diploma.assistant.model.enumaration.StatusUserEnum;
 import com.diploma.assistant.service.account_manager.AuthenticatorService;
 import com.diploma.assistant.view.ui.main_page.admin.CertainComment;
 import com.diploma.assistant.view.ui.sign_up.activity.sign_up_2.CheckStringLine;
@@ -26,6 +26,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 
 public class RecycleViewCommentsContext extends RecyclerView.Adapter<RecycleViewCommentsContext.ViewHolderCommentsContext> implements Serializable{
@@ -55,25 +56,29 @@ public class RecycleViewCommentsContext extends RecyclerView.Adapter<RecycleView
         holder.article.setText(items.get(position).getArticle());
 
         holder.itemView.setOnClickListener(v -> {
-            List<ItemsForListOfComments> it = new ArrayList<>(items);
-            Predicate<ItemsForListOfComments> predicate =  p->!p.getArticleId().equals(it.get(position).getArticleId()) || LocalDateTime.parse(p.getComment_added_data()).compareTo(LocalDateTime.parse(items.get(position).getComment_added_data())) <= 0;
-            it.removeIf(predicate);
+            AuthenticatorService accounts = new AuthenticatorService(activity);
+            String bearerToken = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
+            String status = accounts.getTokenProperty(bearerToken).getBody().get("status", String.class);
+            if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())){
+                List<ItemsForListOfComments> it = new ArrayList<>(items);
+                Predicate<ItemsForListOfComments> predicate =  p->!p.getArticleId().equals(it.get(position).getArticleId()) || LocalDateTime.parse(p.getComment_added_data()).compareTo(LocalDateTime.parse(items.get(position).getComment_added_data())) <= 0;
+                it.removeIf(predicate);
 
-            if(items.get(position).getReviewed().equals(false)){
-                AuthenticatorService accounts = new AuthenticatorService(activity);
-                String token = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
-                CommentsViewModel commentsViewModel = new ViewModelProvider(viewModelStoreOwner).get(CommentsViewModel.class);
-                commentsViewModel.updateComment(token, items.get(position).getArticleId(), items.get(position).getIdCommentsByExistList()).observe(lifecycle, l -> {});
+                if(items.get(position).getReviewed().equals(false)){
+                   CommentsViewModel commentsViewModel = new ViewModelProvider(viewModelStoreOwner).get(CommentsViewModel.class);
+                    commentsViewModel.updateComment(bearerToken, items.get(position).getArticleId(), items.get(position).getIdCommentsByExistList()).observe(lifecycle, l -> {});
+                }
+
+                activity.startActivity(new Intent(activity.getApplicationContext(), CertainComment.class)
+                        .putExtra("id_task", items.get(position).getIdTask())
+                        .putExtra("comment", items.get(position).getComment())
+                        .putExtra("comment_data", items.get(position).getComment_added_data())
+                        .putExtra("comment_user", items.get(position).getUserName())
+                        .putExtra("article", items.get(position).getArticle())
+                        .putExtra("list_of_comments", (Serializable) it)
+                        .putExtra("firebase_token", items.get(position).getFirebaseToken())
+                );
             }
-
-            activity.startActivity(new Intent(activity.getApplicationContext(), CertainComment.class)
-                    .putExtra("id_task", items.get(position).getIdTask())
-                    .putExtra("comment", items.get(position).getComment())
-                    .putExtra("comment_data", items.get(position).getComment_added_data())
-                    .putExtra("comment_user", items.get(position).getUserName())
-                    .putExtra("article", items.get(position).getArticle())
-                    .putExtra("list_of_comments", (Serializable) it)
-            );
         });
 
         if(items.get(position).getReviewed()){

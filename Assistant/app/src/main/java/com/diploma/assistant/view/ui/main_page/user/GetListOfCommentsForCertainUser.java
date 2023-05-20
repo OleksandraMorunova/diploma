@@ -1,4 +1,4 @@
-package com.diploma.assistant.view.ui.main_page.admin;
+package com.diploma.assistant.view.ui.main_page.user;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,13 +11,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.diploma.assistant.R;
+import com.diploma.assistant.databinding.TasksListActivityFinallyBinding;
 import com.diploma.assistant.model.entity.adapter.ItemsForListOfComments;
 import com.diploma.assistant.model.entity.registration_service.User;
 import com.diploma.assistant.model.entity.resource_service.ArticleWithId;
 import com.diploma.assistant.model.entity.resource_service.CommentsDto;
+import com.diploma.assistant.model.entity.resource_service.TaskDto;
 import com.diploma.assistant.model.enumaration.ErrorEnum;
+import com.diploma.assistant.service.account_manager.AuthenticatorService;
 import com.diploma.assistant.view.adapter.RecycleViewCommentsContext;
-import com.diploma.assistant.view_model.TasksViewModel;
 import com.diploma.assistant.view_model.UserViewModel;
 
 import java.time.LocalDateTime;
@@ -31,46 +33,52 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
-public class ListOfComments {
+public class GetListOfCommentsForCertainUser {
     private final Activity activity;
     private final Context context;
     private final ViewModelStoreOwner viewModelStoreOwner;
     private final LifecycleOwner lifecycleOwner;
     private RecyclerView navRecyclerView;
 
+    private String token;
     private final Map<String, String> stringList = new HashMap<>();
     private final List<List<CommentsDto>> dtoList = new ArrayList<>();
     private final List<ArticleWithId> listOfArticle = new ArrayList<>();
     private final List<ItemsForListOfComments> list = new ArrayList<>();
 
-    public ListOfComments(Activity activity, Context context, ViewModelStoreOwner viewModelStoreOwner, LifecycleOwner lifecycleOwner) {
+    public GetListOfCommentsForCertainUser(Activity activity, Context context, ViewModelStoreOwner viewModelStoreOwner, LifecycleOwner lifecycleOwner) {
         this.activity = activity;
         this.context = context;
         this.viewModelStoreOwner = viewModelStoreOwner;
         this.lifecycleOwner = lifecycleOwner;
     }
 
-    public void getCommentsFromDataBase(String token){
-        navRecyclerView = activity.findViewById(R.id.nav_drawer_recycler_view);
-        TasksViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(TasksViewModel.class);
+    public void getListOfComments(){
+        navRecyclerView = activity.findViewById(R.id.nav_drawer_recycler_view_fragment);
+        AuthenticatorService accounts = new AuthenticatorService(activity);
+        token = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
+        String id = accounts.getStringFromSharedPreferences("id_user", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
+
+        UserViewModel userViewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
         AtomicReference<String> idTitle = new AtomicReference<>("");
-        viewModel.getTaskDtoMutableLiveData(token).observe(lifecycleOwner, listOfTasks -> {
-          if(listOfTasks != null){
-              listOfArticle.clear();
-              list.clear();
-              stringList.clear();
-              dtoList.clear();
-              for(int t = 0; t < listOfTasks.size(); t++){
-                  if(listOfTasks.get(t).getComments() != null){
-                      for(int tt = 0; tt < listOfTasks.get(t).getComments().size(); tt++){
-                          idTitle.set(listOfTasks.get(t).getId());
-                          listOfArticle.add(new ArticleWithId(listOfTasks.get(t).getTitle(), listOfTasks.get(t).getId()));
-                      }
-                      dtoList.add(listOfTasks.get(t).getComments());
-                  }
-              }
-              addCommentsToView(idTitle.get(), token);
-          } else Toast.makeText(activity.getApplicationContext(), ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
+        userViewModel.getDetailsUser(id, token).observe(lifecycleOwner, lt -> {
+            if(lt != null){
+                listOfArticle.clear();
+                list.clear();
+                stringList.clear();
+                dtoList.clear();
+                List<TaskDto> tt = lt.getTaskDto();
+                for(int t = 0; t < tt.size(); t++){
+                    if(tt.get(t).getComments() != null){
+                        for(int k = 0; k < tt.get(t).getComments().size(); k++){
+                            idTitle.set(tt.get(t).getId());
+                            listOfArticle.add(new ArticleWithId(tt.get(t).getTitle(), tt.get(t).getId()));
+                        }
+                        dtoList.add(tt.get(t).getComments());
+                    }
+                }
+                addCommentsToView(idTitle.get(), token);
+            }
         });
     }
 
@@ -87,12 +95,13 @@ public class ListOfComments {
                 List<User> userList = users.getUserList();
                 getUsersMap(userList);
                 while (y.get() < finalItems.size()){
-                   secondSorted(finalItems, y);
+                    secondSorted(finalItems, y);
                 }
+
                 navRecyclerView.setLayoutManager(new LinearLayoutManager(context));
                 navRecyclerView.setAdapter(new RecycleViewCommentsContext(activity, list, viewModelStoreOwner, lifecycleOwner));
             } else Toast.makeText(activity.getApplicationContext(), ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
-    });
+        });
     }
 
     private List<ItemsForListOfComments> sortedList(List<CommentsDto> newDtoList, String idTitle){
@@ -120,6 +129,7 @@ public class ListOfComments {
     private void secondSorted(List<ItemsForListOfComments> finalItems, AtomicInteger y){
         String userName = stringList.get(finalItems.get(y.get()).getUserName());
         finalItems.get(y.get()).setUserName(userName);
+        finalItems.get(y.get()).setFirebaseToken(token);
         list.add(new ItemsForListOfComments
                 .ItemsBuilder(finalItems.get(y.get()).getUserName(), finalItems.get(y.get()).getComment())
                 .idComment(finalItems.get(y.get()).getIdCommentsByExistList())
@@ -128,6 +138,7 @@ public class ListOfComments {
                 .reviewed(finalItems.get(y.get()).getReviewed())
                 .article(finalItems.get(y.get()).getArticleId())
                 .articleId(finalItems.get(y.get()).getArticle())
+                .firebaseToken(finalItems.get(y.get()).getFirebaseToken())
                 .build()
         );
         y.getAndIncrement();

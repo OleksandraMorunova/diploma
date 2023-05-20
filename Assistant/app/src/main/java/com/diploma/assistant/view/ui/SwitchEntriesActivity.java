@@ -42,7 +42,6 @@ public class SwitchEntriesActivity extends AppCompatActivity {
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-
                 Log.i("TAG", "onTabUnselected");
             }
 

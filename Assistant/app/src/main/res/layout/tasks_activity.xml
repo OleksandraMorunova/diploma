@@ -29,7 +29,7 @@
                 android:layout_marginStart="10dp"
                 android:fontFamily="@font/lora_bold"
                 android:gravity="center_horizontal"
-                android:textSize="12sp"/>
+                android:textSize="16sp"/>
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -43,7 +43,6 @@
         android:layout_marginEnd="10dp"
         android:textColor="@color/background_text"
         android:textSize="14sp"/>
-
 
         <TextView
             android:id="@+id/user_tasks"

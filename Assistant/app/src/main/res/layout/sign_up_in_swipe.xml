@@ -12,7 +12,7 @@
         android:id="@+id/tab_layout_login"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/transparent"
+        android:background="@color/background"
         app:tabTextColor="@color/primary"
         app:tabGravity="fill"
         app:tabIndicatorAnimationMode="elastic"

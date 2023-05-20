@@ -48,7 +48,6 @@ public class GetDataFromUri {
 
     public MultipartBody.Part createMultipartBody(Uri uri) throws IOException {
       if(uri != null){
-          System.out.println(activity);
           InputStream inputStream = activity.getContentResolver().openInputStream(uri);
           String mimeType = activity.getContentResolver().getType(uri);
           String[] split = mimeType.split("/");

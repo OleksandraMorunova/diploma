@@ -8,6 +8,7 @@ import android.util.Log;
 import androidx.preference.PreferenceManager;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -60,7 +61,6 @@ public class AuthenticatorService implements IAuthenticatorService<String>{
                 if(value.contains(kayValue)){
                     return value;
                 }
-                else Log.e("Shared Preferences is null", value);
             }
         }
         return null;

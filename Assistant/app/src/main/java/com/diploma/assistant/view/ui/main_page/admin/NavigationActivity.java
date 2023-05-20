@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -51,7 +50,7 @@ public class NavigationActivity extends AppCompatActivity {
     private Bitmap bitmap;
     private byte[] bytes;
 
-    private static String name, phone;
+    private String id, name, phone, icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,17 +60,9 @@ public class NavigationActivity extends AppCompatActivity {
         setSupportActionBar(binding.navAppBar.toolbar);
 
         String token = getToken();
-        name = getIntent().getStringExtra("name");
-        String phone = getIntent().getStringExtra("phone");
         List<String> roles = new ArrayList<>(Arrays.asList(getIntent().getStringExtra("role").split(" ")));
-        String icon = getIntent().getStringExtra("icon");
-        TextView nameContainer = findViewById(R.id.name_icon_setting);
-        TextView emailContainer = findViewById(R.id.email_icon_setting);
-        ShapeableImageView imageContainer = findViewById(R.id.image_icon_setting);
+        id = getIntent().getStringExtra("id");
         ImageView settings = findViewById(R.id.setting);
-        nameContainer.setText(name);
-        emailContainer.setText(phone);
-
         settings.setOnClickListener(v -> {
             this.startActivity(new Intent(this, UpdateUsersDataActivity.class)
                     .putExtra("name", name)
@@ -80,23 +71,12 @@ public class NavigationActivity extends AppCompatActivity {
             );
         });
 
-        if(icon != null && token != null){
-                FilesViewModel viewModel = new ViewModelProvider(this).get(FilesViewModel.class);
-                viewModel.getFiles(token, icon).observe(this, f -> {
-                   if (f != null){
-                       bytes = Base64.getDecoder().decode(f.getFile());
-                       bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-                       imageContainer.setImageBitmap(bitmap);
-                   } else Toast.makeText(this, ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
-                });
-        } else imageContainer.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_user, getTheme()));
 
         for(int i = 0; i < roles.size(); i++) {
             if(roles.get(i).equals(TypeUserEnum.ADMIN.getTypeUserName()) && token != null) {
                 recycleView = findViewById(R.id.recycle_view);
                 SwipeRefreshLayout swipe = findViewById(R.id.swipe_layout);
 
-                callToDataBaseForListOfUsers(token);
                 swipe.setOnRefreshListener(() -> {
                     callToDataBaseForListOfUsers(token);
                     getListOfComments(token);
@@ -105,7 +85,6 @@ public class NavigationActivity extends AppCompatActivity {
 
                 ListOfUsers list = new ListOfUsers(this, this, this, this);
                 list.showDialog(token, recycleView);
-                getListOfComments(token);
             }
         }
 
@@ -115,6 +94,14 @@ public class NavigationActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        String token = getToken();
+        callToDataBaseForListOfUsers(token);
+        getListOfComments(token);
     }
 
     @Override
@@ -153,7 +140,35 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     public void getListOfComments(String token){
-        ListOfComments listOfComments = new ListOfComments(this, this, this, this);
+        UserViewModel userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+        userViewModel.checkUserId(id).observe(this, userEntity -> {
+            if(userEntity != null){
+                TextView nameContainer = findViewById(R.id.name_icon_setting);
+                TextView emailContainer = findViewById(R.id.email_icon_setting);
+                ShapeableImageView imageContainer = findViewById(R.id.image_icon_setting);
+
+                name = userEntity.getName();
+                phone = userEntity.getPhone();
+                icon = userEntity.getIcon();
+
+                nameContainer.setText(name);
+                emailContainer.setText(phone);
+
+                if(icon != null && token != null){
+                    FilesViewModel viewModel = new ViewModelProvider(this).get(FilesViewModel.class);
+                    viewModel.getFiles(token, icon).observe(this, f -> {
+                        if (f != null){
+                            bytes = Base64.getDecoder().decode(f.getFile());
+                            bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                            imageContainer.setImageBitmap(bitmap);
+                        } else Toast.makeText(this, ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
+                    });
+                } else imageContainer.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_user, getTheme()));
+
+            }
+        });
+
+        GeListOfCommentsAllUsersWithoutAdmins listOfComments = new GeListOfCommentsAllUsersWithoutAdmins(this, this, this, this);
         listOfComments.getCommentsFromDataBase(token);
     }
 
@@ -176,6 +191,7 @@ public class NavigationActivity extends AppCompatActivity {
                                            .status(users.getUserList().get(i).getStatus())
                                            .count(users.getIntegerList().get(i).toString())
                                            .icon(users.getUserList().get(i).getIcon())
+                                           .firebaseToken(users.getUserList().get(i).getUserTokenFirebase())
                                            .build();
                            items.add(itemsForListOfUsers);
                        }

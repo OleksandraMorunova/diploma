@@ -92,6 +92,7 @@ public class ListOfUsers extends NavigationActivity{
                         .status(autoCompleteTextView.getText().toString())
                         .count("0")
                         .icon(null)
+                        .firebaseToken(null)
                         .build();
                 items.add(itemsForListOfUsers);
                 adapter = new RecycleViewAdminContext(activity, items, this, this);

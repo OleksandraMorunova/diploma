@@ -42,7 +42,7 @@ public class TokenService {
         return mutableLiveData;
     }
 
-    public MutableLiveData<LoginResponse> getNewAccessToken(String refreshToken){
+    public MutableLiveData<LoginResponse> getNewAccessAndRefreshToken(String refreshToken){
         RefreshJwtRequest loginRequest = new RefreshJwtRequest(refreshToken);
         Call<LoginResponse> call = service.refresh(loginRequest);
         call.enqueue(new Callback<>() {

@@ -1,11 +1,14 @@
 package com.diploma.assistant.view.adapter;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
+import android.os.Build;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -23,13 +26,17 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.diploma.assistant.R;
+import com.diploma.assistant.model.entity.registration_service.User;
 import com.diploma.assistant.model.entity.resource_service.Chat;
 import com.diploma.assistant.service.account_manager.AuthenticatorService;
+import com.diploma.assistant.service.firebase.PushNotificationSender;
 import com.diploma.assistant.view.ui.sign_up.activity.sign_up_2.CheckStringLine;
 import com.diploma.assistant.view_model.ChatViewModel;
+import com.diploma.assistant.view_model.UserViewModel;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -51,18 +58,22 @@ public class RecycleViewChat extends RecyclerView.Adapter<RecycleViewChat.ViewHo
     private final List<Chat> chat;
     private final ViewModelStoreOwner viewModelStoreOwner;
     private final LifecycleOwner l;
-    private List<Integer> listPosition = new ArrayList<>();
+    private final List<Integer> listPosition = new ArrayList<>();
     private final String id;
 
     private int count;
     private int updatePosition;
     private String bearerToken;
+    private final String firebaseToken;
 
-    public RecycleViewChat(Activity activity, List<Chat> chat, ViewModelStoreOwner viewModelStoreOwner, LifecycleOwner l, String id) {
+    private final List<User> userList = new ArrayList<>();
+
+    public RecycleViewChat(Activity activity, List<Chat> chat, ViewModelStoreOwner viewModelStoreOwner, LifecycleOwner l, String firebaseToken, String id) {
         this.activity = activity;
         this.chat = chat;
         this.viewModelStoreOwner = viewModelStoreOwner;
         this.l = l;
+        this.firebaseToken = firebaseToken;
         this.id = id;
     }
 
@@ -75,7 +86,6 @@ public class RecycleViewChat extends RecyclerView.Adapter<RecycleViewChat.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolderChat holder, int position) {
         holder.cardView.setCardBackgroundColor(activity.getResources().getColor(R.color.primary, activity.getTheme()));
-
         AuthenticatorService accounts = new AuthenticatorService(activity);
         bearerToken = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
         SecretKey secret = Keys.hmacShaKeyFor(Decoders.BASE64.decode("uu74l8S6ewO/Nmrh3waPdCfyF7UFTUtFoI44Z5c75X0="));
@@ -140,9 +150,8 @@ public class RecycleViewChat extends RecyclerView.Adapter<RecycleViewChat.ViewHo
                     newChat.setMessage(editText.getText().toString());
                     chatViewModel.updateChatMessage(bearerToken, chat.get(updatePosition).getId(), newChat).observe(l, d -> {
                         if(d != null && (updatePosition >= 0 && updatePosition < chat.size())){
-                            listPosition.remove((Integer) updatePosition);
-                            chat.set(updatePosition, d);
-                            notifyItemChanged(updatePosition);
+                            listPosition.clear();
+                            getMessage();
                             count = 0;
                             updatePosition = -1;
                             itemUpdate.setIconTintList(whiteColorStateList);
@@ -154,18 +163,55 @@ public class RecycleViewChat extends RecyclerView.Adapter<RecycleViewChat.ViewHo
                 itemUpdate.setVisible(false);
             }
             else if(!itemUpdate.isVisible() && (itemUpdate.getIconTintList() != yellowColorStateList) && count == 0) {
-                Chat chats = new Chat();
-                chats.setUserStatusMessage(getStatusFromToken(accounts).get(0));
-                chats.setUserId(id);
-                chats.setMessage(Objects.requireNonNull(editText.getText()).toString());
-                chatViewModel.createChatMessage(bearerToken, chats).observe(l, e -> {
-                    if (!chat.contains(e)) {
-                        chat.add(e);
-                        notifyItemInserted(chat.size());
-                    }
-                });
-                editText.setText(null);
-                itemUpdate.setVisible(false);
+                String trimmedStr = Objects.requireNonNull(editText.getText()).toString().trim();
+                if(!trimmedStr.isEmpty()) {
+                    String message = Objects.requireNonNull(editText.getText()).toString();
+                    Chat chats = new Chat();
+                    chats.setUserStatusMessage(getStatusFromToken(accounts).get(0));
+                    chats.setUserId(id);
+                    chats.setMessage(message);
+                    chatViewModel.createChatMessage(bearerToken, chats).observe(l, e -> {
+                       if(firebaseToken != null){
+                          if(!firebaseToken.isEmpty()){
+                              if (Build.VERSION.SDK_INT >= 33) {
+                                  if (ContextCompat.checkSelfPermission(activity.getApplicationContext(), Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
+                                      PushNotificationSender sender = new PushNotificationSender();
+                                      sender.sendNotification(firebaseToken, "Нове повідомлення з чату", message);
+                                  }
+                              } else {
+                                  PushNotificationSender sender = new PushNotificationSender();
+                                  sender.sendNotification(firebaseToken, "Нове повідомлення з чату", message);
+                              }
+                          }
+                       } else {
+                           UserViewModel userViewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
+                           userViewModel.getUsers(bearerToken).observe(l, users -> {
+                               if (users != null) {
+                                   userList.addAll(users.getUserList());
+                                   userList.removeIf(r -> !r.getRoles().contains("ADMIN"));
+
+                                   for(User u: userList){
+                                       if(! u.getUserTokenFirebase().isEmpty()){
+                                           if (Build.VERSION.SDK_INT >= 33) {
+                                               if (ContextCompat.checkSelfPermission(activity.getApplicationContext(), Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
+                                                   PushNotificationSender sender = new PushNotificationSender();
+                                                   sender.sendNotification( u.getUserTokenFirebase(), "Нове повідомлення з чату", message);
+                                               }
+                                           } else {
+                                               PushNotificationSender sender = new PushNotificationSender();
+                                               sender.sendNotification( u.getUserTokenFirebase(), "Нове повідомлення з чату", message);
+                                           }
+                                       }
+                                   }
+
+                               }
+                           });
+                       }
+                        getMessage();
+                    });
+                    editText.setText(null);
+                    itemUpdate.setVisible(false);
+                } else Toast.makeText(activity.getApplicationContext(), "Пустий рядок", Toast.LENGTH_LONG).show();
             }
         });
 

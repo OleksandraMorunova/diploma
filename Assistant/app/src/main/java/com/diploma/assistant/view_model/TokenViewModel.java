@@ -20,7 +20,7 @@ public class TokenViewModel extends AndroidViewModel {
         return repository.getToken(email, password);
     }
 
-    public LiveData<LoginResponse> getNewAccessToken(String refreshToken){
-        return repository.getNewAccessToken(refreshToken);
+    public LiveData<LoginResponse> getNewAccessAndRefreshToken(String refreshToken){
+        return repository.getNewAccessAndRefreshToken(refreshToken);
     }
 }

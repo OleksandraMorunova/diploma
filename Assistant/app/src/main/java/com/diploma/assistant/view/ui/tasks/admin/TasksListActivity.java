@@ -6,38 +6,28 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
-import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.diploma.assistant.R;
 import com.diploma.assistant.databinding.TasksListActivityFinallyBinding;
-import com.diploma.assistant.model.entity.resource_service.TaskDto;
-import com.diploma.assistant.model.enumaration.ErrorEnum;
 import com.diploma.assistant.service.account_manager.AuthenticatorService;
-import com.diploma.assistant.view.adapter.RecycleViewTasks;
+import com.diploma.assistant.view.ui.tasks.GetTaskListForCertainUser;
 import com.diploma.assistant.view_model.FilesViewModel;
-import com.diploma.assistant.view_model.UserViewModel;
 import com.google.android.material.imageview.ShapeableImageView;
 
 import java.util.Base64;
-import java.util.List;
 
 public class TasksListActivity extends AppCompatActivity {
     private TasksListActivityFinallyBinding binding;
-    private final LifecycleOwner lifecycle = this;
     private RecyclerView recycleView;
-    private List<TaskDto> listTask;
-    private RecycleViewTasks adapter;
 
-    String id, name, count, token;
+    String id, name, count, token, firebaseToken;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -51,6 +41,7 @@ public class TasksListActivity extends AppCompatActivity {
         id = getIntent().getStringExtra("id");
         name = getIntent().getStringExtra("name");
         count = getIntent().getStringExtra("count");
+        firebaseToken = getIntent().getStringExtra("firebase_token");
         String icon =  getIntent().getStringExtra("icon");
 
         TextView nameView = findViewById(R.id.name_user_tasks_list);
@@ -59,9 +50,11 @@ public class TasksListActivity extends AppCompatActivity {
         String newCount = "Кількість завдань: " + count;
         countView.setText(newCount);
 
+
         SwipeRefreshLayout swipe = findViewById(R.id.swipe_list_task);
         swipe.setOnRefreshListener(() -> {
-            getTaskForUser();
+            GetTaskListForCertainUser get = new GetTaskListForCertainUser(binding, this, this, this);
+            get.getTaskForUser(recycleView, id, token, name);
             swipe.setRefreshing(false);
         });
 
@@ -79,41 +72,16 @@ public class TasksListActivity extends AppCompatActivity {
 
         binding.fabListTasks.setOnClickListener(v ->
                 this.startActivity(new Intent(this, AddTaskActivity.class)
-                .putExtra("id_user", id))
+                        .putExtra("id_user", id)
+                        .putExtra("firebase_token", firebaseToken))
         );
-
-        getTaskForUser();
+        GetTaskListForCertainUser get = new GetTaskListForCertainUser(binding, this, this, this);
+        get.getTaskForUser(recycleView, id, token, name);
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         binding = null;
-    }
-
-    private void getTaskForUser(){
-        UserViewModel viewModel = new ViewModelProvider(this).get(UserViewModel.class);
-        viewModel.getDetailsUser(id, token).observe(this, u -> {
-            if(u != null){
-                listTask = u.getTaskDto();
-                recycleView.setHasFixedSize(true);
-                recycleView.setLayoutManager(new LinearLayoutManager(this));
-                if(listTask != null){
-                    adapter = new RecycleViewTasks(this,  listTask, id, this, lifecycle, name);
-                    recycleView.setAdapter(adapter);
-
-                    binding.searchViewTasksList.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
-                        @Override
-                        public boolean onQueryTextSubmit(String query) { return false; }
-
-                        @Override
-                        public boolean onQueryTextChange(String newText) {
-                            adapter.getFilter().filter(newText);
-                            return false;
-                        }
-                    });
-                } else Toast.makeText(this, ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 }

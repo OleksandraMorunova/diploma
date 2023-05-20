@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".view.ui.tasks.admin.AddTaskActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar_til_fr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Widget.Material3.AppBarLayout">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_til_fr"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            android:theme="@style/Widget.MyTheme.Toolbar"
+            app:menu="@menu/add_task_menu">
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/description_til_fr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:hint="Опис"
+        app:boxStrokeColor="@color/box_color_selector"
+        app:hintTextColor="@color/primary"
+        android:theme="@style/EditTextColorCustom"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/description_fr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top|start"
+            android:lines="10"
+            android:textColorHighlight="@color/light_purple"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:textColorLink="@color/light_purple"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RelativeLayout
+        android:id="@+id/border_fr"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/list_of_users_title"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shadow_border"
+        android:elevation="5dp"
+        android:gravity="center_vertical"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/card_view_add_task_list_fr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:cardCornerRadius="4dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+</LinearLayout>

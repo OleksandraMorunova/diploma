@@ -13,6 +13,7 @@ public class ItemsForListOfUsers implements Serializable {
     private String status;
     private String count;
     private String icon;
+    private String firebaseToken;
 
     public String getId() {
         return id;
@@ -54,12 +55,21 @@ public class ItemsForListOfUsers implements Serializable {
         this.icon = icon;
     }
 
+    public String getFirebaseToken() {
+        return firebaseToken;
+    }
+
+    public void setFirebaseToken(String firebaseToken) {
+        this.firebaseToken = firebaseToken;
+    }
+
     public ItemsForListOfUsers(ItemsForListOfUsersBuilder builder) {
         this.id = builder.id;
         this.name = builder.name;
         this.status = builder.status;
         this.count = builder.count;
         this.icon = builder.icon;
+        this.firebaseToken = builder.firebaseToken;
     }
 
     public static class ItemsForListOfUsersBuilder implements Serializable {
@@ -68,12 +78,13 @@ public class ItemsForListOfUsers implements Serializable {
         private String status;
         private String count;
         private String icon;
+        private String firebaseToken;
 
         public ItemsForListOfUsersBuilder(String id, String name) {
             this.id = id;
             this.name = name;
         }
-        
+
         public ItemsForListOfUsersBuilder status(String status){
             this.status = status;
             return this;
@@ -86,6 +97,11 @@ public class ItemsForListOfUsers implements Serializable {
 
         public ItemsForListOfUsersBuilder icon(String icon){
             this.icon = icon;
+            return this;
+        }
+
+        public ItemsForListOfUsersBuilder firebaseToken(String firebaseToken){
+            this.firebaseToken = firebaseToken;
             return this;
         }
         public ItemsForListOfUsers build(){

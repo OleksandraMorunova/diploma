@@ -1,10 +1,12 @@
 package com.diploma.assistant.view.ui.tasks.admin;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ import com.diploma.assistant.model.entity.registration_service.LoadFile;
 import com.diploma.assistant.model.entity.resource_service.CommentsDto;
 import com.diploma.assistant.model.entity.resource_service.TaskDto;
 import com.diploma.assistant.model.enumaration.CheckTask;
+import com.diploma.assistant.model.enumaration.TypeUserEnum;
 import com.diploma.assistant.service.account_manager.AuthenticatorService;
 import com.diploma.assistant.view.adapter.RecycleViewCommentsCertainContext;
 import com.diploma.assistant.view.adapter.RecycleViewLookDocument;
@@ -44,6 +47,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import javax.crypto.SecretKey;
+
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.io.Decoders;
+import io.jsonwebtoken.security.Keys;
+
 public class TaskActivity extends AppCompatActivity {
     private LookTaskCordinatorBinding binding;
 
@@ -59,6 +69,8 @@ public class TaskActivity extends AppCompatActivity {
 
     private MaterialToolbar toolbar;
 
+    private boolean checkExistResponse;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,27 +80,39 @@ public class TaskActivity extends AppCompatActivity {
         AuthenticatorService accounts = new AuthenticatorService(this);
         token = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
         id = getIntent().getStringExtra("id");
-        System.out.println(id);
         userId = accounts.getStringFromSharedPreferences("id_user", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
         name = getIntent().getStringExtra("name");
 
-        toolbar = findViewById(R.id.toolbar_look_task);
-        toolbar.findViewById(R.id.check_task).setOnClickListener(v -> {
-            PopupMenu popupMenu = new PopupMenu(this, toolbar.findViewById(R.id.check_task));
-            popupMenu.getMenuInflater().inflate(R.menu.look_task_menu, popupMenu.getMenu());
-            popupMenu.setOnMenuItemClickListener(menuItem -> {
-                if(menuItem.getItemId() == R.id.returned) {
-                    updateTask(CheckTask.RETURNED.getCheckLine());
-                    return true;
-                }
-                if (menuItem.getItemId() ==R.id.reviewed){
-                    updateTask(CheckTask.REVIEWED.getCheckLine());
-                    return true;
-                }
-                return false;
-            });
-            popupMenu.show();
-        });
+        SecretKey secret = Keys.hmacShaKeyFor(Decoders.BASE64.decode("uu74l8S6ewO/Nmrh3waPdCfyF7UFTUtFoI44Z5c75X0="));
+        Claims claims = Jwts.parserBuilder().setSigningKey(secret).build().parseClaimsJws(token.replace("Bearer ", "")).getBody();
+        List<String> roles = (List<String>) claims.get("role");
+
+        if(roles.get(0).equals(TypeUserEnum.ADMIN.getTypeUserName())){
+           toolbar = findViewById(R.id.toolbar_look_task);
+           toolbar.findViewById(R.id.check_task).setOnClickListener(v -> {
+               PopupMenu popupMenu = new PopupMenu(this, toolbar.findViewById(R.id.check_task));
+               popupMenu.getMenuInflater().inflate(R.menu.look_task_menu, popupMenu.getMenu());
+               popupMenu.setOnMenuItemClickListener(menuItem -> {
+                   if(menuItem.getItemId() == R.id.returned) {
+                       updateTask(CheckTask.RETURNED.getCheckLine());
+                       return true;
+                   }
+                   if (menuItem.getItemId() == R.id.reviewed){
+                       updateTask(CheckTask.REVIEWED.getCheckLine());
+                       return true;
+                   }
+                   return false;
+               });
+               popupMenu.show();
+           });
+       } else {
+           toolbar = findViewById(R.id.toolbar_look_task);
+           toolbar.findViewById(R.id.check_task).setOnClickListener(c -> {
+               this.startActivity(new Intent(this, AddTaskActivity.class)
+                       .putExtra("id_task", id)
+                       .putExtra("check_exist", checkExistResponse));
+           });
+       }
 
         LinearLayout l = findViewById(R.id.bottom_sheet_look_task);
 
@@ -106,16 +130,18 @@ public class TaskActivity extends AppCompatActivity {
                 input.setText(null);
             });
         });
+
         TaskResponseViewModel viewModel = new ViewModelProvider(this).get(TaskResponseViewModel.class);
         viewModel.getAllTaskResponseByIdUser(token, id).observe(this, i -> {
             if(i != null){
+                checkExistResponse = true;
                 TextView description = l.findViewById(R.id.text_tasks_look);
                 description.setText(i.getText());
                 List<String> doc = i.getFiles();
                 for(int j = 0; j < doc.size(); j++){
                     int finalI = j;
                     FilesViewModel vviewModel = new ViewModelProvider(this).get(FilesViewModel.class);
-                    vviewModel.getListFiles(token, doc.get(j)).observe(this, data -> {
+                    vviewModel.getFiles(token, doc.get(j)).observe(this, data -> {
                         if(finalI == doc.size() - 1) {
                             mRloadFiles.add(data);
                             if(mLoadFiles.size() == doc.size()) {
@@ -124,7 +150,7 @@ public class TaskActivity extends AppCompatActivity {
                         }
                     });
                 }
-            }
+            } else checkExistResponse = false;
         });
 
         RecyclerView recyclerView = l.findViewById(R.id.card_view_look_task);
@@ -171,11 +197,10 @@ public class TaskActivity extends AppCompatActivity {
             if (t != null) {
                 mDocList.clear();
                 if (t.getFiles() != null) mDocList.addAll(t.getFiles());
-
                 for(int i = 0; i < mDocList.size(); i++){
                     FilesViewModel vviewModel = new ViewModelProvider(this).get(FilesViewModel.class);
                     final int finalI = i;
-                    vviewModel.getListFiles(token, mDocList.get(i)).observe(this, data -> {
+                    vviewModel.getFiles(token, mDocList.get(i)).observe(this, data -> {
                         if(finalI == mDocList.size() - 1) {
                             mLoadFiles.add(data);
                            if(mLoadFiles.size() == mDocList.size()) mAdapter.notifyDataSetChanged();
@@ -198,7 +223,7 @@ public class TaskActivity extends AppCompatActivity {
                     auditTasks.setTextColor(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.error)));
                 } else if (t.getAudit().equals(CheckTask.REVIEWED.getCheckLine())){
                     auditTasks.setText("Переглянуто");
-                    auditTasks.setTextColor(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.green)));
+                    auditTasks.setTextColor(ColorStateList.valueOf(ContextCompat.getColor(this, R.color.white)));
                 } else auditTasks.setText("Не переглянуто");
 
                 if(t.getComments() != null){
@@ -237,7 +262,6 @@ public class TaskActivity extends AppCompatActivity {
         layoutManager.setSpanCount(numColumns);
         mRecyclerView.setLayoutManager(layoutManager);
     }
-
 
     @Override
     public void onDestroy() {

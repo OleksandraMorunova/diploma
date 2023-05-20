@@ -38,7 +38,6 @@ public class RecycleViewAddedDocument extends RecyclerView.Adapter<RecycleViewAd
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolderAddedDocument holder, int position) {
-        //Todo add rer and zip
        SetImageSrcByFormatFile set = new SetImageSrcByFormatFile(activity, items);
        set.putToImage(holder.imageOfFile, position);
 

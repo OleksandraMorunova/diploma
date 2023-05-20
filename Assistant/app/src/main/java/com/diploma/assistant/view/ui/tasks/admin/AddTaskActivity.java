@@ -10,11 +10,13 @@ import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
 
+import android.Manifest;
 import android.content.ClipData;
-import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,6 +28,7 @@ import android.widget.Toast;
 import com.diploma.assistant.R;
 import com.diploma.assistant.databinding.ActivityAddTaskBinding;
 import com.diploma.assistant.model.entity.resource_service.TaskDto;
+import com.diploma.assistant.service.firebase.PushNotificationSender;
 import com.diploma.assistant.service.work_on_files.DownloadFiles;
 import com.diploma.assistant.service.account_manager.AuthenticatorService;
 import com.diploma.assistant.service.work_on_files.DownloadNotificationWorker;
@@ -38,14 +41,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
 import okhttp3.MultipartBody;
 
 public class AddTaskActivity extends AppCompatActivity {
     private RecyclerView recycleView;
     private final List<MultipartBody.Part> files = new ArrayList<>();
     private List<Uri> mUriList;
-    private String token;
+    private String token, firebaseToken;
     private ActivityAddTaskBinding binding;
 
     private static final String LIST_IMAGES = "listimages";
@@ -64,7 +66,7 @@ public class AddTaskActivity extends AppCompatActivity {
 
         AuthenticatorService accounts = new AuthenticatorService(this);
         token = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
-
+        firebaseToken = getIntent().getStringExtra("firebase_token");
         DownloadFiles downloadFiles = new DownloadFiles(this);
         String idUser = getIntent().getStringExtra("id_user");
         MaterialToolbar toolbar = binding.toolbarTil;
@@ -78,36 +80,42 @@ public class AddTaskActivity extends AppCompatActivity {
             downloadThread.start();
         });
 
-        binding.title.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) { }
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) { }
-            @Override
-            public void afterTextChanged(Editable s) {
-                if(Objects.requireNonNull(binding.title.getText()).length() != 0){
-                    binding.titleTil.setHelperTextEnabled(false);
-                    binding.titleTil.setHintTextColor(ColorStateList.valueOf(ContextCompat.getColor(AddTaskActivity.this, R.color.primary)));
-                    binding.titleTil.setBoxStrokeColor(ContextCompat.getColor(AddTaskActivity.this,R.color.box_color_selector));
-                } else {
-                    setToTitleFieldsAboutEmpty();
+            binding.title.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 }
-            }
-        });
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {
+                    if (Objects.requireNonNull(binding.title.getText()).length() != 0) {
+                        binding.titleTil.setHelperTextEnabled(false);
+                        binding.titleTil.setHintTextColor(ColorStateList.valueOf(ContextCompat.getColor(AddTaskActivity.this, R.color.primary)));
+                        binding.titleTil.setBoxStrokeColor(ContextCompat.getColor(AddTaskActivity.this, R.color.box_color_selector));
+                    } else {
+                        setToTitleFieldsAboutEmpty();
+                    }
+                }
+            });
 
         toolbar.findViewById(R.id.send_task).setOnClickListener(v -> {
-            if(Objects.requireNonNull(binding.title.getText()).length() != 0) {
-                TaskDto taskDto = new TaskDto();
-                taskDto.setUserId(idUser);
-                taskDto.setTitle(binding.title.getText().toString());
-                if (binding.description.getText() != null)
-                    taskDto.setDescription(Objects.requireNonNull(binding.description.getText()).toString());
-                Toast.makeText(this, "Завдання відправлено", Toast.LENGTH_SHORT).show();
-                uploadFilesToDataBase(taskDto, files);
-            } else {
-                setToTitleFieldsAboutEmpty();
-                Toast.makeText(this, "Ви маєте пустий заголовк", Toast.LENGTH_SHORT).show();
-            }
+                if (Objects.requireNonNull(binding.title.getText()).length() != 0) {
+                    TaskDto taskDto = new TaskDto();
+                    if (idUser != null) {
+                        taskDto.setUserId(idUser);
+                    }
+                    taskDto.setTitle(binding.title.getText().toString());
+                    if (binding.description.getText() != null)
+                        taskDto.setDescription(Objects.requireNonNull(binding.description.getText()).toString());
+                    Toast.makeText(this, "Завдання відправлено", Toast.LENGTH_SHORT).show();
+                    uploadFilesToDataBase(taskDto, files);
+                } else {
+                    setToTitleFieldsAboutEmpty();
+                    Toast.makeText(this, "Ви маєте пустий заголовк", Toast.LENGTH_SHORT).show();
+                }
         });
     }
 
@@ -161,6 +169,11 @@ public class AddTaskActivity extends AppCompatActivity {
                 runOnUiThread(() -> {
                     if(uri != null){
                         try {
+                            Data inputData = new Data.Builder()
+                                    .putString("file_uri", uri.toString())
+                                    .build();
+                            OneTimeWorkRequest request = new OneTimeWorkRequest.Builder(DownloadNotificationWorker.class).setInputData(inputData).build();
+                            WorkManager.getInstance(this).enqueue(request);
                             files.add(get.createMultipartBody(uri));
                             mUriList.add(uri);
                         } catch (IOException e) {
@@ -182,11 +195,20 @@ public class AddTaskActivity extends AppCompatActivity {
 
     private void uploadFilesToDataBase(TaskDto taskDto, List<MultipartBody.Part> files){
         TasksViewModel viewModel = new ViewModelProvider(this).get(TasksViewModel.class);
-        viewModel.createTask(token, taskDto, files).observe(this, o -> {
-            if(o.equals(true)){
-                Toast.makeText(this, "Файли були успішно завантаженні", Toast.LENGTH_SHORT).show();
-            } else  Toast.makeText(this, "Щось з даними, перевірте коректність файлів", Toast.LENGTH_SHORT).show();
-        });
+           viewModel.createTask(token, taskDto, files).observe(this, o -> {
+               if(o.equals(true)){
+                   if (Build.VERSION.SDK_INT >= 33) {
+                       if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
+                           PushNotificationSender sender = new PushNotificationSender();
+                           sender.sendNotification(firebaseToken, "Вам надіслане нове завдання", taskDto.getTitle());
+                       }
+                   } else {
+                       PushNotificationSender sender = new PushNotificationSender();
+                       sender.sendNotification(firebaseToken, "Вам надіслане нове завдання", taskDto.getTitle());
+                   }
+                   Toast.makeText(this, "Файли були успішно завантаженні", Toast.LENGTH_SHORT).show();
+               } else Toast.makeText(this, "Щось е так з даними, перевірте коректність файлів", Toast.LENGTH_SHORT).show();
+           });
     }
 
     private void setToTitleFieldsAboutEmpty(){

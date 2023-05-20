@@ -52,7 +52,6 @@ public class SendAndGetCode {
         SmsViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(SmsViewModel.class);
         viewModel.postSms(u).observe(lifecycleOwner, user -> {
             try{
-                System.out.println(user);
                 if(user != null){
                     Log.i("TAG", "Success receiver email code");
                     context.startActivity(new Intent(context, o).putExtra("number", u.getPhone()).putExtra("email", u.getEmail()).putExtra("password", password));

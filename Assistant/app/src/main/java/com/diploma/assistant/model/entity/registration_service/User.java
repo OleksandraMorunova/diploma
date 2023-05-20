@@ -117,4 +117,10 @@ public class User implements Serializable {
     public void setIcon(String icon) {
         this.icon = icon;
     }
+    public String getUserTokenFirebase() {
+        return userTokenFirebase;
+    }
+    public void setUserTokenFirebase(String userTokenFirebase) {
+        this.userTokenFirebase = userTokenFirebase;
+    }
 }

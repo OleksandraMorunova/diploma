@@ -25,6 +25,9 @@ public interface UserController {
     @GET("api/content/check/email/{email}")
     Call<ResponseBody> checkUserEmail(@Path("email") String email);
 
+    @GET("api/content/check/id/{id}")
+    Call<User> checkUserId(@Path("id") String id);
+
     @GET("api/content/check/phone/{phone}")
     Call<ResponseBody> checkUserPhone(@Path("phone") String phone);
 

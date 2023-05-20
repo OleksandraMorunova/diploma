@@ -20,8 +20,4 @@ public class FilesViewModel extends AndroidViewModel {
     public LiveData<LoadFile> getFiles(String token, String idFiles){
         return repository.getFiles(token, idFiles);
     }
-
-    public LiveData<LoadFile> getListFiles(String token, String idFiles){
-        return repository.getListFiles(token, idFiles);
-    }
 }

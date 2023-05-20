@@ -1,7 +1,5 @@
 package com.diploma.assistant.model.entity.resource_service;
 
-import java.io.Serializable;
-
 public class ArticleWithId{
     private String taskId;
     private String title;

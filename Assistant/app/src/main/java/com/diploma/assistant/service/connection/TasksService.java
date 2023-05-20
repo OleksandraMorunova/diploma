@@ -67,27 +67,6 @@ public class TasksService {
         return mTask;
     }
 
-    public MutableLiveData<List<TaskDto>> getTaskByIDUser(String token, String idUser) {
-        Call<List<TaskDto>> call = service.getAllTasksByIdUser(token, idUser);
-        call.enqueue(new Callback<>() {
-            @Override
-            public void onResponse(@NonNull Call<List<TaskDto>> call, @NonNull Response<List<TaskDto>> response) {
-                if (response.isSuccessful() && response.body() != null) {
-                    mTaskList.setValue(response.body());
-                } else {
-                    Log.e("GET TASK BY ID USER", "Code: " + response.code());
-                    mTaskList.postValue(null);
-                }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<List<TaskDto>> call, @NonNull Throwable t) {
-                Log.e("GET TASK BY ID USER", t.getMessage(), t.fillInStackTrace());
-                mTaskList.postValue(null);
-            }
-        });
-        return mTaskList;
-    }
 
     public MutableLiveData<Boolean> createTask(String token, TaskDto taskDto, List<MultipartBody.Part> file){
         Call<Void> call = service.createTask(token, taskDto, file);
