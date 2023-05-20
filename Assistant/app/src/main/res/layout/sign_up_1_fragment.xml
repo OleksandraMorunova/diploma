@@ -58,19 +58,6 @@
                 android:textColorLink="@color/light_purple"/>
         </com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/text_about_rights"
-            android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/nunito_sans_regular"
-            android:gravity="center_horizontal"
-            android:text="Натискаючи на Увійти, Ви погоджуєтеся з Умовами використання та Політикою конфіденційності"
-            android:textColor="@color/background_text"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
         <Button
             android:id="@+id/button_sign_up"
             android:layout_width="270dp"
