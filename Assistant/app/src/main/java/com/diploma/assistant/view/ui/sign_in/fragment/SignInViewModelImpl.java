@@ -64,7 +64,7 @@ public class SignInViewModelImpl implements Serializable{
             } else {
                 binding.buttonSignIn.setEnabled(true);
                 binding.progressBar.setVisibility(View.GONE);
-                Toast.makeText(context, "Проблема з токеном", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Ви не зареєстровані", Toast.LENGTH_SHORT).show();
             }
         }));
     }
@@ -74,6 +74,15 @@ public class SignInViewModelImpl implements Serializable{
         UserViewModel userViewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
         userViewModel.getDetailsUser(email, token).observe(lifecycleOwner, userEntity -> ((Activity) context).runOnUiThread(() -> {
             if(userEntity != null){
+                if(userEntity.getUserDto().getStatus().equals(StatusUserEnum.DEACTIVE.getStatus())){
+                    User user = new User();
+                    user.setStatus(StatusUserEnum.ACTIVE.getStatus());
+                    userViewModel.updateUserDetails(userEntity.getUserDto().getId(), user, null).observe(lifecycleOwner, u -> {
+                        if(u == null){
+                            Log.e("Update statu user to ACTIVE", "Body is null");
+                        }
+                    });
+                }
                 FirebaseMessaging.getInstance().getToken()
                         .addOnCompleteListener(task -> {
                             if (!task.isSuccessful()) {
@@ -85,7 +94,7 @@ public class SignInViewModelImpl implements Serializable{
 
                             User user = new User();
                             user.setUserTokenFirebase(tokenFirebase);
-                            userViewModel.updateUserDetails(token, userEntity.getUserDto().getId(), user, null).observe(lifecycleOwner, o -> {});
+                            userViewModel.updateUserDetails(userEntity.getUserDto().getId(), user, null).observe(lifecycleOwner, o -> {});
                         });
                 authenticator.savedString("com.assistant.emmotechie.PREFERENCE_FILE_KEY", "id_user", userEntity.getUserDto().getId());
                 checkUserStatusForPermission(userEntity);

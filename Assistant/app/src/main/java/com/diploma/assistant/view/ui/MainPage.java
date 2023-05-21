@@ -34,11 +34,8 @@ public class MainPage extends AppCompatActivity {
             try {
                 String email = accounts.getTokenProperty(bearerToken).getBody().get("email", String.class);
                 classes.getUserDetails(email, bearerToken);
-
-               // } else Toast.makeText(this, "Упс, схоже у вас проблеми з інтернетом.", Toast.LENGTH_SHORT).show();
             } catch (ExpiredJwtException e){
                 String refreshToken = accounts.getElementFromSet("Refresh", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
-
                 TokenViewModel tokenViewModel = new ViewModelProvider(this).get(TokenViewModel.class);
                 tokenViewModel.getNewAccessAndRefreshToken(refreshToken).observe(this, g -> {
                     if(g != null){

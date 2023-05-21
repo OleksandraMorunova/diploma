@@ -46,13 +46,10 @@ public class DownloadFiles {
     }
 
     public void openGallery(int REQUEST_CODE_OPEN_DOCUMENT){
-        if (ContextCompat.checkSelfPermission(activity.getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE);
-        } else {
-            Intent intent = new Intent(Intent.ACTION_PICK);
-            intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-            activity.startActivityForResult(Intent.createChooser(intent, "Select File"), REQUEST_CODE_OPEN_DOCUMENT);
-        }
+        System.out.println("Agghh");
+        Intent intent = new Intent(Intent.ACTION_PICK);
+        intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+        activity.startActivityForResult(Intent.createChooser(intent, "Select File"), REQUEST_CODE_OPEN_DOCUMENT);
     }
 
     public void openConcreteFile(Uri uri) {

@@ -124,12 +124,6 @@ public class NavigationActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
         binding = null;
@@ -182,20 +176,22 @@ public class NavigationActivity extends AppCompatActivity {
         userViewModel.getUsers(token).observe(this, users -> {
             items.clear();
             if(users != null){
-                int i = 0;
-                while (users.getUserList().size() > i){
-                       if(!users.getUserList().get(i).getRoles().contains(TypeUserEnum.ADMIN.getTypeUserName())){
-                           String name = users.getUserList().get(i).getName();
-                           ItemsForListOfUsers itemsForListOfUsers =
-                                   new ItemsForListOfUsers.ItemsForListOfUsersBuilder(users.getUserList().get(i).getId(), name)
-                                           .status(users.getUserList().get(i).getStatus())
-                                           .count(users.getIntegerList().get(i).toString())
-                                           .icon(users.getUserList().get(i).getIcon())
-                                           .firebaseToken(users.getUserList().get(i).getUserTokenFirebase())
-                                           .build();
-                           items.add(itemsForListOfUsers);
-                       }
-                       i++;
+                if(users.getUserList() != null){
+                    int i = 0;
+                    while (users.getUserList().size() > i){
+                        if(!users.getUserList().get(i).getRoles().contains(TypeUserEnum.ADMIN.getTypeUserName())){
+                            String name = users.getUserList().get(i).getName();
+                            ItemsForListOfUsers itemsForListOfUsers =
+                                    new ItemsForListOfUsers.ItemsForListOfUsersBuilder(users.getUserList().get(i).getId(), name)
+                                            .status(users.getUserList().get(i).getStatus())
+                                            .count(users.getIntegerList().get(i).toString())
+                                            .icon(users.getUserList().get(i).getIcon())
+                                            .firebaseToken(users.getUserList().get(i).getUserTokenFirebase())
+                                            .build();
+                            items.add(itemsForListOfUsers);
+                        }
+                        i++;
+                    }
                 }
                 adapter = new RecycleViewAdminContext(this, items, this, this);
                 recycleView.setLayoutManager(new LinearLayoutManager(this));

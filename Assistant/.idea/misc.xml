@@ -282,7 +282,7 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/app_bar.xml" value="0.190625" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/app_bar_navigation.xml" value="0.128" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bar.xml" value="0.17008196721311475" />
-        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet.xml" value="0.1" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet.xml" value="0.2" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet_look_task.xml" value="0.17452402538531278" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet_look_task_items.xml" value="0.264" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/bottom_sheet_ook_task.xml" value="0.176" />
@@ -334,6 +334,7 @@
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/sign_in_fragment.xml" value="0.190625" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/sign_up_1_fragment.xml" value="0.10006830601092896" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/sign_up_2_fragment.xml" value="0.17271078875793291" />
+        <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/sign_up_3_fragment.xml" value="0.20863616930312098" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/sign_up_in_swipe.xml" value="0.11816939890710383" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/task_item.xml" value="0.264" />
         <entry key="..\:/Users/User/Documents/GitHub/diploma/Assistant/app/src/main/res/layout/tasks_activity.xml" value="0.264" />

@@ -105,7 +105,7 @@ public class RecycleViewAdminContext extends RecyclerView.Adapter< RecycleViewAd
                 if (itemId == R.id.option_3_1) {
                     if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())) {
                         user.setStatus(StatusUserEnum.BLOCKED.getStatus());
-                        userViewModel.updateUserDetails(token, items.get(position).getId(), user, null).observe(lo, l -> {
+                        userViewModel.updateUserDetails(items.get(position).getId(), user, null).observe(lo, l -> {
                             if (l != null) {
                                 holder.statusView.setText(StatusUserEnum.BLOCKED.getStatus());
                                 Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();
@@ -130,7 +130,7 @@ public class RecycleViewAdminContext extends RecyclerView.Adapter< RecycleViewAd
                 if (itemId == R.id.option_3_3){
                     if(Objects.equals(status, StatusUserEnum.ACTIVE.getStatus())) {
                         user.setStatus(StatusUserEnum.ACTIVE.getStatus());
-                        userViewModel.updateUserDetails(token, items.get(position).getId(), user, null).observe(lo, l -> {
+                        userViewModel.updateUserDetails(items.get(position).getId(), user, null).observe(lo, l -> {
                             if (l != null) {
                                 holder.statusView.setText(StatusUserEnum.ACTIVE.getStatus());
                                 Toast.makeText(context.getApplicationContext(), "Дані успішно оновленно", Toast.LENGTH_SHORT).show();

@@ -52,9 +52,14 @@ public class SendAndGetCode {
         SmsViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(SmsViewModel.class);
         viewModel.postSms(u).observe(lifecycleOwner, user -> {
             try{
+                System.out.println(user);
                 if(user != null){
                     Log.i("TAG", "Success receiver email code");
-                    context.startActivity(new Intent(context, o).putExtra("number", u.getPhone()).putExtra("email", u.getEmail()).putExtra("password", password));
+                    context.startActivity(new Intent(context, o)
+                            .putExtra("number", u.getPhone())
+                            .putExtra("email", u.getEmail())
+                            .putExtra("password", password)
+                    );
                 }  else {
                     Log.e("TAG", "Помилка відправлення коду на пошту");
                 }
@@ -65,19 +70,14 @@ public class SendAndGetCode {
         });
     }
 
-    public void getCode(User u, List<Object> userData, Class<?> phoneClass, Class<?> emailClass){
+    public void getCode(String u, List<Object> userData, Class<?> phoneClass, Class<?> emailClass){
         SmsViewModel smsViewModel = new ViewModelProvider(viewModelStoreOwner).get(SmsViewModel.class);
         smsViewModel.getCode(u).observe(lifecycleOwner, user -> {
-            try{
-                if(user != null){
-                   checkByUpdateUserDetailsPhoneOrEmail(userData, phoneClass, emailClass);
-                } else {
-                    clearEditText();
-                    Toast.makeText(context, MakeToastEnum.NO_RIGHT_CODE.getError(), Toast.LENGTH_SHORT).show();
-                }
-            }catch (Exception e){
-                Log.e("TAG", "Failure receiver code");
-                Toast.makeText(context, MakeToastEnum.NO_CONNECTION_WITH_SERVER.getError(), Toast.LENGTH_SHORT).show();
+            if(user.equals(true)){
+                checkByUpdateUserDetailsPhoneOrEmail(userData, phoneClass, emailClass);
+            } else {
+                clearEditText();
+                Toast.makeText(context, MakeToastEnum.NO_RIGHT_CODE.getError(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -119,8 +119,7 @@ public class SendAndGetCode {
 
     private void updateDetailsByEmailViewModelImplMethod(User new_u, String numberOrEmail, Class<?> emailClass){
         UserViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
-        //TODO CHECK
-        viewModel.updateUserDetails(null, numberOrEmail, null, null).observe(lifecycleOwner, users -> {
+        viewModel.updateUserDetails(numberOrEmail, new_u, null).observe(lifecycleOwner, users -> {
             try {
                 if(users != null){
                     Log.i("TAG", "Updated user data by email and password");

@@ -33,7 +33,7 @@ public interface UserController {
 
     @Multipart
     @PUT("api/content/update/{phoneOrId}")
-    Call<User> updateUserDetails(@Header("Authorization") String token, @Path("phoneOrId") String phoneOrId, @Part("json") User user, @Part MultipartBody.Part file);
+    Call<User> updateUserDetails(@Path("phoneOrId") String phoneOrId, @Part("json") User user, @Part MultipartBody.Part file);
 
     @POST("api/admin/create")
     Call<User> createUser(@Header("Authorization") String token, @Body User user);

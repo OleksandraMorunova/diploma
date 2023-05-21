@@ -1,7 +1,7 @@
 package com.diploma.assistant.model.enumaration;
 
 public enum ErrorEnum {
-    INVALID("INVALID"),
+    INVALID("Недостатньо прав"),
     CONNECTION_TO_INTERNET("Перевірте підключення до інтернету"),
     INVALID_COUNTRY_CODE("Невірний код країни!"),
     NO_MATCH_PASSWORDS("Паролі не співпадають."),

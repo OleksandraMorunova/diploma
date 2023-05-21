@@ -51,7 +51,7 @@ public class TasksListActivity extends AppCompatActivity {
         countView.setText(newCount);
 
 
-        SwipeRefreshLayout swipe = findViewById(R.id.swipe_list_task);
+        SwipeRefreshLayout swipe = binding.ms.swipeListTask;
         swipe.setOnRefreshListener(() -> {
             GetTaskListForCertainUser get = new GetTaskListForCertainUser(binding, this, this, this);
             get.getTaskForUser(recycleView, id, token, name);

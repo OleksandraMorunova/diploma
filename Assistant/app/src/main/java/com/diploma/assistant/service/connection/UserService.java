@@ -166,8 +166,8 @@ public class UserService {
         return mutableLiveDataString;
     }
 
-    public MutableLiveData<User> updateUserDetails(String token, String phone, User user, MultipartBody.Part file){
-        Call<User> call = service.updateUserDetails(token, phone, user, file);
+    public MutableLiveData<User> updateUserDetails(String phone, User user, MultipartBody.Part file){
+        Call<User> call = service.updateUserDetails(phone, user, file);
         call.enqueue(new Callback<>() {
             @Override
             public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {

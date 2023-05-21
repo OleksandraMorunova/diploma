@@ -94,6 +94,7 @@ public class AddTaskFragment extends AppCompatActivity {
                 if(o.equals(false)){
                     Toast.makeText(this, "Щось пішло не так, спробуйте будь-ласка ще раз", Toast.LENGTH_SHORT).show();
                 } else {
+                    Toast.makeText(this, "Ваша відповідь успішно відправлена", Toast.LENGTH_SHORT).show();
                     UserViewModel userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
                     userViewModel.getUsers(token).observe(this, users -> {
                         if (users != null) {
@@ -101,7 +102,7 @@ public class AddTaskFragment extends AppCompatActivity {
                             userList.removeIf(r -> !r.getRoles().contains("ADMIN"));
 
                             for(User u: userList){
-                                if(! u.getUserTokenFirebase().isEmpty()){
+                                if(u.getUserTokenFirebase() != null){
                                     if (Build.VERSION.SDK_INT >= 33) {
                                         if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
                                             PushNotificationSender sender = new PushNotificationSender();

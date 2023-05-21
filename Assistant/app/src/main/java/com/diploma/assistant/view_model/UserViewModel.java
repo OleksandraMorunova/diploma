@@ -43,8 +43,8 @@ public class UserViewModel extends AndroidViewModel {
         return repository.getPhoneNumber(phoneNumber);
     }
 
-    public LiveData<User> updateUserDetails(String token, String phone, User user, MultipartBody.Part file) {
-        return repository.updateUserDetails(token, phone, user, file);
+    public LiveData<User> updateUserDetails(String phone, User user, MultipartBody.Part file) {
+        return repository.updateUserDetails(phone, user, file);
     }
 
 

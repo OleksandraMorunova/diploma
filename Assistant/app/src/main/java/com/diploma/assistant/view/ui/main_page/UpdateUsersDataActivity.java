@@ -1,6 +1,8 @@
 package com.diploma.assistant.view.ui.main_page;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -8,7 +10,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.work.Data;
@@ -52,11 +58,11 @@ public class UpdateUsersDataActivity extends AppCompatActivity {
         String phoneNumber = getIntent().getStringExtra("phone_number");
         byte[] byteArray = getIntent().getByteArrayExtra("icon");
 
-        Bitmap icon = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
         binding.updateNameTiet.setText(name);
         binding.updatePhoneNumberTiet.setText(phoneNumber);
 
-        if(icon != null){
+        if(byteArray != null){
+            Bitmap icon = BitmapFactory.decodeByteArray(byteArray, 0, byteArray.length);
             binding.updateImage.setImageBitmap(icon);
         } else binding.updateImage.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_user, getTheme()));
 
@@ -77,7 +83,7 @@ public class UpdateUsersDataActivity extends AppCompatActivity {
 
             UserViewModel userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
             final int[] i = {0};
-            userViewModel.updateUserDetails(token, userId, user, part).observe(this, o -> {
+            userViewModel.updateUserDetails(userId, user, part).observe(this, o -> {
                while (i[0] < 1){
                    if(o != null) Toast.makeText(this, "Дані успішно оновленні", Toast.LENGTH_SHORT).show();
                    else Toast.makeText(this, "Щось пішло не так, спробуйте будь-ласка ще раз", Toast.LENGTH_SHORT).show();

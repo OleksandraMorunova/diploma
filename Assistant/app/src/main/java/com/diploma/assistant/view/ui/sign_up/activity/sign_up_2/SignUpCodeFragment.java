@@ -31,7 +31,6 @@ public class SignUpCodeFragment extends AppCompatActivity{
     ViewModelStoreOwner viewModelStoreOwner = this;
     LifecycleOwner lifecycleOwner = this;
 
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,15 +46,16 @@ public class SignUpCodeFragment extends AppCompatActivity{
             binding.textMessageNumber.setText(String.format(getResources().getString(R.string.phone_number), number));
             SmsCheck smsCheck = new SmsCheck(SignUpCodeFragment.this);
             smsCheck.getSms();
-        } else binding.textMessageNumber.setText(String.format(getResources().getString(R.string.email), email));
+        } else {
+            binding.textMessageNumber.setText(String.format(getResources().getString(R.string.email), email));
+        }
 
         timer = new Timer(binding, SignUpCodeFragment.this, lifecycleOwner, viewModelStoreOwner);
         List<Object> emailAndPassword = Arrays.asList(number, email, password);
         timer.getCountDownTimer(emailAndPassword, binding.timer);
 
-        //TODO Посилає код
-        //SendAndGetCode code = new SendAndGetCode(viewModelStoreOwner, lifecycleOwner);
-        //code.receiverCode(number.replace(" ", "").replace("-", ""));
+        SendAndGetCode code = new SendAndGetCode(binding, this, viewModelStoreOwner, lifecycleOwner);
+        code.receiverCode(number.replace(" ", "").replace("-", ""));
 
         EditText[] o = new EditText[]{binding.editText1, binding.editText2, binding.editText3, binding.editText4, binding.editText5};
         List<EditText> eText = Arrays.asList(o);
@@ -76,8 +76,7 @@ public class SignUpCodeFragment extends AppCompatActivity{
                         CheckStringLine checkString = new CheckStringLine(binding);
                         if(s.length() != 0 && checkString.editTextIsNotNull() && checkString.editTextIsNumber()) {
                             List<String> l = Arrays.asList(binding.editText1.getText().toString(), binding.editText2.getText().toString(), binding.editText3.getText().toString(), binding.editText4.getText().toString(), binding.editText5.getText().toString());
-                            User u = new User();
-                            u.setCode(l.stream().map(String::valueOf).collect(Collectors.joining("", "", "")));
+                            String u = l.stream().map(String::valueOf).collect(Collectors.joining("", "", ""));
                             code.getCode(u, emailAndPassword, SignUpSetLoginAndPasswordFragment.class, MainPage.class);
                         }
                     }

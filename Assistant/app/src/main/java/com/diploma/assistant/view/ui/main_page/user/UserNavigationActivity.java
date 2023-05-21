@@ -132,12 +132,6 @@ public class UserNavigationActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_navigation);
-        return NavigationUI.navigateUp(navController, mAppBarConfiguration) || super.onSupportNavigateUp();
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
         binding = null;
@@ -161,6 +155,7 @@ public class UserNavigationActivity extends AppCompatActivity {
 
                 nameContainer.setText(name);
                 emailContainer.setText(phone);
+
 
                 if(icon != null && token != null){
                     FilesViewModel viewModel = new ViewModelProvider(this).get(FilesViewModel.class);

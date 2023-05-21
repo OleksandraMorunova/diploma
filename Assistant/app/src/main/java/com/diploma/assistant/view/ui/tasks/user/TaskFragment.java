@@ -97,15 +97,21 @@ public class TaskFragment extends AppCompatActivity {
                  if(d.equals(false)){
                      Toast.makeText(this, "Щось пішло не так, спробуйте будь-ласка ще раз", Toast.LENGTH_SHORT).show();
                  } else {
-                     Toast.makeText(this, "Повідомлення успішно видалене", Toast.LENGTH_SHORT).show();
+                     Toast.makeText(this, "Видалено відповідь на поточне завдання", Toast.LENGTH_SHORT).show();
                      TextView description = l.findViewById(R.id.text_tasks_look);
                      description.setText(null);
+                     uploadResponseToTask(l);
+                     responseTask.setText(null);
+                     responseTask.setFiles(null);
+                     mRloadFiles.clear();
+                     mRAdapter.notifyDataSetChanged();
                  }
              });
            });
 
            toolbar.findViewById(R.id.add_task).setOnClickListener(v -> {
-               if(responseTask.getId() == null){
+               if((responseTask.getFiles() == null || responseTask.getText() == null) ||
+                       (responseTask.getFiles() == null && responseTask.getText() == null)){
                    this.startActivity(new Intent(this, AddTaskFragment.class)
                            .putExtra("id_task", id));
                } else {
@@ -126,8 +132,6 @@ public class TaskFragment extends AppCompatActivity {
             });
         });
 
-        uploadResponseToTask(l);
-
         BottomSheetBehavior<View> bottomSheetBehavior = BottomSheetBehavior.from(l);
         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         bottomSheetBehavior.setPeekHeight(115);
@@ -146,27 +150,20 @@ public class TaskFragment extends AppCompatActivity {
                 findViewById(R.id.fab_look_fr).animate().scaleX(1 - slideOffset).scaleY(1 - slideOffset).setDuration(0).start();
             }
         });
-        callToTask();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
         binding = null;
-        clearCache(getCacheDir());
     }
 
-    private void clearCache(File cacheDir) {
-        File[] files = cacheDir.listFiles();
-        if (files != null) {
-            for (File child : files) {
-                boolean isDeleted = child.delete();
-                if (!isDeleted) {
-                    Log.e("ClearCache", "Failed to delete file: " + child.getAbsolutePath());
-                } else
-                    Log.i("Delete files in content://com.diploma.assistant.fileprovider/cache/", "Successfully");
-            }
-        } else Log.e("Delete files in content://com.diploma.assistant.fileprovider/cache/", "No successfully, no element");
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mRloadFiles.clear();
+        uploadResponseToTask(l);
+        callToTask();
     }
 
     private void adapterComment(List<ItemsForListOfCommentsCertain> it, List<String> user, String userId){
@@ -200,7 +197,9 @@ public class TaskFragment extends AppCompatActivity {
                     vviewModel.getFiles(token, mDocList.get(i)).observe(this, data -> {
                         if(finalI == mDocList.size() - 1) {
                             mLoadFiles.add(data);
-                            if(mLoadFiles.size() == mDocList.size()) mAdapter.notifyDataSetChanged();
+                            if(mLoadFiles.size() == mDocList.size()){
+                                mAdapter.notifyDataSetChanged();
+                            }
                         }
                     });
                 }
@@ -248,18 +247,19 @@ public class TaskFragment extends AppCompatActivity {
                 TextView description = l.findViewById(R.id.text_tasks_look);
                 description.setText(i.getText() == null ? "Немає опису завдання" : i.getText());
                 List<String> doc = i.getFiles();
-                for(int j = 0; j < doc.size(); j++){
-                    int finalI = j;
-                    FilesViewModel vviewModel = new ViewModelProvider(this).get(FilesViewModel.class);
-                    vviewModel.getFiles(token, doc.get(j)).observe(this, data -> {
-                        if(finalI == doc.size() - 1) {
-                            mRloadFiles.add(data);
-                            if(mLoadFiles.size() == mDocList.size()){
-                                mRAdapter.notifyDataSetChanged();
+                if(doc != null){
+                    for(int j = 0; j < doc.size(); j++){
+                        int finalI = j;
+                        FilesViewModel vviewModel = new ViewModelProvider(this).get(FilesViewModel.class);
+                        vviewModel.getFiles(token, doc.get(j)).observe(this, data -> {
+                            if(finalI == doc.size() - 1) {
+                                mRloadFiles.add(data);
+                                if(doc.size() == mRloadFiles.size()){
+                                    mRAdapter.notifyDataSetChanged();
+                                }
                             }
-                        }
-                    });
-
+                        });
+                    }
                 }
             }
         });

@@ -41,7 +41,7 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:layout_centerHorizontal="true"
-           android:layout_marginTop="120dp"
+           android:layout_marginTop="140dp"
            android:layout_toEndOf="@+id/update_image"
            android:src="@drawable/ic_baseline_update"
            app:tint="@color/primary" />

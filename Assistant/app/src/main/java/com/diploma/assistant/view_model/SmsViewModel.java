@@ -18,15 +18,15 @@ public class SmsViewModel extends AndroidViewModel {
         super(application);
     }
 
-    public LiveData<ResponseBody> createCode(User user){
+    public LiveData<User> createCode(User user){
         return repository.createCode(user);
     }
 
-    public LiveData<ResponseBody> getCode(User user){
+    public LiveData<Boolean> getCode(String user){
         return repository.getCode(user);
     }
 
-    public LiveData<ResponseBody> postSms(User user) {
+    public LiveData<User> postSms(User user) {
         return repository.postSms(user);
     }
 }
