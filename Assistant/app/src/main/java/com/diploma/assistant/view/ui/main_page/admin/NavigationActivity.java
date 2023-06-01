@@ -158,7 +158,6 @@ public class NavigationActivity extends AppCompatActivity {
                         } else Toast.makeText(this, ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
                     });
                 } else imageContainer.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_user, getTheme()));
-
             }
         });
 

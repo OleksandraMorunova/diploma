@@ -26,6 +26,8 @@ import com.diploma.assistant.view.ui.sign_up.activity.sign_up_2.CheckStringLine;
 import com.diploma.assistant.view_model.CommentsViewModel;
 import com.diploma.assistant.view_model.UserViewModel;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -43,6 +45,19 @@ public class CertainComment extends AppCompatActivity{
         binding = CommentsCertainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        List<ItemsForListOfComments> list = (List<ItemsForListOfComments>) getIntent().getSerializableExtra("list_of_comments");
+        RecyclerView navRecyclerView = findViewById(R.id.recycle_view_certain_text_of_comment);
+
+        binding.swipeCertainComment.setOnRefreshListener(() -> {
+            viewListOfComments.clear();
+            for(ItemsForListOfComments commentsDto: list){
+                viewListOfComments.add(new ItemsForListOfCommentsCertain(CheckStringLine.parserData(commentsDto.getComment_added_data()), commentsDto.getComment()));
+            }
+            navRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+            navRecyclerView.setAdapter(new RecycleViewCommentsCertainContext(this, viewListOfComments));
+            binding.swipeCertainComment.setRefreshing(false);
+        });
+
         AuthenticatorService service = new AuthenticatorService(this);
         String id = service.getStringFromSharedPreferences("id_user", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
         AuthenticatorService accounts = new AuthenticatorService(this);
@@ -54,7 +69,6 @@ public class CertainComment extends AppCompatActivity{
         String article = getIntent().getStringExtra("article");
         String comment = getIntent().getStringExtra("comment");
         firebaseToken = getIntent().getStringExtra("firebase_token");
-        List<ItemsForListOfComments> list = (List<ItemsForListOfComments>) getIntent().getSerializableExtra("list_of_comments");
 
         TextView commentNameContainer = findViewById(R.id.certain_user_name_comment);
         TextView commentDataContainer = findViewById(R.id.certain_data_time_comment);
@@ -66,7 +80,6 @@ public class CertainComment extends AppCompatActivity{
         commentContainer.setText(comment);
         commentArticle.setText(article);
 
-        RecyclerView navRecyclerView = findViewById(R.id.recycle_view_certain_text_of_comment);
         for(ItemsForListOfComments commentsDto: list){
             viewListOfComments.add(new ItemsForListOfCommentsCertain(CheckStringLine.parserData(commentsDto.getComment_added_data()), commentsDto.getComment()));
         }
@@ -81,46 +94,18 @@ public class CertainComment extends AppCompatActivity{
                CommentsDto dto = new CommentsDto();
                dto.setUser_comment_id(id);
                dto.setComment(message);
+               dto.setComment_added_data(LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
+               final int[] i = {0};
                viewModel.postComment(token, idTask, dto).observe(this, p -> {
-                   if(p != null){
-                      if(firebaseToken != null){
-                          if (Build.VERSION.SDK_INT >= 33) {
-                              if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
-                                  PushNotificationSender sender = new PushNotificationSender();
-                                  sender.sendNotification(firebaseToken, "Вам надіслали новий коментар", message);
-                              }
-                          } else {
-                              PushNotificationSender sender = new PushNotificationSender();
-                              sender.sendNotification(firebaseToken, "Вам надіслали новий коментар", message);
-                          }
-                      } else {
-                          UserViewModel userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
-                          userViewModel.getUsers(token).observe(this, users -> {
-                              if (users != null) {
-                                  userList.addAll(users.getUserList());
-                                  userList.removeIf(r -> !r.getRoles().contains("ADMIN"));
-                                  for(User u: userList){
-                                      if(! u.getUserTokenFirebase().isEmpty()){
-                                          if (Build.VERSION.SDK_INT >= 33) {
-                                              if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED) {
-                                                  PushNotificationSender sender = new PushNotificationSender();
-                                                  sender.sendNotification( u.getUserTokenFirebase(), "Нове повідомлення з чату", message);
-                                              }
-                                          } else {
-                                              PushNotificationSender sender = new PushNotificationSender();
-                                              sender.sendNotification( u.getUserTokenFirebase(), "Нове повідомлення з чату", message);
-                                          }
-                                      }
-                                  }
-
-                              }
-                          });
-                      }
-                       viewListOfComments.add(new ItemsForListOfCommentsCertain(CheckStringLine.parserData(p.getAddedData()), binding.commentTextInputEditText.getText().toString()));
-                       navRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-                       navRecyclerView.setAdapter(new RecycleViewCommentsCertainContext(this, viewListOfComments));
-                       binding.commentTextInputEditText.setText(null);
-                   }
+                 while (i[0] < 1){
+                     if(p != null){
+                         viewListOfComments.add(new ItemsForListOfCommentsCertain(CheckStringLine.parserData(dto.getComment_added_data()), binding.commentTextInputEditText.getText().toString()));
+                         navRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+                         navRecyclerView.setAdapter(new RecycleViewCommentsCertainContext(this, viewListOfComments));
+                         binding.commentTextInputEditText.setText(null);
+                     }
+                     i[0]++;
+                 }
                });
            });
        }

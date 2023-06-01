@@ -51,7 +51,6 @@ public class TasksListFragment extends Fragment {
 
         binding.fabListTasks.setVisibility(View.INVISIBLE);
         binding.searchViewTasksList.setImeOptions(EditorInfo.IME_ACTION_DONE);
-        TasksListActivityBinding t = binding.ms;
         RecyclerView recycleView = binding.ms.recycleViewTasksList;
 
         SwipeRefreshLayout swipe = binding.ms.swipeListTask;

@@ -53,7 +53,6 @@ public class UserNavigationActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.navAppBarFragment.toolbarFragment);
-
         AuthenticatorService accounts = new AuthenticatorService(this);
         id = accounts.getStringFromSharedPreferences("id_user", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
 
@@ -113,25 +112,6 @@ public class UserNavigationActivity extends AppCompatActivity {
     }
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.navigation, menu);
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        SearchView searchView = (SearchView) searchItem.getActionView();
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) { return false; }
-
-            @Override
-            public boolean onQueryTextChange(String newText) {
-
-                return false;
-            }
-        });
-        searchView.setIconified(false);
-        return true;
-    }
-
-    @Override
     protected void onDestroy() {
         super.onDestroy();
         binding = null;
@@ -156,7 +136,6 @@ public class UserNavigationActivity extends AppCompatActivity {
                 nameContainer.setText(name);
                 emailContainer.setText(phone);
 
-
                 if(icon != null && token != null){
                     FilesViewModel viewModel = new ViewModelProvider(this).get(FilesViewModel.class);
                     viewModel.getFiles(token, icon).observe(this, f -> {
@@ -167,7 +146,6 @@ public class UserNavigationActivity extends AppCompatActivity {
                         } else Toast.makeText(this, ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
                     });
                 } else imageContainer.setImageDrawable(ResourcesCompat.getDrawable(getResources(), R.drawable.ic_user, getTheme()));
-
             }
         });
 

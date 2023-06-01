@@ -45,6 +45,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -122,10 +124,11 @@ public class TaskFragment extends AppCompatActivity {
         inputLayout.setEndIconOnClickListener(v -> {
             CommentsViewModel viewModel = new ViewModelProvider(this).get(CommentsViewModel.class);
             CommentsDto dto = new CommentsDto();
-            dto.setUser_comment_id(id);
+            dto.setUser_comment_id(userId);
             dto.setComment(Objects.requireNonNull(input.getText()).toString());
+            dto.setComment_added_data(LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_DATE_TIME));
             viewModel.postComment(token, id, dto).observe(this, p -> {
-                it.add(new ItemsForListOfCommentsCertain(CheckStringLine.parserData(p.getAddedData()), input.getText().toString()));
+                it.add(new ItemsForListOfCommentsCertain(CheckStringLine.parserData(dto.getComment_added_data()), input.getText().toString()));
                 user.add(userId);
                 adapterComment(it, user, userId);
                 input.setText(null);

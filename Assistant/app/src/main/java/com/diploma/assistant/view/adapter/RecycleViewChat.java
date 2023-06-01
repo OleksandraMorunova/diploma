@@ -156,6 +156,7 @@ public class RecycleViewChat extends RecyclerView.Adapter<RecycleViewChat.ViewHo
                             updatePosition = -1;
                             itemUpdate.setIconTintList(whiteColorStateList);
                             itemUpdate.setVisible(false);
+                            itemDelete.setVisible(false);
                             editText.setText(null);
                         }
                     });

@@ -16,26 +16,14 @@ import androidx.core.content.ContextCompat;
 
 
 public class DownloadFiles {
-    private Activity activity;
+    private final Activity activity;
 
     private static final int CREATE_FILE = 1;
-    private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 2;
 
     public DownloadFiles(Activity activity) {
         this.activity = activity;
     }
 
-    //Analog "save as"
-    public void createFile(Uri pickerInitialUri, String typeOfFile, String value) {
-        Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType(typeOfFile);
-        intent.putExtra(Intent.EXTRA_TITLE, value);
-        intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, pickerInitialUri);
-        activity.startActivityForResult(intent, CREATE_FILE);
-    }
-
-    //Opens the system's file picker app
     public void openFile(int REQUEST_CODE_OPEN_DOCUMENT) {
         Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
         intent.addCategory(Intent.CATEGORY_OPENABLE);
@@ -46,7 +34,6 @@ public class DownloadFiles {
     }
 
     public void openGallery(int REQUEST_CODE_OPEN_DOCUMENT){
-        System.out.println("Agghh");
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
         activity.startActivityForResult(Intent.createChooser(intent, "Select File"), REQUEST_CODE_OPEN_DOCUMENT);

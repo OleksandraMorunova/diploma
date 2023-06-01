@@ -60,7 +60,7 @@ public class GetListOfCommentsForCertainUser {
         String id = accounts.getStringFromSharedPreferences("id_user", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
 
         UserViewModel userViewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
-        AtomicReference<String> idTitle = new AtomicReference<>("");
+        List<String> idTitle = new ArrayList<>();
         userViewModel.getDetailsUser(id, token).observe(lifecycleOwner, lt -> {
             if(lt != null){
                 listOfArticle.clear();
@@ -71,18 +71,18 @@ public class GetListOfCommentsForCertainUser {
                 for(int t = 0; t < tt.size(); t++){
                     if(tt.get(t).getComments() != null){
                         for(int k = 0; k < tt.get(t).getComments().size(); k++){
-                            idTitle.set(tt.get(t).getId());
+                            idTitle.add(tt.get(t).getId());
                             listOfArticle.add(new ArticleWithId(tt.get(t).getTitle(), tt.get(t).getId()));
                         }
                         dtoList.add(tt.get(t).getComments());
                     }
                 }
-                addCommentsToView(idTitle.get(), token);
+                addCommentsToView(idTitle, token);
             }
         });
     }
 
-    private void addCommentsToView(String idTitle, String token){
+    private void addCommentsToView(List<String> idTitle, String token){
         List<CommentsDto> newDtoList = dtoList.stream()
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
@@ -104,12 +104,12 @@ public class GetListOfCommentsForCertainUser {
         });
     }
 
-    private List<ItemsForListOfComments> sortedList(List<CommentsDto> newDtoList, String idTitle){
+    private List<ItemsForListOfComments> sortedList(List<CommentsDto> newDtoList, List<String> idTitle){
         List<ItemsForListOfComments> items = new ArrayList<>();
         for(int u = 0; u < newDtoList.size(); u++){
             items.add(new ItemsForListOfComments.ItemsBuilder(newDtoList.get(u).getUser_comment_id(), newDtoList.get(u).getComment())
                     .idComment(newDtoList.get(u).getId())
-                    .idTask(idTitle)
+                    .idTask(idTitle.get(u))
                     .commentAddedData(newDtoList.get(u).getComment_added_data())
                     .reviewed(newDtoList.get(u).getReviewed())
                     .article(listOfArticle.get(u).getTitle())

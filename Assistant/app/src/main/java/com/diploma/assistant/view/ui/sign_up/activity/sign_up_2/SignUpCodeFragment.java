@@ -54,8 +54,10 @@ public class SignUpCodeFragment extends AppCompatActivity{
         List<Object> emailAndPassword = Arrays.asList(number, email, password);
         timer.getCountDownTimer(emailAndPassword, binding.timer);
 
-        SendAndGetCode code = new SendAndGetCode(binding, this, viewModelStoreOwner, lifecycleOwner);
-        code.receiverCode(number.replace(" ", "").replace("-", ""));
+        if(number != null){
+            SendAndGetCode code = new SendAndGetCode(binding, this, viewModelStoreOwner, lifecycleOwner);
+            code.receiverCode(number.replace(" ", "").replace("-", ""));
+        }
 
         EditText[] o = new EditText[]{binding.editText1, binding.editText2, binding.editText3, binding.editText4, binding.editText5};
         List<EditText> eText = Arrays.asList(o);

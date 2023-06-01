@@ -51,8 +51,6 @@ public class SendAndGetCode {
     public void post(User u, String password, Class<?> o){
         SmsViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(SmsViewModel.class);
         viewModel.postSms(u).observe(lifecycleOwner, user -> {
-            try{
-                System.out.println(user);
                 if(user != null){
                     Log.i("TAG", "Success receiver email code");
                     context.startActivity(new Intent(context, o)
@@ -63,10 +61,6 @@ public class SendAndGetCode {
                 }  else {
                     Log.e("TAG", "Помилка відправлення коду на пошту");
                 }
-            } catch (Exception e){
-                Log.e("TAG", "Failure receiver code");
-                Toast.makeText(context, MakeToastEnum.NO_CONNECTION_WITH_SERVER.getError(), Toast.LENGTH_SHORT).show();
-            }
         });
     }
 
@@ -112,7 +106,7 @@ public class SendAndGetCode {
         } else {
             User new_u = new User();
             new_u.setPassword(password);
-            checkEmailViewModelImplMethod(new_u, email, emailClass);
+            //checkEmailViewModelImplMethod(new_u, email, emailClass);
             updateDetailsByEmailViewModelImplMethod(new_u, email, emailClass);
         }
     }
@@ -120,16 +114,11 @@ public class SendAndGetCode {
     private void updateDetailsByEmailViewModelImplMethod(User new_u, String numberOrEmail, Class<?> emailClass){
         UserViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(UserViewModel.class);
         viewModel.updateUserDetails(numberOrEmail, new_u, null).observe(lifecycleOwner, users -> {
-            try {
-                if(users != null){
-                    Log.i("TAG", "Updated user data by email and password");
-                    Toast.makeText(context, MakeToastEnum.UPDATE_DETAILS.getError(), Toast.LENGTH_SHORT).show();
-                    context.startActivity(new Intent(context, emailClass));
-                } else Toast.makeText(context, MakeToastEnum.NO_CONNECTION_WITH_SERVER.getError(), Toast.LENGTH_SHORT).show();
-            } catch (Exception e){
-                Log.e("TAG", "Failure update email and password");
-                Toast.makeText(context, MakeToastEnum.NO_CONNECTION_WITH_SERVER.getError(), Toast.LENGTH_SHORT).show();
-            }
+            if(users != null){
+                Log.i("TAG", "Updated user data by email and password");
+                Toast.makeText(context, MakeToastEnum.UPDATE_DETAILS.getError(), Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context, emailClass));
+            } else Toast.makeText(context, MakeToastEnum.NO_CONNECTION_WITH_SERVER.getError(), Toast.LENGTH_SHORT).show();
         });
     }
 

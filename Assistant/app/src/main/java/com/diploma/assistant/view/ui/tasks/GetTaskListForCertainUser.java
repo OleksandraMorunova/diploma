@@ -53,13 +53,6 @@ public class GetTaskListForCertainUser {
                 if(listTask != null){
                     adapter = new RecycleViewTasks(activity,  listTask, id, viewModelStoreOwner, lifecycle, name);
                     recycleView.setAdapter(adapter);
-
-                    AuthenticatorService accounts = new AuthenticatorService(activity);
-                    String bearerToken = accounts.getElementFromSet("Bearer", "jwt_token", "com.assistant.emmotechie.PREFERENCE_FILE_KEY");
-                    SecretKey secret = Keys.hmacShaKeyFor(Decoders.BASE64.decode("uu74l8S6ewO/Nmrh3waPdCfyF7UFTUtFoI44Z5c75X0="));
-                    Claims claims = Jwts.parserBuilder().setSigningKey(secret).build().parseClaimsJws(bearerToken.replace("Bearer ", "")).getBody();
-                    List<String> role = (List<String>) claims.get("role");
-                    if(role.get(0).equals(TypeUserEnum.ADMIN.getTypeUserName())){
                         binding.searchViewTasksList.setOnQueryTextListener(new androidx.appcompat.widget.SearchView.OnQueryTextListener() {
                             @Override
                             public boolean onQueryTextSubmit(String query) { return false; }
@@ -69,9 +62,6 @@ public class GetTaskListForCertainUser {
                                 return false;
                             }
                         });
-                    } else {
-                        binding.searchViewTasksList.setVisibility(View.INVISIBLE);
-                    }
                 } else Toast.makeText(activity.getApplicationContext(), ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
             }
         });

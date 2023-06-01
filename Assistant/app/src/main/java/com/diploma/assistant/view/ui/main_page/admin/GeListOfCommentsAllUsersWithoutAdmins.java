@@ -54,7 +54,7 @@ public class GeListOfCommentsAllUsersWithoutAdmins {
     public void getCommentsFromDataBase(String token){
         navRecyclerView = activity.findViewById(R.id.nav_drawer_recycler_view);
         TasksViewModel viewModel = new ViewModelProvider(viewModelStoreOwner).get(TasksViewModel.class);
-        AtomicReference<String> idTitle = new AtomicReference<>("");
+        List<String> taskId = new ArrayList<>();
         viewModel.getTaskDtoMutableLiveData(token).observe(lifecycleOwner, listOfTasks -> {
           if(listOfTasks != null){
               listOfArticle.clear();
@@ -64,18 +64,18 @@ public class GeListOfCommentsAllUsersWithoutAdmins {
               for(int t = 0; t < listOfTasks.size(); t++){
                   if(listOfTasks.get(t).getComments() != null){
                       for(int tt = 0; tt < listOfTasks.get(t).getComments().size(); tt++){
-                          idTitle.set(listOfTasks.get(t).getId());
+                          taskId.add(listOfTasks.get(t).getId());
                           listOfArticle.add(new ArticleWithId(listOfTasks.get(t).getTitle(), listOfTasks.get(t).getId()));
                       }
                       dtoList.add(listOfTasks.get(t).getComments());
                   }
               }
-              addCommentsToView(idTitle.get(), token);
+              addCommentsToView(taskId, token);
           } else Toast.makeText(activity.getApplicationContext(), ErrorEnum.CONNECTION_TO_INTERNET.getName(), Toast.LENGTH_SHORT).show();
         });
     }
 
-    private void addCommentsToView(String idTitle, String token){
+    private void addCommentsToView(List<String> idTitle, String token){
         List<CommentsDto> newDtoList = dtoList.stream()
                 .flatMap(Collection::stream)
                 .collect(Collectors.toList());
@@ -96,12 +96,12 @@ public class GeListOfCommentsAllUsersWithoutAdmins {
     });
     }
 
-    private List<ItemsForListOfComments> sortedList(List<CommentsDto> newDtoList, String idTitle){
+    private List<ItemsForListOfComments> sortedList(List<CommentsDto> newDtoList, List<String> idTitle){
         List<ItemsForListOfComments> items = new ArrayList<>();
         for(int u = 0; u < newDtoList.size(); u++){
             items.add(new ItemsForListOfComments.ItemsBuilder(newDtoList.get(u).getUser_comment_id(), newDtoList.get(u).getComment())
                     .idComment(newDtoList.get(u).getId())
-                    .idTask(idTitle)
+                    .idTask(idTitle.get(u))
                     .commentAddedData(newDtoList.get(u).getComment_added_data())
                     .reviewed(newDtoList.get(u).getReviewed())
                     .article(listOfArticle.get(u).getTitle())
@@ -109,7 +109,10 @@ public class GeListOfCommentsAllUsersWithoutAdmins {
                     .build()
             );
         }
-        return items.stream().sorted(Comparator.comparing(o -> LocalDateTime.parse(o.getComment_added_data()))).collect(Collectors.toList());
+        if(items != null) {
+            return items.stream().sorted(Comparator.comparing(o -> LocalDateTime.parse(o.getComment_added_data()))).collect(Collectors.toList());
+        }
+        return null;
     }
 
     private void getUsersMap(List<User> userList){

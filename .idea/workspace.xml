@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="449a7b29-302d-47f9-b97c-4acd7720bf35" name="Changes" comment="" />
+    <list default="true" id="449a7b29-302d-47f9-b97c-4acd7720bf35" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/service/connection/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/service/connection/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/service/work_on_files/DownloadFiles.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/service/work_on_files/DownloadFiles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/adapter/RecycleViewChat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/adapter/RecycleViewChat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/adapter/RecycleViewCommentsCertainContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/adapter/RecycleViewCommentsCertainContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/adapter/RecycleViewTasks.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/adapter/RecycleViewTasks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/main_page/admin/CertainComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/main_page/admin/CertainComment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/main_page/user/UserNavigationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/main_page/user/UserNavigationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/sign_in/fragment/SignInViewModelImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/sign_in/fragment/SignInViewModelImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/sign_up/activity/sign_up_2/SendAndGetCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/sign_up/activity/sign_up_2/SendAndGetCode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/sign_up/activity/sign_up_2/SignUpCodeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/sign_up/activity/sign_up_2/SignUpCodeFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/tasks/GetTaskListForCertainUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/tasks/GetTaskListForCertainUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/tasks/admin/TasksListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/tasks/admin/TasksListActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/tasks/user/TasksListFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view/ui/tasks/user/TasksListFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view_model/UserViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/java/com/diploma/assistant/view_model/UserViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/res/layout/tasks_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/res/layout/tasks_activity.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assistant/app/src/main/res/layout/tasks_fragment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assistant/app/src/main/res/layout/tasks_fragment.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

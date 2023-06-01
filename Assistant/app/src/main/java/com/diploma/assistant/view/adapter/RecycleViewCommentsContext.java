@@ -78,6 +78,7 @@ public class RecycleViewCommentsContext extends RecyclerView.Adapter<RecycleView
                         .putExtra("list_of_comments", (Serializable) it)
                         .putExtra("firebase_token", items.get(position).getFirebaseToken())
                 );
+
             }
         });
 

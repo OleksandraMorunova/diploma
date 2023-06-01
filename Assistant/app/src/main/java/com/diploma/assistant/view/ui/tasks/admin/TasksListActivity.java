@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
@@ -49,7 +50,6 @@ public class TasksListActivity extends AppCompatActivity {
         TextView countView = findViewById(R.id.count_tasks_list);
         String newCount = "Кількість завдань: " + count;
         countView.setText(newCount);
-
 
         SwipeRefreshLayout swipe = binding.ms.swipeListTask;
         swipe.setOnRefreshListener(() -> {

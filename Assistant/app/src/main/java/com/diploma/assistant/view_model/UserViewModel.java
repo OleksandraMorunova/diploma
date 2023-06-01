@@ -28,8 +28,8 @@ public class UserViewModel extends AndroidViewModel {
         return repository.deleteUserById(token, id);
     }
 
-    public LiveData<UserAndTasks> getDetailsUser(String token, String email){
-        return repository.getDetailsUser(token, email);
+    public LiveData<UserAndTasks> getDetailsUser(String email, String token){
+        return repository.getDetailsUser(email, token);
     }
 
     public LiveData<ResponseBody> checkUserEmail(String email) {

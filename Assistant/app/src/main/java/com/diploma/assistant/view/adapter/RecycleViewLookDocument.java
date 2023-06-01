@@ -48,7 +48,6 @@ public class RecycleViewLookDocument extends RecyclerView.Adapter<RecycleViewLoo
 
         if(items.get(position) != null){
             holder.nameOfFile.setText(items.get(position).getFilename());
-
             SetImageSrcByFormatFile set = new SetImageSrcByFormatFile(activity, uris);
             set.putToImage(holder.imageOfFile, position);
 

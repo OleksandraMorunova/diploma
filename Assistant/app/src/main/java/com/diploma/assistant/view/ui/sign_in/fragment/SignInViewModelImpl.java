@@ -79,7 +79,7 @@ public class SignInViewModelImpl implements Serializable{
                     user.setStatus(StatusUserEnum.ACTIVE.getStatus());
                     userViewModel.updateUserDetails(userEntity.getUserDto().getId(), user, null).observe(lifecycleOwner, u -> {
                         if(u == null){
-                            Log.e("Update statu user to ACTIVE", "Body is null");
+                            Log.e("Update status user to ACTIVE", "Body is null");
                         }
                     });
                 }
@@ -98,8 +98,6 @@ public class SignInViewModelImpl implements Serializable{
                         });
                 authenticator.savedString("com.assistant.emmotechie.PREFERENCE_FILE_KEY", "id_user", userEntity.getUserDto().getId());
                 checkUserStatusForPermission(userEntity);
-            } else {
-                Toast.makeText(context, "Проблема з даними", Toast.LENGTH_SHORT).show();
             }
         }));
     }

@@ -34,7 +34,10 @@ public class UserService {
             public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     userMutableLiveData.setValue(response.body());
-                } else userMutableLiveData.postValue(null);
+                } else{
+                    Log.e("CREATE USER", "Code: " + response.code());
+                    userMutableLiveData.postValue(null);
+                }
             }
 
             @Override
@@ -53,7 +56,10 @@ public class UserService {
             public void onResponse(@NonNull Call<Void> call, @NonNull Response<Void> response) {
                 if (response.isSuccessful()){
                     booleanMutableLiveData.setValue(true);
-                } else booleanMutableLiveData.postValue(false);
+                } else {
+                    Log.e("DELETE USER", "Code: " + response.code());
+                    booleanMutableLiveData.postValue(false);
+                }
             }
 
             @Override
@@ -116,12 +122,15 @@ public class UserService {
             public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
                 if (response.isSuccessful()) {
                     mutableLiveDataString.setValue(response.body());
-                } else mutableLiveDataString.postValue(null);
+                } else {
+                    Log.e("CHECK USER EMAIL", "Code: " + response.code());
+                    mutableLiveDataString.postValue(null);
+                }
             }
 
             @Override
             public void onFailure(@NonNull Call<ResponseBody> call, @NonNull Throwable t) {
-                Log.e("TAG", "Check user email", t.getCause());
+                Log.e("CHECK USER EMAIL", t.getMessage(), t.fillInStackTrace());
                 mutableLiveDataString.postValue(null);
             }
         });
@@ -135,12 +144,15 @@ public class UserService {
             public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
                 if (response.isSuccessful()) {
                     userMutableLiveData.setValue(response.body());
-                } else userMutableLiveData.postValue(null);
+                } else {
+                    Log.e("CHECK USER ID", "Code: " + response.code());
+                    userMutableLiveData.postValue(null);
+                }
             }
 
             @Override
             public void onFailure(@NonNull Call<User> call, @NonNull Throwable t) {
-                Log.e("TAG", "Check user email", t.getCause());
+                Log.e("CHECK USER ID", t.getMessage(), t.fillInStackTrace());
                 userMutableLiveData.postValue(null);
             }
         });
@@ -154,7 +166,10 @@ public class UserService {
             public void onResponse(@NonNull Call<ResponseBody> call, @NonNull Response<ResponseBody> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     mutableLiveDataString.setValue(response.body());
-                } else mutableLiveDataString.postValue(null);
+                } else {
+                    Log.e("GET USER`S PHONE NUMBER", "Code: " + response.code());
+                    mutableLiveDataString.postValue(null);
+                }
             }
 
             @Override
@@ -173,7 +188,10 @@ public class UserService {
             public void onResponse(@NonNull Call<User> call, @NonNull Response<User> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     userMutableLiveData.setValue(response.body());
-                } else userMutableLiveData.postValue(null);
+                } else {
+                    Log.e("UPDATE USER`S DATA", "Code: " + response.code());
+                    userMutableLiveData.postValue(null);
+                }
             }
 
             @Override
